@@ -432,7 +432,7 @@ The release suite covers both numerical output and rendered images:
 - a 72-page real-RNA vector PDF checked for blank pages, clipping, text, raster contamination, and pixel-exact hashes;
 - a rendering contract covering annotations, comparisons, plots, long-RNA detail, and all result-to-render connections.
 
-See the repository's [validation methods](https://github.com/rice8y/ribon/blob/main/docs/VALIDATION.md), [model boundary](https://github.com/rice8y/ribon/blob/main/docs/MODEL.md), and [reference index](https://github.com/rice8y/ribon/blob/main/docs/REFERENCES.md) for exact methods and measured results.
+See the repository's [validation methods](https://github.com/rice8y/ribon/blob/v0.1.0/docs/VALIDATION.md), [model boundary](https://github.com/rice8y/ribon/blob/v0.1.0/docs/MODEL.md), and [reference index](https://github.com/rice8y/ribon/blob/v0.1.0/docs/REFERENCES.md) for exact methods and measured results.
 
 ## Build and test
 

@@ -189,10 +189,6 @@ Once released, import the package by version:
 
 #doc-code(raw("#import \"@preview/ribon:0.1.0\": *", lang: "typ", block: true))
 
-When working from a local checkout, import the package entry point:
-
-#doc-code(raw("#import \"../package/lib.typ\": *", lang: "typ", block: true))
-
 The runtime consists of Typst source plus #raw("ribon_plugin.wasm"). It does not need a Python interpreter, native shared library, shell command, or network request while compiling a document.
 
 == Smallest drawing
