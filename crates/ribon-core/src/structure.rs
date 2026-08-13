@@ -98,12 +98,26 @@ fn normalize_sequence_with_breaks(input: &str) -> Result<(String, Vec<usize>), R
         }
         position += 1;
         let c = raw.to_ascii_uppercase();
-        let c = if c == 'T' { 'U' } else { c };
-        // IUPAC ambiguity codes are accepted but only A/C/G/U participate in
-        // the built-in energy model.
+        // IUPAC ambiguity codes are accepted but only A/C/G/U/T participate
+        // in the built-in energy models. T uses the U-shaped thermodynamic
+        // lookup index while remaining T in public results and layouts.
         if !matches!(
             c,
-            'A' | 'C' | 'G' | 'U' | 'R' | 'Y' | 'S' | 'W' | 'K' | 'M' | 'B' | 'D' | 'H' | 'V' | 'N'
+            'A' | 'C'
+                | 'G'
+                | 'U'
+                | 'T'
+                | 'R'
+                | 'Y'
+                | 'S'
+                | 'W'
+                | 'K'
+                | 'M'
+                | 'B'
+                | 'D'
+                | 'H'
+                | 'V'
+                | 'N'
         ) {
             return Err(RnaError::InvalidSequence {
                 position,
@@ -123,8 +137,9 @@ fn normalize_sequence_with_breaks(input: &str) -> Result<(String, Vec<usize>), R
     Ok((out, strand_breaks))
 }
 
-/// Normalize whitespace, DNA thymine, and case. Strand separators are removed;
-/// structure parsing uses an internal variant that also retains their indices.
+/// Normalize whitespace and case while preserving DNA thymine. Strand
+/// separators are removed; structure parsing uses an internal variant that
+/// also retains their indices.
 pub fn normalize_sequence(input: &str) -> Result<String, RnaError> {
     normalize_sequence_with_breaks(input).map(|(sequence, _)| sequence)
 }
@@ -148,7 +163,16 @@ fn bracket_kind(c: char) -> Option<(usize, bool)> {
 fn pair_is_canonical(a: u8, b: u8) -> bool {
     matches!(
         (a, b),
-        (b'A', b'U') | (b'U', b'A') | (b'C', b'G') | (b'G', b'C') | (b'G', b'U') | (b'U', b'G')
+        (b'A', b'U')
+            | (b'U', b'A')
+            | (b'A', b'T')
+            | (b'T', b'A')
+            | (b'C', b'G')
+            | (b'G', b'C')
+            | (b'G', b'U')
+            | (b'U', b'G')
+            | (b'G', b'T')
+            | (b'T', b'G')
     )
 }
 
@@ -293,9 +317,9 @@ mod tests {
     use super::*;
 
     #[test]
-    fn parses_extended_dot_bracket_and_normalizes_dna() {
+    fn parses_extended_dot_bracket_and_preserves_dna_thymine() {
         let parsed = parse_structure("atgcaa", "([.)].").unwrap();
-        assert_eq!(parsed.sequence, "AUGCAA");
+        assert_eq!(parsed.sequence, "ATGCAA");
         assert_eq!(parsed.pairs.len(), 2);
         assert!(is_pseudoknotted(&parsed.pairs));
     }

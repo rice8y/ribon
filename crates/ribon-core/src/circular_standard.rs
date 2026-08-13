@@ -239,14 +239,14 @@ pub fn circular_fold_with_model(
             }
         } else if model.nucleic_acid() == crate::energy::NucleicAcid::Dna {
             if dangles % 2 == 1 {
-                "exact constrained circular Mathews 2004 DNA ensemble with fixed-structure single-dangle/coaxial cycle evaluation"
+                "exact constrained circular RNAstructure 6.6 DNA ensemble with fixed-structure single-dangle/coaxial cycle evaluation"
             } else {
-                "constrained circular Mathews 2004 DNA root grammar with circular entropy penalty"
+                "constrained circular RNAstructure 6.6 DNA root grammar with circular entropy penalty"
             }
         } else if dangles % 2 == 1 {
-            "exact constrained circular Turner ensemble with fixed-structure single-dangle/coaxial cycle evaluation"
+            "exact constrained circular RNAstructure 6.6 RNA ensemble with fixed-structure single-dangle/coaxial cycle evaluation"
         } else {
-            "constrained circular Turner root grammar with circular entropy penalty"
+            "constrained circular RNAstructure 6.6 RNA root grammar with circular entropy penalty"
         },
     })
 }

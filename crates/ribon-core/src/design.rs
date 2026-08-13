@@ -340,6 +340,7 @@ fn allowed_bases(symbol: u8) -> Result<Vec<u8>, RnaError> {
         b'C' => b"C".as_slice(),
         b'G' => b"G".as_slice(),
         b'U' => b"U".as_slice(),
+        b'T' => b"T".as_slice(),
         b'R' => b"AG".as_slice(),
         b'Y' => b"CU".as_slice(),
         b'S' => b"CG".as_slice(),
@@ -461,5 +462,28 @@ mod tests {
             .candidates
             .iter()
             .all(|candidate| candidate.gc_fraction == 1.0));
+    }
+
+    #[test]
+    fn dna_template_accepts_and_preserves_thymine() {
+        let model = EnergyModel::with_parameter_family(37.0, 0, 1.021, NucleicAcid::Dna).unwrap();
+        let result = inverse_fold_exact(
+            "(...)",
+            "TNNNA",
+            3,
+            &model,
+            &ConstraintConfig::default(),
+            &InverseDesignOptions {
+                return_count: 3,
+                ..InverseDesignOptions::default()
+            },
+        )
+        .unwrap();
+        assert_eq!(result.candidate_sequence_count, 4usize.pow(3));
+        assert!(result.candidates.iter().all(|candidate| {
+            candidate.sequence.starts_with('T')
+                && candidate.sequence.ends_with('A')
+                && !candidate.sequence.contains('U')
+        }));
     }
 }

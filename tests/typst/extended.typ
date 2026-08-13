@@ -5,7 +5,7 @@
 
 #let model = analysis-model()
 #let manifest = data(parameters()).active
-#assert.eq(manifest.model_id, "ribon-turner-2004")
+#assert.eq(manifest.model_id, "ribon-rnastructure-6.6-rna")
 #assert.eq(manifest.parameter_file_count, 34)
 
 #let complex = cofold(

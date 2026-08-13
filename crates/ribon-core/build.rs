@@ -18,8 +18,8 @@ fn main() {
         370,
         terminal_pair_penalty(data, "rna.helix_ends.dg"),
         terminal_pair_penalty(data, "rna.helix_ends.dh"),
-        "Turner 2004 RNA",
-        "turner2004_generated.rs",
+        "RNAstructure 6.6 standard RNA",
+        "rnastructure_6_6_rna_generated.rs",
     );
     generate_parameter_module(
         data,
@@ -28,8 +28,8 @@ fn main() {
         named_scalar_centi(data, "dna.miscloop.dh", "terminal AU penalty"),
         terminal_pair_penalty(data, "dna.helix_ends.dg"),
         named_scalar_centi(data, "dna.miscloop.dh", "terminal AU penalty"),
-        "Mathews 2004 DNA",
-        "mathews2004_dna_generated.rs",
+        "RNAstructure 6.6 standard DNA",
+        "rnastructure_6_6_dna_generated.rs",
     );
 }
 
@@ -95,7 +95,7 @@ fn generate_parameter_module(
 
     let mut generated = format!(
         "// Generated from RNAstructure 6.6 GPL-2.0-only {description} data tables.\n\
-         // Source distribution SHA-256: 8a2904c4b9e16854a2aac3c6f3e510c844685f8cf330601e986d12f7d97dadc8.\n\
+         // Reference Bioconda osx-arm64 archive SHA-256: 8a2904c4b9e16854a2aac3c6f3e510c844685f8cf330601e986d12f7d97dadc8.\n\
          // Integer values are 0.01 kcal/mol.\n"
     );
     for (name, values) in [

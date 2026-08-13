@@ -31,7 +31,7 @@ pub struct DuplexResult {
     pub model: &'static str,
 }
 
-/// Predict a connected intermolecular duplex under Turner internal-loop rules.
+/// Predict a connected intermolecular duplex under nearest-neighbor internal-loop rules.
 pub fn duplex(
     sequence_a: &str,
     sequence_b: &str,
@@ -253,10 +253,10 @@ pub fn duplex_with_model(
         } else {
             match model.nucleic_acid() {
                 crate::energy::NucleicAcid::Rna => {
-                    "connected intermolecular Turner 2004 RNA duplex, dangles=0"
+                    "connected intermolecular RNAstructure 6.6 RNA duplex, dangles=0"
                 }
                 crate::energy::NucleicAcid::Dna => {
-                    "connected intermolecular Mathews 2004 DNA duplex, dangles=0"
+                    "connected intermolecular RNAstructure 6.6 DNA duplex, dangles=0"
                 }
             }
         },

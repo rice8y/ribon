@@ -648,7 +648,7 @@ where
     let pyrimidines = bases
         .iter()
         .enumerate()
-        .filter_map(|(index, &base)| matches!(base, b'C' | b'U').then_some(index))
+        .filter_map(|(index, &base)| matches!(base, b'C' | b'U' | b'T').then_some(index))
         .collect::<Vec<_>>();
     let size = purines.len() + pyrimidines.len();
     if size == 0 {
@@ -2040,7 +2040,7 @@ fn decoded_diagnostic_energy(
         helix_count: helices,
         crossing_count,
         enclosed_unpaired_count: enclosed_unpaired,
-        model: "Ribon generalized pseudoknot diagnostic v1: DP09 Ps/Pb/Pup terms, 0.89 spanning stacks, and Turner terminal pairs",
+        model: "Ribon generalized pseudoknot diagnostic v1: DP09 Ps/Pb/Pup terms, 0.89 spanning stacks, and RNAstructure 6.6 RNA terminal pairs",
     }
 }
 

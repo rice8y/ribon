@@ -4,11 +4,17 @@ use crate::structure::{is_pseudoknotted, parse_structure, ParsedStructure, RnaEr
 use serde::{Deserialize, Serialize};
 use std::sync::Arc;
 
-mod turner2004 {
-    include!(concat!(env!("OUT_DIR"), "/turner2004_generated.rs"));
+mod rnastructure_6_6_rna {
+    include!(concat!(
+        env!("OUT_DIR"),
+        "/rnastructure_6_6_rna_generated.rs"
+    ));
 }
-mod mathews2004_dna {
-    include!(concat!(env!("OUT_DIR"), "/mathews2004_dna_generated.rs"));
+mod rnastructure_6_6_dna {
+    include!(concat!(
+        env!("OUT_DIR"),
+        "/rnastructure_6_6_dna_generated.rs"
+    ));
 }
 
 /// Nucleic-acid parameter family used by the thermodynamic engine.
@@ -199,14 +205,14 @@ macro_rules! params {
                 values.as_slice()
             } else {
                 match $model.nucleic_acid {
-                    NucleicAcid::Rna => &turner2004::$name[..],
-                    NucleicAcid::Dna => &mathews2004_dna::$name[..],
+                    NucleicAcid::Rna => &rnastructure_6_6_rna::$name[..],
+                    NucleicAcid::Dna => &rnastructure_6_6_dna::$name[..],
                 }
             }
         } else {
             match $model.nucleic_acid {
-                NucleicAcid::Rna => &turner2004::$name[..],
-                NucleicAcid::Dna => &mathews2004_dna::$name[..],
+                NucleicAcid::Rna => &rnastructure_6_6_rna::$name[..],
+                NucleicAcid::Dna => &rnastructure_6_6_dna::$name[..],
             }
         }
     };
@@ -222,8 +228,8 @@ macro_rules! lxc_parameter {
             value
         } else {
             match $model.nucleic_acid {
-                NucleicAcid::Rna => turner2004::LXC_37,
-                NucleicAcid::Dna => mathews2004_dna::LXC_37,
+                NucleicAcid::Rna => rnastructure_6_6_rna::LXC_37,
+                NucleicAcid::Dna => rnastructure_6_6_dna::LXC_37,
             }
         }
     };
@@ -233,7 +239,7 @@ const INF_PARAMETER: i32 = 10_000_000;
 const T_MEASURE_KELVIN: f64 = 310.15;
 pub const CUSTOM_MODEL_ID: &str = "ribon-custom-thermodynamic-v1";
 
-/// Turner 2004 nearest-neighbor parameters at a selected temperature.
+/// RNAstructure 6.6 nearest-neighbor parameters at a selected temperature.
 ///
 /// The embedded source tables are generated from the RNAstructure 6.6
 /// `data_tables/rna.*` bundle. MFE folding and fixed-structure evaluation
@@ -249,7 +255,7 @@ pub struct EnergyModel {
     nucleic_acid: NucleicAcid,
     parameter_overrides: Option<Arc<ThermodynamicParameterOverrides>>,
     /// Optional caller-selected internal-loop size restriction.  `None`
-    /// enumerates every geometrically possible loop; the Turner logarithmic
+    /// enumerates every geometrically possible loop; the nearest-neighbor logarithmic
     /// extension is defined beyond the 30-entry tabulated range.
     pub max_internal_loop: Option<usize>,
 }
@@ -405,6 +411,12 @@ impl EnergyModel {
                 "salt molarity must be finite and positive".into(),
             ));
         }
+        if nucleic_acid == NucleicAcid::Dna && (salt_molar - STANDARD_MOLAR).abs() >= 1.0e-12 {
+            return Err(RnaError::InvalidOption(
+                "the DNA parameter family does not support monovalent-salt corrections; use salt_molar=1.021"
+                    .into(),
+            ));
+        }
         Ok(Self {
             temperature_celsius,
             dangles,
@@ -459,8 +471,8 @@ impl EnergyModel {
             return CUSTOM_MODEL_ID;
         }
         match self.nucleic_acid {
-            NucleicAcid::Rna => "ribon-turner-2004",
-            NucleicAcid::Dna => "ribon-mathews-dna-2004",
+            NucleicAcid::Rna => "ribon-rnastructure-6.6-rna",
+            NucleicAcid::Dna => "ribon-rnastructure-6.6-dna",
         }
     }
 
@@ -484,6 +496,12 @@ impl EnergyModel {
         if !salt_molar.is_finite() || salt_molar <= 0.0 {
             return Err(RnaError::InvalidOption(
                 "salt molarity must be finite and positive".into(),
+            ));
+        }
+        if self.nucleic_acid == NucleicAcid::Dna && (salt_molar - STANDARD_MOLAR).abs() >= 1.0e-12 {
+            return Err(RnaError::InvalidOption(
+                "the DNA parameter family does not support monovalent-salt corrections; use salt_molar=1.021"
+                    .into(),
             ));
         }
         let mut model = self.clone();
@@ -529,7 +547,7 @@ impl EnergyModel {
         pair_type(a, b).is_some()
     }
 
-    /// Pair formation has no context-free contribution in the Turner model.
+    /// Pair formation has no context-free contribution in the selected model.
     pub fn pair_energy(&self, a: u8, b: u8) -> f64 {
         if self.can_pair(a, b) {
             0.0
@@ -539,6 +557,7 @@ impl EnergyModel {
     }
 
     fn special_loop_energy(&self, kind: SpecialLoopKind, sequence: &str) -> Option<(i32, i32)> {
+        let lookup_sequence = sequence.to_ascii_uppercase().replace('T', "U");
         if let Some(custom) = &self.parameter_overrides {
             let replacement = match kind {
                 SpecialLoopKind::Tri => &custom.triloops,
@@ -548,7 +567,7 @@ impl EnergyModel {
             if let Some(replacement) = replacement {
                 return replacement.iter().find_map(|entry| {
                     let normalized = entry.sequence.to_ascii_uppercase().replace('T', "U");
-                    normalized.eq(sequence).then_some((
+                    normalized.eq(&lookup_sequence).then_some((
                         entry.free_energy_37_centi_kcal_mol,
                         entry.enthalpy_centi_kcal_mol,
                     ))
@@ -556,14 +575,14 @@ impl EnergyModel {
             }
         }
         let table = match (self.nucleic_acid, kind) {
-            (NucleicAcid::Rna, SpecialLoopKind::Tri) => turner2004::TRILOOPS,
-            (NucleicAcid::Rna, SpecialLoopKind::Tetra) => turner2004::TETRALOOPS,
-            (NucleicAcid::Rna, SpecialLoopKind::Hexa) => turner2004::HEXALOOPS,
-            (NucleicAcid::Dna, SpecialLoopKind::Tri) => mathews2004_dna::TRILOOPS,
-            (NucleicAcid::Dna, SpecialLoopKind::Tetra) => mathews2004_dna::TETRALOOPS,
-            (NucleicAcid::Dna, SpecialLoopKind::Hexa) => mathews2004_dna::HEXALOOPS,
+            (NucleicAcid::Rna, SpecialLoopKind::Tri) => rnastructure_6_6_rna::TRILOOPS,
+            (NucleicAcid::Rna, SpecialLoopKind::Tetra) => rnastructure_6_6_rna::TETRALOOPS,
+            (NucleicAcid::Rna, SpecialLoopKind::Hexa) => rnastructure_6_6_rna::HEXALOOPS,
+            (NucleicAcid::Dna, SpecialLoopKind::Tri) => rnastructure_6_6_dna::TRILOOPS,
+            (NucleicAcid::Dna, SpecialLoopKind::Tetra) => rnastructure_6_6_dna::TETRALOOPS,
+            (NucleicAcid::Dna, SpecialLoopKind::Hexa) => rnastructure_6_6_dna::HEXALOOPS,
         };
-        find_special(table, sequence)
+        find_special(table, &lookup_sequence)
     }
 
     fn temperature_ratio(&self) -> f64 {
@@ -2327,17 +2346,17 @@ fn loop_gap(previous: &LoopStem, current: &LoopStem) -> usize {
 
 fn energy_model_name(nucleic_acid: NucleicAcid, dangles: u8) -> &'static str {
     match (nucleic_acid, dangles) {
-        (NucleicAcid::Rna, 0) => "Turner 2004 RNA nearest-neighbor, dangles=0",
-        (NucleicAcid::Rna, 1) => "Turner 2004 RNA nearest-neighbor, dangles=1",
-        (NucleicAcid::Rna, 2) => "Turner 2004 RNA nearest-neighbor, dangles=2",
+        (NucleicAcid::Rna, 0) => "RNAstructure 6.6 RNA nearest-neighbor, dangles=0",
+        (NucleicAcid::Rna, 1) => "RNAstructure 6.6 RNA nearest-neighbor, dangles=1",
+        (NucleicAcid::Rna, 2) => "RNAstructure 6.6 RNA nearest-neighbor, dangles=2",
         (NucleicAcid::Rna, 3) => {
-            "Turner 2004 RNA nearest-neighbor, dangles=3 with coaxial stacking"
+            "RNAstructure 6.6 RNA nearest-neighbor, dangles=3 with coaxial stacking"
         }
-        (NucleicAcid::Dna, 0) => "Mathews 2004 DNA nearest-neighbor, dangles=0",
-        (NucleicAcid::Dna, 1) => "Mathews 2004 DNA nearest-neighbor, dangles=1",
-        (NucleicAcid::Dna, 2) => "Mathews 2004 DNA nearest-neighbor, dangles=2",
+        (NucleicAcid::Dna, 0) => "RNAstructure 6.6 DNA nearest-neighbor, dangles=0",
+        (NucleicAcid::Dna, 1) => "RNAstructure 6.6 DNA nearest-neighbor, dangles=1",
+        (NucleicAcid::Dna, 2) => "RNAstructure 6.6 DNA nearest-neighbor, dangles=2",
         (NucleicAcid::Dna, 3) => {
-            "Mathews 2004 DNA nearest-neighbor, dangles=3 with coaxial stacking"
+            "RNAstructure 6.6 DNA nearest-neighbor, dangles=3 with coaxial stacking"
         }
         _ => unreachable!("validated dangle model"),
     }
@@ -2345,21 +2364,21 @@ fn energy_model_name(nucleic_acid: NucleicAcid, dangles: u8) -> &'static str {
 
 fn ensemble_model_name(nucleic_acid: NucleicAcid, dangles: u8) -> &'static str {
     match (nucleic_acid, dangles) {
-        (NucleicAcid::Rna, 0) => "Turner 2004 RNA McCaskill, dangles=0",
-        (NucleicAcid::Rna, 2) => "Turner 2004 RNA McCaskill, dangles=2",
+        (NucleicAcid::Rna, 0) => "RNAstructure 6.6 RNA McCaskill, dangles=0",
+        (NucleicAcid::Rna, 2) => "RNAstructure 6.6 RNA McCaskill, dangles=2",
         (NucleicAcid::Rna, 1) => {
-            "Turner 2004 RNA exact fixed-structure ensemble, exclusive single dangles"
+            "RNAstructure 6.6 RNA exact fixed-structure ensemble, exclusive single dangles"
         }
         (NucleicAcid::Rna, 3) => {
-            "Turner 2004 RNA exact fixed-structure ensemble, single dangles and coaxial stacking"
+            "RNAstructure 6.6 RNA exact fixed-structure ensemble, single dangles and coaxial stacking"
         }
-        (NucleicAcid::Dna, 0) => "Mathews 2004 DNA McCaskill, dangles=0",
-        (NucleicAcid::Dna, 2) => "Mathews 2004 DNA McCaskill, dangles=2",
+        (NucleicAcid::Dna, 0) => "RNAstructure 6.6 DNA McCaskill, dangles=0",
+        (NucleicAcid::Dna, 2) => "RNAstructure 6.6 DNA McCaskill, dangles=2",
         (NucleicAcid::Dna, 1) => {
-            "Mathews 2004 DNA exact fixed-structure ensemble, exclusive single dangles"
+            "RNAstructure 6.6 DNA exact fixed-structure ensemble, exclusive single dangles"
         }
         (NucleicAcid::Dna, 3) => {
-            "Mathews 2004 DNA exact fixed-structure ensemble, single dangles and coaxial stacking"
+            "RNAstructure 6.6 DNA exact fixed-structure ensemble, single dangles and coaxial stacking"
         }
         _ => unreachable!("validated dangle model"),
     }
@@ -2393,6 +2412,10 @@ fn pair_type(a: u8, b: u8) -> Option<usize> {
         (b'U', b'G') => Some(3),
         (b'A', b'U') => Some(4),
         (b'U', b'A') => Some(5),
+        (b'G', b'T') => Some(2),
+        (b'T', b'G') => Some(3),
+        (b'A', b'T') => Some(4),
+        (b'T', b'A') => Some(5),
         _ => None,
     }
 }
@@ -2414,7 +2437,7 @@ fn base_index(base: u8) -> usize {
         b'A' => 1,
         b'C' => 2,
         b'G' => 3,
-        b'U' => 4,
+        b'U' | b'T' => 4,
         _ => 0,
     }
 }
@@ -2474,7 +2497,7 @@ mod tests {
     }
 
     #[test]
-    fn mathews_2004_dna_bundle_is_independent_and_matches_reference_energy() {
+    fn rnastructure_6_6_dna_bundle_is_independent_and_matches_reference_energy() {
         let rna =
             EnergyModel::with_parameter_family(37.0, 0, STANDARD_MOLAR, NucleicAcid::Rna).unwrap();
         let dna =
@@ -2487,7 +2510,19 @@ mod tests {
             dna.stack_energy(b'G', b'C', b'G', b'C'),
             rna.stack_energy(b'G', b'C', b'G', b'C')
         );
-        assert_eq!(dna.parameter_model_id(), "ribon-mathews-dna-2004");
+        assert_eq!(dna.parameter_model_id(), "ribon-rnastructure-6.6-dna");
+    }
+
+    #[test]
+    fn dna_rejects_unvalidated_monovalent_salt_corrections() {
+        let error = EnergyModel::with_parameter_family(37.0, 0, 0.1, NucleicAcid::Dna).unwrap_err();
+        assert!(error
+            .to_string()
+            .contains("does not support monovalent-salt"));
+
+        let dna =
+            EnergyModel::with_parameter_family(37.0, 0, STANDARD_MOLAR, NucleicAcid::Dna).unwrap();
+        assert!(dna.with_salt_molar(0.1).is_err());
     }
 
     #[test]

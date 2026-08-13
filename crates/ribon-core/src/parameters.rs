@@ -5,11 +5,11 @@ use crate::structure::RnaError;
 use crate::{analyze_with_model, AnalysisResult, EnergyModel, NucleicAcid};
 use serde::{Deserialize, Serialize};
 
-pub const MODEL_ID: &str = "ribon-turner-2004";
-pub const DNA_MODEL_ID: &str = "ribon-mathews-dna-2004";
+pub const MODEL_ID: &str = "ribon-rnastructure-6.6-rna";
+pub const DNA_MODEL_ID: &str = "ribon-rnastructure-6.6-dna";
 pub const PARAMETER_BUNDLE_SHA256: &str =
     "0c00a31400f1dedbe9a3e161b2f9b1b74cde54941144ee988f48173d33bbcd7b";
-pub const SOURCE_ARCHIVE_SHA256: &str =
+pub const REFERENCE_ARCHIVE_SHA256: &str =
     "8a2904c4b9e16854a2aac3c6f3e510c844685f8cf330601e986d12f7d97dadc8";
 pub const DNA_PARAMETER_BUNDLE_SHA256: &str =
     "019ad1d5c3dac421df37e0a5aeded6d3da50da03deecc23ba0ae5a6d5d06b977";
@@ -55,7 +55,7 @@ pub struct ParameterManifest {
     pub parameterization: &'static str,
     pub data_source: &'static str,
     pub source_version: &'static str,
-    pub source_archive_sha256: &'static str,
+    pub reference_archive_sha256: &'static str,
     pub parameter_bundle_sha256: &'static str,
     pub parameter_file_count: usize,
     pub license: &'static str,
@@ -68,11 +68,12 @@ pub fn parameter_manifest() -> ParameterManifest {
     ParameterManifest {
         schema_version: 1,
         model_id: MODEL_ID,
-        model_name: "Ribon Turner 2004 nearest-neighbor model",
-        parameterization: "Turner 2004 RNA nearest-neighbor free energies and enthalpies",
+        model_name: "Ribon RNAstructure 6.6 standard RNA parameter family",
+        parameterization:
+            "RNAstructure 6.6 standard RNA parameters (Turner 2004 lineage with subsequent RNAstructure revisions)",
         data_source: "RNAstructure data_tables/rna.*",
         source_version: "RNAstructure 6.6",
-        source_archive_sha256: SOURCE_ARCHIVE_SHA256,
+        reference_archive_sha256: REFERENCE_ARCHIVE_SHA256,
         parameter_bundle_sha256: PARAMETER_BUNDLE_SHA256,
         parameter_file_count: 34,
         license: "GPL-2.0-only",
@@ -86,11 +87,11 @@ pub fn dna_parameter_manifest() -> ParameterManifest {
     ParameterManifest {
         schema_version: 1,
         model_id: DNA_MODEL_ID,
-        model_name: "Ribon Mathews 2004 DNA nearest-neighbor model",
-        parameterization: "Mathews 2004 DNA nearest-neighbor free energies and enthalpies",
+        model_name: "Ribon RNAstructure 6.6 standard DNA parameter family",
+        parameterization: "RNAstructure 6.6 standard DNA parameters compiled by the Mathews group",
         data_source: "RNAstructure data_tables/dna.*",
         source_version: "RNAstructure 6.6",
-        source_archive_sha256: SOURCE_ARCHIVE_SHA256,
+        reference_archive_sha256: REFERENCE_ARCHIVE_SHA256,
         parameter_bundle_sha256: DNA_PARAMETER_BUNDLE_SHA256,
         parameter_file_count: 33,
         license: "GPL-2.0-only",
@@ -151,6 +152,12 @@ pub fn validate_parameter_profile(profile: &ParameterProfile) -> Result<(), RnaE
             "profile salt molarity must be finite and positive".into(),
         ));
     }
+    if profile.model_id == DNA_MODEL_ID && (profile.salt_molar - 1.021).abs() >= 1.0e-12 {
+        return Err(RnaError::InvalidOption(
+            "the DNA parameter family does not support monovalent-salt corrections; use salt_molar=1.021"
+                .into(),
+        ));
+    }
     Ok(())
 }
 
@@ -193,6 +200,10 @@ mod tests {
             profile.parameter_bundle_sha256,
             parameter_manifest().parameter_bundle_sha256
         );
+        assert_eq!(
+            parameter_manifest().reference_archive_sha256,
+            REFERENCE_ARCHIVE_SHA256
+        );
     }
 
     #[test]
@@ -214,6 +225,7 @@ mod tests {
             ..ParameterProfile::default()
         };
         let result = analyze_with_profile("GGGTTTCCC", &profile).unwrap();
+        assert_eq!(result.sequence, "GGGTTTCCC");
         assert_eq!(result.mfe_structure, "(((...)))");
         assert!((result.mfe_energy_kcal_mol + 0.2).abs() < 1.0e-12);
         assert!(result.model.parameter_set.contains("DNA"));

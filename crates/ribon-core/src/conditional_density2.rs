@@ -120,9 +120,11 @@ pub(super) fn conditional_parameter_model_name(model: &EnergyModel) -> &'static 
         "Ribon conditional density-2 DP09 model with custom normalized loop parameters"
     } else {
         match model.nucleic_acid() {
-            NucleicAcid::Rna => "Ribon conditional density-2 DP09 model with Turner 2004 RNA loops",
+            NucleicAcid::Rna => {
+                "Ribon conditional density-2 DP09 model with RNAstructure 6.6 RNA loops"
+            }
             NucleicAcid::Dna => {
-                "Ribon conditional density-2 DP09 model with Mathews 2004 DNA loops"
+                "Ribon conditional density-2 DP09 model with RNAstructure 6.6 DNA loops"
             }
         }
     }

@@ -280,7 +280,7 @@ pub fn suboptimal_structures(
         truncated,
         structures,
         constraints: constraints.summary(),
-        method: "exact k-best Turner dynamic program",
+        method: "exact k-best nearest-neighbor dynamic program",
     })
 }
 

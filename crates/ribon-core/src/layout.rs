@@ -440,6 +440,13 @@ mod tests {
     }
 
     #[test]
+    fn layout_preserves_dna_thymine() {
+        let result = layout_structure("atg&t", "...&.", LayoutKind::Linear).unwrap();
+        assert_eq!(result.sequence, "ATGT");
+        assert_eq!(result.strand_breaks, vec![3]);
+    }
+
+    #[test]
     fn multi_strand_linear_layout_uses_antiparallel_rows_and_rungs() {
         let result = layout_structure("GGGG&CCCC", "((((&))))", LayoutKind::Linear).unwrap();
         assert_eq!(result.algorithm, "strand-aware antiparallel linear diagram");

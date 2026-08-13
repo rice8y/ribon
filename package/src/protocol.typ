@@ -22,7 +22,7 @@
 /// Pass the returned dictionary to every analysis operation that must share
 /// identical temperature, loop, dangle, salt, and MEA settings.
 #let analysis-model(
-  id: "ribon-turner-2004",
+  id: "ribon-rnastructure-6.6-rna",
   temperature: 37.0,
   min-loop: 3,
   dangles: 2,
@@ -37,21 +37,20 @@
   "mea_gamma": mea-gamma,
 )
 
-/// Construct the built-in Mathews 2004 DNA thermodynamic model.
-/// DNA input may use `T`; the analysis engine preserves the model selection
-/// while sharing the canonical base-index representation internally.
+/// Construct the built-in RNAstructure 6.6 DNA thermodynamic model.
+/// DNA input may use `T`, which is retained in public results and drawings.
+/// No additional monovalent-salt correction is applied to this family.
 #let dna-model(
   temperature: 37.0,
   min-loop: 3,
   dangles: 2,
-  salt: 1.021,
   mea-gamma: 1.0,
 ) = analysis-model(
-  id: "ribon-mathews-dna-2004",
+  id: "ribon-rnastructure-6.6-dna",
   temperature: temperature,
   min-loop: min-loop,
   dangles: dangles,
-  salt: salt,
+  salt: 1.021,
   mea-gamma: mea-gamma,
 )
 

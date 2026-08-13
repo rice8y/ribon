@@ -106,14 +106,21 @@ pub fn comparative_fold_with_model(
         gamma,
         model,
     )?;
+    let display_sequence = |sequence: &str| {
+        if model.nucleic_acid() == crate::energy::NucleicAcid::Dna {
+            sequence.replace('U', "T")
+        } else {
+            sequence.to_owned()
+        }
+    };
     Ok(ComparativeResult {
         sequence_count: alignment.len(),
         alignment_length: length,
-        consensus_sequence: consensus,
+        consensus_sequence: display_sequence(&consensus),
         consensus_structure: analysis.mfe_structure.clone(),
         consensus_energy_kcal_mol: analysis.mfe_energy_kcal_mol,
         analysis,
-        alignment,
+        alignment: alignment.iter().map(|row| display_sequence(row)).collect(),
         covariation,
         covariance_weight_kcal_mol: options.covariance_weight_kcal_mol,
         model: if model.parameter_profile_name().is_some() {
@@ -121,10 +128,10 @@ pub fn comparative_fold_with_model(
         } else {
             match model.nucleic_acid() {
                 crate::energy::NucleicAcid::Rna => {
-                    "alignment-column Turner 2004 RNA loop-energy average with covariation pseudo-energy"
+                    "alignment-column RNAstructure 6.6 RNA loop-energy average with covariation pseudo-energy"
                 }
                 crate::energy::NucleicAcid::Dna => {
-                    "alignment-column Mathews 2004 DNA loop-energy average with covariation pseudo-energy"
+                    "alignment-column RNAstructure 6.6 DNA loop-energy average with covariation pseudo-energy"
                 }
             }
         },
@@ -336,7 +343,11 @@ fn analyze_alignment(
     );
     let ensemble = summarize(&partition);
     Ok(AnalysisResult {
-        sequence: consensus.to_string(),
+        sequence: if model.nucleic_acid() == crate::energy::NucleicAcid::Dna {
+            consensus.replace('U', "T")
+        } else {
+            consensus.to_string()
+        },
         length: consensus.len(),
         temperature_celsius,
         model: ModelDescription {
@@ -345,10 +356,10 @@ fn analyze_alignment(
             } else {
                 match model.nucleic_acid() {
                     crate::energy::NucleicAcid::Rna => {
-                        "Ribon Turner 2004 RNA / alignment-column average"
+                        "Ribon RNAstructure 6.6 RNA / alignment-column average"
                     }
                     crate::energy::NucleicAcid::Dna => {
-                        "Ribon Mathews 2004 DNA / alignment-column average"
+                        "Ribon RNAstructure 6.6 DNA / alignment-column average"
                     }
                 }
             },
@@ -361,10 +372,10 @@ fn analyze_alignment(
             } else {
                 match model.nucleic_acid() {
                     crate::energy::NucleicAcid::Rna => {
-                        "alignment-averaged Turner RNA loop grammar with covariance"
+                        "alignment-averaged RNAstructure 6.6 RNA loop grammar with covariance"
                     }
                     crate::energy::NucleicAcid::Dna => {
-                        "alignment-averaged Mathews DNA loop grammar with covariance"
+                        "alignment-averaged RNAstructure 6.6 DNA loop grammar with covariance"
                     }
                 }
             },
@@ -1190,6 +1201,20 @@ mod tests {
             assert_eq!((actual.i, actual.j), (expected.i, expected.j));
             assert!((actual.probability - expected.probability).abs() < 1.0e-12);
         }
+    }
+
+    #[test]
+    fn dna_consensus_and_alignment_preserve_thymine() {
+        let alignment = vec!["GGGTTTCCC".to_string()];
+        let model =
+            EnergyModel::with_parameter_family(37.0, 0, 1.021, crate::energy::NucleicAcid::Dna)
+                .unwrap();
+        let result =
+            comparative_fold_with_model(&alignment, 3, 1.0, &model, &ComparativeOptions::default())
+                .unwrap();
+        assert_eq!(result.consensus_sequence, "GGGTTTCCC");
+        assert_eq!(result.analysis.sequence, "GGGTTTCCC");
+        assert_eq!(result.alignment, alignment);
     }
 
     #[test]

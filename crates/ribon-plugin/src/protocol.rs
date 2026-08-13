@@ -61,7 +61,7 @@ struct Model {
 impl Default for Model {
     fn default() -> Self {
         Self {
-            id: "ribon-turner-2004".into(),
+            id: ribon_core::MODEL_ID.into(),
             parameter_base: NucleicAcid::Rna,
             parameter_overrides: None,
             temperature_celsius: 37.0,
@@ -631,6 +631,11 @@ fn validate_model(model: &Model) -> Result<(), ApiError> {
     if !model.salt_molar.is_finite() || model.salt_molar <= 0.0 {
         return Err(ApiError::request(
             "model.salt_molar must be finite and positive",
+        ));
+    }
+    if selected_family(model) == NucleicAcid::Dna && (model.salt_molar - 1.021).abs() >= 1.0e-12 {
+        return Err(ApiError::request(
+            "the DNA parameter family does not support monovalent-salt corrections; use model.salt_molar=1.021",
         ));
     }
     if !model.mea_gamma.is_finite() || model.mea_gamma <= 0.0 {
@@ -1385,6 +1390,7 @@ mod tests {
             "input": {"sequence": "GGGAAACCC"}
         }));
         assert_eq!(analysis["ok"], true, "{analysis:#}");
+        assert_eq!(analysis["result"]["data"]["sequence"], "GGGAAACCC");
         let sequence = analysis["result"]["data"]["sequence"].clone();
         let structure = analysis["result"]["data"]["mfe_structure"].clone();
         let layout = call(json!({
@@ -1482,6 +1488,7 @@ mod tests {
             "model": model.clone()
         }));
         assert_eq!(analysis["ok"], true, "{analysis:#}");
+        assert_eq!(analysis["result"]["data"]["sequence"], "GGGTTTCCC");
         assert_eq!(analysis["result"]["data"]["mfe_structure"], "(((...)))");
         assert!(
             (analysis["result"]["data"]["mfe_energy_kcal_mol"]
@@ -1516,6 +1523,22 @@ mod tests {
             .as_str()
             .unwrap()
             .contains("DNA"));
+
+        let unsupported_salt = call(json!({
+            "schema_version": 1,
+            "operation": "analyze",
+            "input": {"sequence": "GGGTTTCCC"},
+            "model": {
+                "id": ribon_core::DNA_MODEL_ID,
+                "salt_molar": 0.1
+            }
+        }));
+        assert_eq!(unsupported_salt["ok"], false, "{unsupported_salt:#}");
+        assert_eq!(unsupported_salt["error"]["code"], "invalid_request");
+        assert!(unsupported_salt["error"]["message"]
+            .as_str()
+            .unwrap()
+            .contains("does not support monovalent-salt"));
     }
 
     #[test]

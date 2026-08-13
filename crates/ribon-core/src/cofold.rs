@@ -163,10 +163,10 @@ pub fn cofold_with_model(
             }
         } else {
             match (model.nucleic_acid(), dangles % 2) {
-                (NucleicAcid::Rna, 0) => "full polynomial cut-point Turner 2004 RNA cofold ensemble with intra- and intermolecular branches",
-                (NucleicAcid::Rna, _) => "full exhaustive cut-point fixed-structure Turner 2004 RNA cofold ensemble",
-                (NucleicAcid::Dna, 0) => "full polynomial cut-point Mathews 2004 DNA cofold ensemble with intra- and intermolecular branches",
-                (NucleicAcid::Dna, _) => "full exhaustive cut-point fixed-structure Mathews 2004 DNA cofold ensemble",
+                (NucleicAcid::Rna, 0) => "full polynomial cut-point RNAstructure 6.6 RNA cofold ensemble with intra- and intermolecular branches",
+                (NucleicAcid::Rna, _) => "full exhaustive cut-point fixed-structure RNAstructure 6.6 RNA cofold ensemble",
+                (NucleicAcid::Dna, 0) => "full polynomial cut-point RNAstructure 6.6 DNA cofold ensemble with intra- and intermolecular branches",
+                (NucleicAcid::Dna, _) => "full exhaustive cut-point fixed-structure RNAstructure 6.6 DNA cofold ensemble",
             }
         },
     })

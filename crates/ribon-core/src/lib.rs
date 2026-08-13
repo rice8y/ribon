@@ -103,7 +103,7 @@ pub use modified_parameters::ModifiedBaseKind;
 pub use parameters::{
     analyze_with_profile, dna_parameter_manifest, parameter_catalog, parameter_manifest,
     validate_parameter_profile, ParameterManifest, ParameterProfile, DNA_MODEL_ID,
-    DNA_PARAMETER_BUNDLE_SHA256, MODEL_ID, PARAMETER_BUNDLE_SHA256, SOURCE_ARCHIVE_SHA256,
+    DNA_PARAMETER_BUNDLE_SHA256, MODEL_ID, PARAMETER_BUNDLE_SHA256, REFERENCE_ARCHIVE_SHA256,
 };
 pub use partition::{partition, partition_with_constraints, PairProbability, PartitionResult};
 pub use pseudoknot::{
@@ -164,7 +164,7 @@ pub fn analyze(
     analyze_with_dangles(sequence, temperature_celsius, min_loop, gamma, 2)
 }
 
-/// Run all prediction stages with an explicit Turner dangle convention.
+/// Run all prediction stages with an explicit nearest-neighbor dangle convention.
 ///
 /// PF-derived quantities for requested models `1` and `3` enumerate the exact
 /// fixed-structure single-dangle/coaxial energy over the complete planar state
@@ -311,8 +311,8 @@ pub fn analyze_with_compiled_constraints(
                 "Ribon normalized custom thermodynamic parameter overlay"
             } else {
                 match energy_model.nucleic_acid() {
-                    NucleicAcid::Rna => "Ribon Turner 2004 RNA / RNAstructure 6.6 tables",
-                    NucleicAcid::Dna => "Ribon Mathews 2004 DNA / RNAstructure 6.6 tables",
+                    NucleicAcid::Rna => "Ribon RNAstructure 6.6 standard RNA parameter family",
+                    NucleicAcid::Dna => "Ribon RNAstructure 6.6 standard DNA parameter family",
                 }
             },
             parameter_profile_name: energy_model.parameter_profile_name().map(str::to_owned),
@@ -406,17 +406,14 @@ pub fn fold_sequence_with_options(
 
 fn model_note(nucleic_acid: NucleicAcid, dangles: u8, salt_correction: bool) -> &'static str {
     if nucleic_acid == NucleicAcid::Dna {
-        return if salt_correction {
-            "Mathews 2004 DNA nearest-neighbor tables with explicit temperature interpolation and monovalent-salt corrections."
-        } else {
-            "Mathews 2004 DNA nearest-neighbor free-energy and enthalpy tables at the 1.021 M reference salt concentration."
-        };
+        debug_assert!(!salt_correction);
+        return "RNAstructure 6.6 DNA free-energy and enthalpy tables with explicit temperature interpolation and no additional salt correction.";
     }
     match (dangles, salt_correction) {
-        (0, false) => "MFE, supplied-structure evaluation, and partition function share the independently parsed Turner 2004 tables. The grammar is single-strand, pseudoknot-free, and uses dangles=0 at the 1.021 M reference salt concentration.",
-        (2, false) => "MFE, supplied-structure evaluation, and partition function share the independently parsed Turner 2004 tables and the double-dangle/mismatch convention at the 1.021 M reference salt concentration.",
-        (0, true) => "Turner 2004 dangles=0 with published monovalent-salt corrections on stacks and hairpin, internal, and multibranch loops.",
-        (2, true) => "Turner 2004 dangles=2 with published monovalent-salt corrections on stacks and hairpin, internal, and multibranch loops.",
+        (0, false) => "MFE, supplied-structure evaluation, and partition function share the RNAstructure 6.6 standard RNA tables. The grammar is single-strand, pseudoknot-free, and uses dangles=0 at the 1.021 M salt-correction reference concentration.",
+        (2, false) => "MFE, supplied-structure evaluation, and partition function share the RNAstructure 6.6 standard RNA tables and the double-dangle/mismatch convention at the 1.021 M salt-correction reference concentration.",
+        (0, true) => "RNAstructure 6.6 RNA dangles=0 with published monovalent-salt corrections on stacks and hairpin, internal, and multibranch loops.",
+        (2, true) => "RNAstructure 6.6 RNA dangles=2 with published monovalent-salt corrections on stacks and hairpin, internal, and multibranch loops.",
         (1, false) => "MFE, supplied-structure evaluation, and the exact fixed-structure ensemble use exclusive single dangling ends at the 1.021 M reference salt concentration.",
         (3, false) => "MFE and supplied-structure evaluation include coaxial stacking; the exact fixed-structure ensemble sums the same evaluated structure energies at the 1.021 M reference salt concentration.",
         (1, true) => "Single-dangle MFE and exact fixed-structure ensemble with published monovalent-salt corrections.",

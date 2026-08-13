@@ -225,7 +225,7 @@ pub fn local_fold_with_model(
         temperature_celsius,
         dangles,
         salt_molar,
-        method: "exact banded sliding-window Turner inside/outside ensembles; arithmetic mean over containing windows",
+        method: "exact banded sliding-window nearest-neighbor inside/outside ensembles; arithmetic mean over containing windows",
     })
 }
 

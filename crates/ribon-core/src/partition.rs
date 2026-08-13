@@ -605,9 +605,9 @@ fn partition_odd_exact(
         pair_probabilities,
         unpaired_probabilities,
         model: if model.dangles() == 1 {
-            "exact fixed-structure Turner ensemble, exclusive single dangles"
+            "exact fixed-structure selected nearest-neighbor ensemble, exclusive single dangles"
         } else {
-            "exact fixed-structure Turner ensemble, single dangles and coaxial stacking"
+            "exact fixed-structure selected nearest-neighbor ensemble, single dangles and coaxial stacking"
         },
         salt_molar: model.salt_molar(),
         constraints: constraints.summary(),

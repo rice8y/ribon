@@ -362,7 +362,11 @@ impl ConstraintModel {
             || self.force_unpaired[j]
             || self.forbidden_pairs[i][j]
             || self.max_span.is_some_and(|span| j - i >= span)
-            || (self.no_gu && matches!((bases[i], bases[j]), (b'G', b'U') | (b'U', b'G')))
+            || (self.no_gu
+                && matches!(
+                    (bases[i], bases[j]),
+                    (b'G', b'U') | (b'U', b'G') | (b'G', b'T') | (b'T', b'G')
+                ))
         {
             return false;
         }

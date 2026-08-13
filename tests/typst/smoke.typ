@@ -16,9 +16,11 @@
 #assert(data(evaluate(sequence, analysis.mfe_structure, model: model)).total_kcal_mol < 0.0)
 #assert.eq(data(fold(sequence, model: analysis-model(dangles: 3))).dangles, 3)
 #let dna = data(analyze("GGGTTTCCC", model: dna-model(dangles: 0)))
+#assert.eq(dna.sequence, "GGGTTTCCC")
 #assert.eq(dna.mfe_structure, "(((...)))")
 #assert(calc.abs(dna.mfe_energy_kcal_mol + 0.2) < 0.000000001)
 #assert(dna.model.parameter_set.contains("DNA"))
+#assert.eq(data(layout("ATGT", "....", method: "linear")).sequence, "ATGT")
 #let dna-conditional = data(conditional-density2(
   "GGGTTTCCC",
   ".........",

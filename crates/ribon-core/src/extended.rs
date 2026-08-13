@@ -353,7 +353,7 @@ pub fn fold_modified_with_model(
         model: if custom_profile {
             "custom normalized RNA model with experimental sparse modified-base nearest-neighbor corrections"
         } else {
-            "Turner 2004 with experimental sparse modified-base nearest-neighbor corrections"
+            "RNAstructure 6.6 RNA with experimental sparse modified-base nearest-neighbor corrections"
         },
     })
 }
@@ -445,7 +445,7 @@ pub fn fold_gquad_with_model(
         model: if custom_profile {
             "integrated custom RNA/G-quadruplex exterior and generalized-multiloop grammar"
         } else {
-            "integrated Turner/G-quadruplex exterior and generalized-multiloop grammar"
+            "integrated RNAstructure 6.6 RNA/G-quadruplex exterior and generalized-multiloop grammar"
         },
     })
 }
