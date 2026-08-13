@@ -1,0 +1,27 @@
+{
+  "content_margins_pixels": [
+    79.0,
+    48.0,
+    170.0,
+    41.0
+  ],
+  "embedded_raster_images": 0,
+  "feature_labels": [
+    "Cofold",
+    "Circular RNA",
+    "Modified base",
+    "G-quadruplex",
+    "Pseudoknot",
+    "Local accessibility",
+    "Exact energy landscape",
+    "Exact inverse design",
+    "Ligand microstate ensemble",
+    "aptamer",
+    "p=0.",
+    "m6A"
+  ],
+  "grayscale_standard_deviation": 0.0863048,
+  "ink_fraction": 0.013495999999999952,
+  "pages": 1,
+  "pdf": "target/qa/typst/extended.pdf"
+}

@@ -1,0 +1,24 @@
+{
+  "modules": [
+    {
+      "bytes": 1715708,
+      "imports": [
+        [
+          "typst_env",
+          "wasm_minimal_protocol_send_result_to_host"
+        ],
+        [
+          "typst_env",
+          "wasm_minimal_protocol_write_args_to_buffer"
+        ]
+      ],
+      "path": "package/ribon_plugin.wasm",
+      "public_exports": [
+        "run"
+      ],
+      "sha256": "dd46e824ef952ea24f12032544c2b73389cb16c440ad030ffe44c94bd4d2e5b1",
+      "valid": true
+    }
+  ],
+  "wasm_tools_validation": true
+}

@@ -1,0 +1,12 @@
+{
+  "page_count": 3,
+  "renderer": "pdftoppm version 25.11.0",
+  "resolution_ppi": 150,
+  "schema": "ribon.plot-layout-pixel-golden/1",
+  "sha256": [
+    "46ff1bea5e8b1bf93b146a12ee76e85251bb22d1fce0e65f3f682bd10cdd9d52",
+    "2191ffa9e0ff1b80b316ff9afa844de4b6890cfad7183eb0f9d6cb133f724d37",
+    "b59132290207348269ed786487df2f2773e0be250b62929425bd8a2ee1792f35"
+  ],
+  "source": "tests/typst/plot_layout_quality.typ"
+}

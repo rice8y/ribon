@@ -1,0 +1,30 @@
+{
+  "source": "Andronescu, Pop & Condon 2010 S-Test ShPK (RNA STRAND/PseudoBase literature records)",
+  "source_url": "https://www.cs.ubc.ca/labs/algorithms/Publications/PaperMaterials/PseudoRNA/data/TES_pkshort_max200_RenJab-S20.txt",
+  "cases": [
+    {"id":"Bt_PrP","sequence":"GCCCCAUGGAGGUGGCUGGGGCCAGCCUCAUGGAGGUGGCUGGGG","structure":"...[[[[[[............((((((]]]]]]....)))))).."},
+    {"id":"BWYV","sequence":"GGCGCGGCACCGUCCGCGGAACAAACGG","structure":"..(((((..[[[[)))))......]]]]"},
+    {"id":"Ec_PK1","sequence":"CGAGGGGCGGUUGGCCUCGUAAAAAGCCGC","structure":"[[[[[.((((((..]]]]].....))))))"},
+    {"id":"Ec_PK4","sequence":"GUUUGUUAGUGGCGUGUCCGUCCGCAGCUGGCAAGCGAAUGUAAAGACUGAC","structure":"((((((((((.(((.[[[.[[[))).)))))))))).........]]].]]]"},
+    {"id":"EC_S15","sequence":"GGGAUCGCUGAAUUAGAGAUCGGCGUCCUUUCAUUCUAUAUACUUUGGAGUUUUAAAAUGUCUCUAA","structure":"((((.((((((.[[[[[[[))))))))))...............................]]]]]]]"},
+    {"id":"HDV","sequence":"GGCCGGCATGGTCCCAGCCTCCTCGCTGGCGCCGGCTGGGCAACAUUCCGAGGGGACCGUCCCCUCGGUAAUGGCGAAUGGGACCCA","structure":"[[[[[[[..((((((((((........)))]]]]]]]......(((((((((((((...))))))))).)))).....))))))).."},
+    {"id":"HDV_anti","sequence":"GGGUCGGCAUGGCAUCUCCACCUCCUCGCGGUCCGACCUGGGCAUCCGAAGGAGGACGCACGUCCACUCGGAUGGCUAAGGGAGAGCCACU","structure":".((((((........[[[[(((.......)))))))))....(((((((....((((....))))..)))))))......]]]]......."},
+    {"id":"HIVRT32","sequence":"UCAAGUAUUCCGAAGCUCAACGGGAAAAUGAGCUA","structure":".......[[[[[.((((((.]]]]]...))))))."},
+    {"id":"HIVRT322","sequence":"UCAAGUAUUCCGAAGGGUAACGGGAAAAUGCCCUA","structure":".......[[[[[.((((((.]]]]]...))))))."},
+    {"id":"HIVRT33","sequence":"UCAAGUAUUCCGAAGCUUGACGGGAAAAUAAGCUA","structure":".......[[[[[.((((((.]]]]]...))))))."},
+    {"id":"Hs_Prp","sequence":"GCCUCAUGGUGGUGGCUGGGGGCAGCCUCAUGGUGGUGGCUGGGG","structure":"...((((((.............[[[[[))))))....]]]]]..."},
+    {"id":"LP_PK1","sequence":"CGAGAAGGAGAUCUCUCGUAAAUAAGACUC","structure":"[[[[[..(((.((]]]]].......)))))"},
+    {"id":"minimalIBV","sequence":"GGGGUAUCAGUCAGGCUCGGCUGGUACCCCUUGCAAAGCGAGCCU","structure":"(((((((((((..[[[[[[)))))))))))........]]]]]]."},
+    {"id":"MMTV","sequence":"GGGGCAGUCCCCUAGCCCCACUCAAAAGGGGGAU","structure":"[[[[[..((((((.]]]]]........))))))."},
+    {"id":"MMTV_vpk","sequence":"GGCGCAGUGGGUCAGCGCCACUCAAAAGGCCCAU","structure":"[[[[[..((((((.]]]]]........))))))."},
+    {"id":"pKA_A","sequence":"GGCCGCCAGGCUCCAGCGGCCUUGCAAAAGGAGCCU","structure":"[[[[[[..((((((.]]]]]]........))))))."},
+    {"id":"satRPV","sequence":"ACAGAGCGCGUACUGUCUGACGACGUAUCCGCGCGGACUAGAAGGCUGGUGCCUCGUCCAACAAAUAGAUACA","structure":"((((.[[[[[..))))........(((((]]]]]((((....((((....)))).))))........)))))."},
+    {"id":"SRV_1","sequence":"GGGGCCAGCCCCAGGCCCCGAAACAAGCUUAUGGGGCA","structure":"((((((.[[[[[.)))))).............]]]]]."},
+    {"id":"T2_gene32","sequence":"CUGACCAGCUAUGAGGUCAUACAUCGUCAUAGC","structure":".[[[[[.(((((((]]]]].......)))))))"},
+    {"id":"T4_gene32","sequence":"UGCCAGCUAUGAGGUAAAGUGUCAUAGC","structure":"[[[[.(((((((]]]].....)))))))"},
+    {"id":"TMV_L","sequence":"AUAAUAAAUAACGGAUUGUGUCCGUAAUCACACGUGGUGCGUACGAUAACGCAUAGUGUUUUUCCCUCCACUUAAAUCGAAGGG","structure":"............[[[.((((]]].....))))[[[.((((((]]]...))))))[[[[.....(((((]]]]......).))))"},
+    {"id":"Tt_LSU_P3P7","sequence":"AGACCGUCAAACACAGACUAAAUGUCGGUCGGGGAAGAUGUAUUCUUCUCAUAAGAUAUAGUCGG","structure":".(((((.((....[.[[[[[..)).))))).(((((((.....)))))))........]]]]]]."},
+    {"id":"TYMV","sequence":"UUAGCUCGCCAGUUAGCGAGGUCUGUCCCCACACGACAGAUAAUCGGGUGCAACUCCCGCCCCUCUUCCGAGGGUCAUCGGAACCA","structure":"....(((((......)))))(((((((.......)))))))...((((.......))))[[[...((((((]]]...))))))..."},
+    {"id":"AKV_MuLV","sequence":"GGGUCAGGAGCCCCCCCCUGAACCCAGGAUAACCCUCACUGUCGGGGGGC","structure":"((((((((.[[[[[[[)))).))))..................]]]]]]]"}
+  ]
+}

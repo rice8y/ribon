@@ -1,0 +1,99 @@
+{
+  "golden_updated": false,
+  "metadata": {
+    "axis-modes": [
+      "linear",
+      "log"
+    ],
+    "exact-profile": [
+      0.5,
+      0.75,
+      0.5,
+      0.0
+    ],
+    "exact-reference-profiles": [
+      [
+        1,
+        2,
+        1,
+        0
+      ],
+      [
+        1,
+        1,
+        1,
+        0
+      ]
+    ],
+    "explicit-position": [
+      0.28,
+      0.32
+    ],
+    "inner-position-count": 9,
+    "outer-positions": [
+      "top",
+      "bottom",
+      "left",
+      "right"
+    ],
+    "reference-axes": [
+      [
+        "x",
+        "y"
+      ],
+      [
+        "x",
+        "y"
+      ]
+    ],
+    "schema": "ribon.plot-layout-qa/1",
+    "secondary-axes": [
+      "x2",
+      "y2"
+    ],
+    "secondary-series-axes": [
+      "x",
+      "y2"
+    ]
+  },
+  "numeric_exact": true,
+  "pages": [
+    {
+      "ink_fraction": 0.013276999999999983,
+      "margins_pixels": [
+        58.0,
+        57.0,
+        59.0,
+        717.0
+      ],
+      "page": 1,
+      "standard_deviation": 0.0867342
+    },
+    {
+      "ink_fraction": 0.01830200000000004,
+      "margins_pixels": [
+        58.0,
+        57.0,
+        59.0,
+        466.0
+      ],
+      "page": 2,
+      "standard_deviation": 0.101322
+    },
+    {
+      "ink_fraction": 0.016893999999999965,
+      "margins_pixels": [
+        58.0,
+        57.0,
+        59.0,
+        555.0
+      ],
+      "page": 3,
+      "standard_deviation": 0.0992039
+    }
+  ],
+  "pdf": "target/qa/typst/plot-layout-quality.pdf",
+  "pixel_exact": true,
+  "schema": "ribon.plot-layout-validation/1",
+  "vector_only": true
+}

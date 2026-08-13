@@ -1,0 +1,71 @@
+{
+  "source": "ViennaRNA 2.7.2 dangles=0 uniq_ML=true deterministic differential corpus",
+  "commit": "1ffec79f5e258896160f7362ced8263450f371dc",
+  "seed": 20260809,
+  "cases": [
+    {
+      "sequence":"ACGAAUGGCCAUCUAGUGAUACUAUAAUCG",
+      "mfe_structure":".(((((((..(((....))).))))..)))",
+      "mfe_energy":-2.20000005,
+      "ensemble_energy":-2.62888481,
+      "centroid_structure":".(((((((..(((....))).))))..)))",
+      "mea_structure":".(((((((..(((....))).))))..)))"
+    },
+    {
+      "sequence":"GGGGGUGUUUCACUCGUGGCAGGAAGCAGC",
+      "mfe_structure":"...(.((((((.((......)))))))).)",
+      "mfe_energy":-6.19999981,
+      "ensemble_energy":-6.47390960,
+      "centroid_structure":"...(.((((((.((......)))))))).)",
+      "mea_structure":"...(.((((((.((......)))))))).)"
+    },
+    {
+      "sequence":"CUCGAUUUGCGCACUCAUACCAGUCUGUCU",
+      "mfe_structure":"........(((.(((......))).)))..",
+      "mfe_energy":-0.50000000,
+      "ensemble_energy":-1.03983994,
+      "centroid_structure":"........(((.(((......))).)))..",
+      "mea_structure":"........(((.(((......))).))).."
+    },
+    {
+      "sequence":"CGAGUGAGACGCAUAGGGUAAUUGGCGAGG",
+      "mfe_structure":".........(((..(......)..)))...",
+      "mfe_energy":-1.39999998,
+      "ensemble_energy":-2.04789553,
+      "centroid_structure":".........(((............)))...",
+      "mea_structure":".........(((..(......)..)))..."
+    },
+    {
+      "sequence":"CUUACCGAGUGCGUUGAUAUGUAAUGUUUAUGAUAAUACCCUAAGGUUAUGGGUCCUCGG",
+      "mfe_structure":"....(((((.((((((.....))))))..........((((.........)))).)))))",
+      "mfe_energy":-8.89999962,
+      "ensemble_energy":-10.3600020,
+      "centroid_structure":"....(((((..............................................)))))",
+      "mea_structure":"....(((((.((.(....................................).)).)))))"
+    },
+    {
+      "sequence":"GUCCCGGCCUCGAGACCUAUCCGGUUCGUCACGGAGCGCAGCCCGUGACGCGGGGUGACU",
+      "mfe_structure":"(((...((((((.((((.....))))((((((((.((...))))))))))))))))))).",
+      "mfe_energy":-22.6000004,
+      "ensemble_energy":-23.4809333,
+      "centroid_structure":".((.(......).))...........((((((((.((...))))))))))..........",
+      "mea_structure":"(((.((....)).))).(((((.(..((((((((.((...))))))))))).)))))..."
+    },
+    {
+      "sequence":"AUAAUUACGGCUAGCGACGGUCACCGCUGG",
+      "mfe_structure":"..........((((((........))))))",
+      "mfe_energy":-7.00000000,
+      "ensemble_energy":-7.04793569,
+      "centroid_structure":"..........((((((........))))))",
+      "mea_structure":"..........((((((........))))))"
+    },
+    {
+      "sequence":"CUACCGCCGGAUCACGCAUUUUCUCUCCGG",
+      "mfe_structure":"......(((((..............)))))",
+      "mfe_energy":-4.80000019,
+      "ensemble_energy":-4.93552612,
+      "centroid_structure":"......(((((..............)))))",
+      "mea_structure":"......(((((..............)))))"
+    }
+  ]
+}

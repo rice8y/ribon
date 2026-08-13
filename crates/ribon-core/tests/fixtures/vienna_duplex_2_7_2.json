@@ -1,0 +1,14 @@
+{
+  "source": "ViennaRNA 2.7.2 RNAduplex, dangles=0",
+  "commit": "1ffec79f5e258896160f7362ced8263450f371dc",
+  "cases": [
+    {"sequence_a":"GGG","sequence_b":"CCC","salt_molar":1.021,"full_structure":"(((&)))","mfe_energy":-2.5},
+    {"sequence_a":"GGGAAACCC","sequence_b":"GGGUUUCCC","salt_molar":1.021,"full_structure":"(((((((((&)))))))))","mfe_energy":-15.5},
+    {"sequence_a":"GCAUACGUGC","sequence_b":"GCAUGCGUAC","salt_molar":1.021,"full_structure":"((((.(....&).))))....","mfe_energy":-4.7},
+    {"sequence_a":"GCAUACGUGC","sequence_b":"GCAUGCGUAC","salt_molar":0.1,"full_structure":"((((.(....&).))))....","mfe_energy":-3.02},
+    {"sequence_a":"ACGUGC","sequence_b":"GCAUGC","salt_molar":1.021,"full_structure":".(((((&))))).","mfe_energy":-4.2},
+    {"sequence_a":"AUGGCUACGAU","sequence_b":"AUCGUAGCCAU","salt_molar":1.021,"full_structure":"(((((((((((&)))))))))))","mfe_energy":-16.3},
+    {"sequence_a":"GGCAUUGCAACG","sequence_b":"CGUUGCAAUGCC","salt_molar":0.5,"full_structure":"((((((((((((&))))))))))))","mfe_energy":-19.48},
+    {"sequence_a":"UACCGGAUCGAA","sequence_b":"UUCGAUCCGGUA","salt_molar":2.0,"full_structure":"((((((((((((&))))))))))))","mfe_energy":-19.3}
+  ]
+}

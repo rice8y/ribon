@@ -1,0 +1,11 @@
+{
+  "changed_pages": [],
+  "dpi": 110,
+  "golden": "tests/golden/render_golden_sha256.json",
+  "golden_updated": false,
+  "pages": 72,
+  "pdf": "target/qa/ribon-real-data-validation.pdf",
+  "pixel_exact": true,
+  "rasterizer": "pdftoppm version 25.11.0",
+  "typst": "typst 0.15.0 (unknown commit)"
+}

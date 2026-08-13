@@ -1,0 +1,49 @@
+{
+  "golden_updated": false,
+  "metadata": {
+    "comparison-pair-count": 2,
+    "exact-expected": [
+      0.5,
+      0.75,
+      0.5,
+      0.0
+    ],
+    "exact-length": 4,
+    "exact-reference": [
+      1,
+      2,
+      1,
+      0
+    ],
+    "schema": "ribon.plot-qa/1"
+  },
+  "numeric_exact": true,
+  "pages": [
+    {
+      "ink_fraction": 0.01566500000000004,
+      "margins_pixels": [
+        82.0,
+        80.0,
+        83.0,
+        533.0
+      ],
+      "page": 1,
+      "standard_deviation": 0.0934359
+    },
+    {
+      "ink_fraction": 0.018784000000000023,
+      "margins_pixels": [
+        82.0,
+        80.0,
+        83.0,
+        590.0
+      ],
+      "page": 2,
+      "standard_deviation": 0.102597
+    }
+  ],
+  "pdf": "target/qa/typst/plot-quality.pdf",
+  "pixel_exact": true,
+  "schema": "ribon.plot-validation/1",
+  "vector_only": true
+}

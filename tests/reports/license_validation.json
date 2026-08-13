@@ -1,0 +1,25 @@
+{
+  "dna_parameter_bundle_sha256": "019ad1d5c3dac421df37e0a5aeded6d3da50da03deecc23ba0ae5a6d5d06b977",
+  "dna_parameter_file_count": 33,
+  "dna_parameter_source": "RNAstructure 6.6 data_tables/dna.*",
+  "external_oracles_release_excluded": true,
+  "linked_cparty": false,
+  "linked_original_naview": false,
+  "linked_varna": false,
+  "linked_viennarna": false,
+  "parameter_bundle_sha256": "0c00a31400f1dedbe9a3e161b2f9b1b74cde54941144ee988f48173d33bbcd7b",
+  "parameter_file_count": 34,
+  "parameter_source": "RNAstructure 6.6 data_tables/rna.*",
+  "project_license": "GPL-2.0-only",
+  "runtime_package_file_set_exact": true,
+  "source_archive_sha256": "8a2904c4b9e16854a2aac3c6f3e510c844685f8cf330601e986d12f7d97dadc8",
+  "stale_linked_backend_paths_absent": true,
+  "typst_universe_license_blocker": false,
+  "wasm_imports": [
+    "typst_env.wasm_minimal_protocol_write_args_to_buffer",
+    "typst_env.wasm_minimal_protocol_send_result_to_host"
+  ],
+  "wasm_public_exports": [
+    "run"
+  ]
+}

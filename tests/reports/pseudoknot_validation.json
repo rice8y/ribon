@@ -1,0 +1,1197 @@
+{
+  "arbitrary_prefix_maximum_state_count": 116,
+  "arbitrary_prefix_minimum_state_count": 4,
+  "arbitrary_prefix_probability_mass_normalized": true,
+  "arbitrary_prefix_state_spaces_complete": true,
+  "cases": 24,
+  "engine": "independent Rust probability-directed pseudoknot decoder",
+  "hybrid_predictions_with_crossing_pairs": 24,
+  "methods": {
+    "hybrid": {
+      "mean_precision": 0.7471536423689114,
+      "mean_sensitivity": 0.7656924508240297
+    },
+    "matching_centroid": {
+      "mean_precision": 0.5341382575757575,
+      "mean_sensitivity": 0.3791628618486204
+    },
+    "matching_mea": {
+      "mean_precision": 0.562566257380569,
+      "mean_sensitivity": 0.40157447801023655
+    },
+    "probknot": {
+      "mean_precision": 0.5756761207239093,
+      "mean_sensitivity": 0.474049225484984
+    },
+    "restricted_centroid": {
+      "mean_precision": 0.7246819153069154,
+      "mean_sensitivity": 0.6851205553991931
+    },
+    "restricted_mea": {
+      "mean_precision": 0.720631487786093,
+      "mean_sensitivity": 0.7012316665103042
+    },
+    "restricted_mfe": {
+      "mean_precision": 0.7180336105171632,
+      "mean_sensitivity": 0.7056761109547488
+    }
+  },
+  "probknot_predictions_with_crossing_pairs": 7,
+  "restricted_probability_mass_normalized": true,
+  "restricted_values_finite": true,
+  "results": [
+    {
+      "arbitrary_prefix_length": 10,
+      "arbitrary_state_count": 47,
+      "hybrid_crossing_count": 42,
+      "id": "Bt_PrP",
+      "length": 45,
+      "methods": {
+        "hybrid": {
+          "precision": 0.07692307692307693,
+          "predicted_pair_count": 13,
+          "sensitivity": 0.08333333333333333
+        },
+        "matching_centroid": {
+          "precision": 0.2857142857142857,
+          "predicted_pair_count": 14,
+          "sensitivity": 0.3333333333333333
+        },
+        "matching_mea": {
+          "precision": 0.3333333333333333,
+          "predicted_pair_count": 15,
+          "sensitivity": 0.4166666666666667
+        },
+        "probknot": {
+          "precision": 0.3333333333333333,
+          "predicted_pair_count": 15,
+          "sensitivity": 0.4166666666666667
+        },
+        "restricted_centroid": {
+          "precision": 0.0,
+          "predicted_pair_count": 7,
+          "sensitivity": 0.0
+        },
+        "restricted_mea": {
+          "precision": 0.0,
+          "predicted_pair_count": 8,
+          "sensitivity": 0.0
+        },
+        "restricted_mfe": {
+          "precision": 0.0,
+          "predicted_pair_count": 11,
+          "sensitivity": 0.0
+        }
+      },
+      "probknot_crossing_count": 0,
+      "reference_pair_count": 12,
+      "restricted_state_count": 237501,
+      "restricted_state_count_exact": "237501"
+    },
+    {
+      "arbitrary_prefix_length": 10,
+      "arbitrary_state_count": 54,
+      "hybrid_crossing_count": 20,
+      "id": "BWYV",
+      "length": 28,
+      "methods": {
+        "hybrid": {
+          "precision": 1.0,
+          "predicted_pair_count": 9,
+          "sensitivity": 1.0
+        },
+        "matching_centroid": {
+          "precision": 1.0,
+          "predicted_pair_count": 5,
+          "sensitivity": 0.5555555555555556
+        },
+        "matching_mea": {
+          "precision": 1.0,
+          "predicted_pair_count": 5,
+          "sensitivity": 0.5555555555555556
+        },
+        "probknot": {
+          "precision": 0.8333333333333334,
+          "predicted_pair_count": 6,
+          "sensitivity": 0.5555555555555556
+        },
+        "restricted_centroid": {
+          "precision": 1.0,
+          "predicted_pair_count": 9,
+          "sensitivity": 1.0
+        },
+        "restricted_mea": {
+          "precision": 1.0,
+          "predicted_pair_count": 9,
+          "sensitivity": 1.0
+        },
+        "restricted_mfe": {
+          "precision": 1.0,
+          "predicted_pair_count": 9,
+          "sensitivity": 1.0
+        }
+      },
+      "probknot_crossing_count": 0,
+      "reference_pair_count": 9,
+      "restricted_state_count": 328,
+      "restricted_state_count_exact": "328"
+    },
+    {
+      "arbitrary_prefix_length": 10,
+      "arbitrary_state_count": 18,
+      "hybrid_crossing_count": 30,
+      "id": "Ec_PK1",
+      "length": 30,
+      "methods": {
+        "hybrid": {
+          "precision": 1.0,
+          "predicted_pair_count": 11,
+          "sensitivity": 1.0
+        },
+        "matching_centroid": {
+          "precision": 0.0,
+          "predicted_pair_count": 5,
+          "sensitivity": 0.0
+        },
+        "matching_mea": {
+          "precision": 0.0,
+          "predicted_pair_count": 5,
+          "sensitivity": 0.0
+        },
+        "probknot": {
+          "precision": 0.4444444444444444,
+          "predicted_pair_count": 9,
+          "sensitivity": 0.36363636363636365
+        },
+        "restricted_centroid": {
+          "precision": 1.0,
+          "predicted_pair_count": 11,
+          "sensitivity": 1.0
+        },
+        "restricted_mea": {
+          "precision": 1.0,
+          "predicted_pair_count": 11,
+          "sensitivity": 1.0
+        },
+        "restricted_mfe": {
+          "precision": 1.0,
+          "predicted_pair_count": 11,
+          "sensitivity": 1.0
+        }
+      },
+      "probknot_crossing_count": 20,
+      "reference_pair_count": 11,
+      "restricted_state_count": 1293,
+      "restricted_state_count_exact": "1293"
+    },
+    {
+      "arbitrary_prefix_length": 10,
+      "arbitrary_state_count": 91,
+      "hybrid_crossing_count": 40,
+      "id": "Ec_PK4",
+      "length": 52,
+      "methods": {
+        "hybrid": {
+          "precision": 0.6666666666666666,
+          "predicted_pair_count": 15,
+          "sensitivity": 0.5263157894736842
+        },
+        "matching_centroid": {
+          "precision": 1.0,
+          "predicted_pair_count": 13,
+          "sensitivity": 0.6842105263157895
+        },
+        "matching_mea": {
+          "precision": 1.0,
+          "predicted_pair_count": 13,
+          "sensitivity": 0.6842105263157895
+        },
+        "probknot": {
+          "precision": 0.9285714285714286,
+          "predicted_pair_count": 14,
+          "sensitivity": 0.6842105263157895
+        },
+        "restricted_centroid": {
+          "precision": 0.8333333333333334,
+          "predicted_pair_count": 12,
+          "sensitivity": 0.5263157894736842
+        },
+        "restricted_mea": {
+          "precision": 0.8333333333333334,
+          "predicted_pair_count": 12,
+          "sensitivity": 0.5263157894736842
+        },
+        "restricted_mfe": {
+          "precision": 0.7142857142857143,
+          "predicted_pair_count": 14,
+          "sensitivity": 0.5263157894736842
+        }
+      },
+      "probknot_crossing_count": 0,
+      "reference_pair_count": 19,
+      "restricted_state_count": 195325,
+      "restricted_state_count_exact": "195325"
+    },
+    {
+      "arbitrary_prefix_length": 10,
+      "arbitrary_state_count": 116,
+      "hybrid_crossing_count": 70,
+      "id": "EC_S15",
+      "length": 67,
+      "methods": {
+        "hybrid": {
+          "precision": 1.0,
+          "predicted_pair_count": 17,
+          "sensitivity": 1.0
+        },
+        "matching_centroid": {
+          "precision": 0.6666666666666666,
+          "predicted_pair_count": 15,
+          "sensitivity": 0.5882352941176471
+        },
+        "matching_mea": {
+          "precision": 0.6666666666666666,
+          "predicted_pair_count": 15,
+          "sensitivity": 0.5882352941176471
+        },
+        "probknot": {
+          "precision": 0.5555555555555556,
+          "predicted_pair_count": 18,
+          "sensitivity": 0.5882352941176471
+        },
+        "restricted_centroid": {
+          "precision": 0.375,
+          "predicted_pair_count": 16,
+          "sensitivity": 0.35294117647058826
+        },
+        "restricted_mea": {
+          "precision": 0.3333333333333333,
+          "predicted_pair_count": 18,
+          "sensitivity": 0.35294117647058826
+        },
+        "restricted_mfe": {
+          "precision": 0.3157894736842105,
+          "predicted_pair_count": 19,
+          "sensitivity": 0.35294117647058826
+        }
+      },
+      "probknot_crossing_count": 0,
+      "reference_pair_count": 17,
+      "restricted_state_count": 21815022,
+      "restricted_state_count_exact": "21815022"
+    },
+    {
+      "arbitrary_prefix_length": 10,
+      "arbitrary_state_count": 30,
+      "hybrid_crossing_count": 128,
+      "id": "HDV",
+      "length": 87,
+      "methods": {
+        "hybrid": {
+          "precision": 0.5333333333333333,
+          "predicted_pair_count": 30,
+          "sensitivity": 0.5333333333333333
+        },
+        "matching_centroid": {
+          "precision": 0.4642857142857143,
+          "predicted_pair_count": 28,
+          "sensitivity": 0.43333333333333335
+        },
+        "matching_mea": {
+          "precision": 0.4642857142857143,
+          "predicted_pair_count": 28,
+          "sensitivity": 0.43333333333333335
+        },
+        "probknot": {
+          "precision": 0.43333333333333335,
+          "predicted_pair_count": 30,
+          "sensitivity": 0.43333333333333335
+        },
+        "restricted_centroid": {
+          "precision": 0.36,
+          "predicted_pair_count": 25,
+          "sensitivity": 0.3
+        },
+        "restricted_mea": {
+          "precision": 0.36,
+          "predicted_pair_count": 25,
+          "sensitivity": 0.3
+        },
+        "restricted_mfe": {
+          "precision": 0.36,
+          "predicted_pair_count": 25,
+          "sensitivity": 0.3
+        }
+      },
+      "probknot_crossing_count": 0,
+      "reference_pair_count": 30,
+      "restricted_state_count": 4294967295,
+      "restricted_state_count_exact": "11365116366"
+    },
+    {
+      "arbitrary_prefix_length": 10,
+      "arbitrary_state_count": 54,
+      "hybrid_crossing_count": 119,
+      "id": "HDV_anti",
+      "length": 91,
+      "methods": {
+        "hybrid": {
+          "precision": 0.3225806451612903,
+          "predicted_pair_count": 31,
+          "sensitivity": 0.4166666666666667
+        },
+        "matching_centroid": {
+          "precision": 0.18181818181818182,
+          "predicted_pair_count": 22,
+          "sensitivity": 0.16666666666666666
+        },
+        "matching_mea": {
+          "precision": 0.14814814814814814,
+          "predicted_pair_count": 27,
+          "sensitivity": 0.16666666666666666
+        },
+        "probknot": {
+          "precision": 0.27586206896551724,
+          "predicted_pair_count": 29,
+          "sensitivity": 0.3333333333333333
+        },
+        "restricted_centroid": {
+          "precision": 0.3,
+          "predicted_pair_count": 20,
+          "sensitivity": 0.25
+        },
+        "restricted_mea": {
+          "precision": 0.3,
+          "predicted_pair_count": 20,
+          "sensitivity": 0.25
+        },
+        "restricted_mfe": {
+          "precision": 0.2857142857142857,
+          "predicted_pair_count": 21,
+          "sensitivity": 0.25
+        }
+      },
+      "probknot_crossing_count": 85,
+      "reference_pair_count": 24,
+      "restricted_state_count": 4294967295,
+      "restricted_state_count_exact": "7637627030"
+    },
+    {
+      "arbitrary_prefix_length": 10,
+      "arbitrary_state_count": 41,
+      "hybrid_crossing_count": 36,
+      "id": "HIVRT32",
+      "length": 35,
+      "methods": {
+        "hybrid": {
+          "precision": 0.9166666666666666,
+          "predicted_pair_count": 12,
+          "sensitivity": 1.0
+        },
+        "matching_centroid": {
+          "precision": 1.0,
+          "predicted_pair_count": 6,
+          "sensitivity": 0.5454545454545454
+        },
+        "matching_mea": {
+          "precision": 1.0,
+          "predicted_pair_count": 6,
+          "sensitivity": 0.5454545454545454
+        },
+        "probknot": {
+          "precision": 0.9166666666666666,
+          "predicted_pair_count": 12,
+          "sensitivity": 1.0
+        },
+        "restricted_centroid": {
+          "precision": 1.0,
+          "predicted_pair_count": 11,
+          "sensitivity": 1.0
+        },
+        "restricted_mea": {
+          "precision": 1.0,
+          "predicted_pair_count": 11,
+          "sensitivity": 1.0
+        },
+        "restricted_mfe": {
+          "precision": 1.0,
+          "predicted_pair_count": 11,
+          "sensitivity": 1.0
+        }
+      },
+      "probknot_crossing_count": 36,
+      "reference_pair_count": 11,
+      "restricted_state_count": 898,
+      "restricted_state_count_exact": "898"
+    },
+    {
+      "arbitrary_prefix_length": 10,
+      "arbitrary_state_count": 41,
+      "hybrid_crossing_count": 30,
+      "id": "HIVRT322",
+      "length": 35,
+      "methods": {
+        "hybrid": {
+          "precision": 1.0,
+          "predicted_pair_count": 11,
+          "sensitivity": 1.0
+        },
+        "matching_centroid": {
+          "precision": 1.0,
+          "predicted_pair_count": 6,
+          "sensitivity": 0.5454545454545454
+        },
+        "matching_mea": {
+          "precision": 1.0,
+          "predicted_pair_count": 6,
+          "sensitivity": 0.5454545454545454
+        },
+        "probknot": {
+          "precision": 1.0,
+          "predicted_pair_count": 6,
+          "sensitivity": 0.5454545454545454
+        },
+        "restricted_centroid": {
+          "precision": 1.0,
+          "predicted_pair_count": 11,
+          "sensitivity": 1.0
+        },
+        "restricted_mea": {
+          "precision": 1.0,
+          "predicted_pair_count": 11,
+          "sensitivity": 1.0
+        },
+        "restricted_mfe": {
+          "precision": 1.0,
+          "predicted_pair_count": 11,
+          "sensitivity": 1.0
+        }
+      },
+      "probknot_crossing_count": 0,
+      "reference_pair_count": 11,
+      "restricted_state_count": 1851,
+      "restricted_state_count_exact": "1851"
+    },
+    {
+      "arbitrary_prefix_length": 10,
+      "arbitrary_state_count": 41,
+      "hybrid_crossing_count": 30,
+      "id": "HIVRT33",
+      "length": 35,
+      "methods": {
+        "hybrid": {
+          "precision": 0.45454545454545453,
+          "predicted_pair_count": 11,
+          "sensitivity": 0.45454545454545453
+        },
+        "matching_centroid": {
+          "precision": 0.0,
+          "predicted_pair_count": 6,
+          "sensitivity": 0.0
+        },
+        "matching_mea": {
+          "precision": 0.0,
+          "predicted_pair_count": 6,
+          "sensitivity": 0.0
+        },
+        "probknot": {
+          "precision": 0.45454545454545453,
+          "predicted_pair_count": 11,
+          "sensitivity": 0.45454545454545453
+        },
+        "restricted_centroid": {
+          "precision": 0.45454545454545453,
+          "predicted_pair_count": 11,
+          "sensitivity": 0.45454545454545453
+        },
+        "restricted_mea": {
+          "precision": 0.45454545454545453,
+          "predicted_pair_count": 11,
+          "sensitivity": 0.45454545454545453
+        },
+        "restricted_mfe": {
+          "precision": 0.45454545454545453,
+          "predicted_pair_count": 11,
+          "sensitivity": 0.45454545454545453
+        }
+      },
+      "probknot_crossing_count": 30,
+      "reference_pair_count": 11,
+      "restricted_state_count": 1491,
+      "restricted_state_count_exact": "1491"
+    },
+    {
+      "arbitrary_prefix_length": 10,
+      "arbitrary_state_count": 111,
+      "hybrid_crossing_count": 50,
+      "id": "Hs_Prp",
+      "length": 45,
+      "methods": {
+        "hybrid": {
+          "precision": 0.0,
+          "predicted_pair_count": 15,
+          "sensitivity": 0.0
+        },
+        "matching_centroid": {
+          "precision": 0.0,
+          "predicted_pair_count": 16,
+          "sensitivity": 0.0
+        },
+        "matching_mea": {
+          "precision": 0.0,
+          "predicted_pair_count": 16,
+          "sensitivity": 0.0
+        },
+        "probknot": {
+          "precision": 0.0,
+          "predicted_pair_count": 16,
+          "sensitivity": 0.0
+        },
+        "restricted_centroid": {
+          "precision": 0.0,
+          "predicted_pair_count": 15,
+          "sensitivity": 0.0
+        },
+        "restricted_mea": {
+          "precision": 0.0,
+          "predicted_pair_count": 15,
+          "sensitivity": 0.0
+        },
+        "restricted_mfe": {
+          "precision": 0.0,
+          "predicted_pair_count": 15,
+          "sensitivity": 0.0
+        }
+      },
+      "probknot_crossing_count": 0,
+      "reference_pair_count": 11,
+      "restricted_state_count": 410470,
+      "restricted_state_count_exact": "410470"
+    },
+    {
+      "arbitrary_prefix_length": 10,
+      "arbitrary_state_count": 4,
+      "hybrid_crossing_count": 18,
+      "id": "LP_PK1",
+      "length": 30,
+      "methods": {
+        "hybrid": {
+          "precision": 0.8888888888888888,
+          "predicted_pair_count": 9,
+          "sensitivity": 0.8
+        },
+        "matching_centroid": {
+          "precision": 1.0,
+          "predicted_pair_count": 5,
+          "sensitivity": 0.5
+        },
+        "matching_mea": {
+          "precision": 1.0,
+          "predicted_pair_count": 5,
+          "sensitivity": 0.5
+        },
+        "probknot": {
+          "precision": 0.7142857142857143,
+          "predicted_pair_count": 7,
+          "sensitivity": 0.5
+        },
+        "restricted_centroid": {
+          "precision": 1.0,
+          "predicted_pair_count": 8,
+          "sensitivity": 0.8
+        },
+        "restricted_mea": {
+          "precision": 1.0,
+          "predicted_pair_count": 8,
+          "sensitivity": 0.8
+        },
+        "restricted_mfe": {
+          "precision": 1.0,
+          "predicted_pair_count": 8,
+          "sensitivity": 0.8
+        }
+      },
+      "probknot_crossing_count": 0,
+      "reference_pair_count": 10,
+      "restricted_state_count": 364,
+      "restricted_state_count_exact": "364"
+    },
+    {
+      "arbitrary_prefix_length": 10,
+      "arbitrary_state_count": 61,
+      "hybrid_crossing_count": 77,
+      "id": "minimalIBV",
+      "length": 45,
+      "methods": {
+        "hybrid": {
+          "precision": 0.8947368421052632,
+          "predicted_pair_count": 19,
+          "sensitivity": 1.0
+        },
+        "matching_centroid": {
+          "precision": 0.6875,
+          "predicted_pair_count": 16,
+          "sensitivity": 0.6470588235294118
+        },
+        "matching_mea": {
+          "precision": 0.6875,
+          "predicted_pair_count": 16,
+          "sensitivity": 0.6470588235294118
+        },
+        "probknot": {
+          "precision": 0.6111111111111112,
+          "predicted_pair_count": 18,
+          "sensitivity": 0.6470588235294118
+        },
+        "restricted_centroid": {
+          "precision": 0.9444444444444444,
+          "predicted_pair_count": 18,
+          "sensitivity": 1.0
+        },
+        "restricted_mea": {
+          "precision": 0.9444444444444444,
+          "predicted_pair_count": 18,
+          "sensitivity": 1.0
+        },
+        "restricted_mfe": {
+          "precision": 0.9444444444444444,
+          "predicted_pair_count": 18,
+          "sensitivity": 1.0
+        }
+      },
+      "probknot_crossing_count": 1,
+      "reference_pair_count": 17,
+      "restricted_state_count": 49227,
+      "restricted_state_count_exact": "49227"
+    },
+    {
+      "arbitrary_prefix_length": 10,
+      "arbitrary_state_count": 107,
+      "hybrid_crossing_count": 35,
+      "id": "MMTV",
+      "length": 34,
+      "methods": {
+        "hybrid": {
+          "precision": 0.8461538461538461,
+          "predicted_pair_count": 13,
+          "sensitivity": 1.0
+        },
+        "matching_centroid": {
+          "precision": 0.0,
+          "predicted_pair_count": 8,
+          "sensitivity": 0.0
+        },
+        "matching_mea": {
+          "precision": 0.0,
+          "predicted_pair_count": 9,
+          "sensitivity": 0.0
+        },
+        "probknot": {
+          "precision": 0.0,
+          "predicted_pair_count": 10,
+          "sensitivity": 0.0
+        },
+        "restricted_centroid": {
+          "precision": 0.9166666666666666,
+          "predicted_pair_count": 12,
+          "sensitivity": 1.0
+        },
+        "restricted_mea": {
+          "precision": 0.9166666666666666,
+          "predicted_pair_count": 12,
+          "sensitivity": 1.0
+        },
+        "restricted_mfe": {
+          "precision": 0.9166666666666666,
+          "predicted_pair_count": 12,
+          "sensitivity": 1.0
+        }
+      },
+      "probknot_crossing_count": 0,
+      "reference_pair_count": 11,
+      "restricted_state_count": 4764,
+      "restricted_state_count_exact": "4764"
+    },
+    {
+      "arbitrary_prefix_length": 10,
+      "arbitrary_state_count": 52,
+      "hybrid_crossing_count": 47,
+      "id": "MMTV_vpk",
+      "length": 34,
+      "methods": {
+        "hybrid": {
+          "precision": 0.8461538461538461,
+          "predicted_pair_count": 13,
+          "sensitivity": 1.0
+        },
+        "matching_centroid": {
+          "precision": 0.0,
+          "predicted_pair_count": 0,
+          "sensitivity": 0.0
+        },
+        "matching_mea": {
+          "precision": 1.0,
+          "predicted_pair_count": 5,
+          "sensitivity": 0.45454545454545453
+        },
+        "probknot": {
+          "precision": 0.625,
+          "predicted_pair_count": 8,
+          "sensitivity": 0.45454545454545453
+        },
+        "restricted_centroid": {
+          "precision": 0.9166666666666666,
+          "predicted_pair_count": 12,
+          "sensitivity": 1.0
+        },
+        "restricted_mea": {
+          "precision": 0.9166666666666666,
+          "predicted_pair_count": 12,
+          "sensitivity": 1.0
+        },
+        "restricted_mfe": {
+          "precision": 0.9166666666666666,
+          "predicted_pair_count": 12,
+          "sensitivity": 1.0
+        }
+      },
+      "probknot_crossing_count": 15,
+      "reference_pair_count": 11,
+      "restricted_state_count": 1067,
+      "restricted_state_count_exact": "1067"
+    },
+    {
+      "arbitrary_prefix_length": 10,
+      "arbitrary_state_count": 58,
+      "hybrid_crossing_count": 42,
+      "id": "pKA_A",
+      "length": 36,
+      "methods": {
+        "hybrid": {
+          "precision": 0.9230769230769231,
+          "predicted_pair_count": 13,
+          "sensitivity": 1.0
+        },
+        "matching_centroid": {
+          "precision": 0.75,
+          "predicted_pair_count": 8,
+          "sensitivity": 0.5
+        },
+        "matching_mea": {
+          "precision": 0.6666666666666666,
+          "predicted_pair_count": 9,
+          "sensitivity": 0.5
+        },
+        "probknot": {
+          "precision": 0.8571428571428571,
+          "predicted_pair_count": 7,
+          "sensitivity": 0.5
+        },
+        "restricted_centroid": {
+          "precision": 0.9230769230769231,
+          "predicted_pair_count": 13,
+          "sensitivity": 1.0
+        },
+        "restricted_mea": {
+          "precision": 0.9230769230769231,
+          "predicted_pair_count": 13,
+          "sensitivity": 1.0
+        },
+        "restricted_mfe": {
+          "precision": 0.9230769230769231,
+          "predicted_pair_count": 13,
+          "sensitivity": 1.0
+        }
+      },
+      "probknot_crossing_count": 0,
+      "reference_pair_count": 12,
+      "restricted_state_count": 5085,
+      "restricted_state_count_exact": "5085"
+    },
+    {
+      "arbitrary_prefix_length": 10,
+      "arbitrary_state_count": 8,
+      "hybrid_crossing_count": 50,
+      "id": "satRPV",
+      "length": 73,
+      "methods": {
+        "hybrid": {
+          "precision": 0.5,
+          "predicted_pair_count": 18,
+          "sensitivity": 0.4090909090909091
+        },
+        "matching_centroid": {
+          "precision": 0.65,
+          "predicted_pair_count": 20,
+          "sensitivity": 0.5909090909090909
+        },
+        "matching_mea": {
+          "precision": 0.65,
+          "predicted_pair_count": 20,
+          "sensitivity": 0.5909090909090909
+        },
+        "probknot": {
+          "precision": 0.65,
+          "predicted_pair_count": 20,
+          "sensitivity": 0.5909090909090909
+        },
+        "restricted_centroid": {
+          "precision": 0.6428571428571429,
+          "predicted_pair_count": 14,
+          "sensitivity": 0.4090909090909091
+        },
+        "restricted_mea": {
+          "precision": 0.5625,
+          "predicted_pair_count": 16,
+          "sensitivity": 0.4090909090909091
+        },
+        "restricted_mfe": {
+          "precision": 0.5625,
+          "predicted_pair_count": 16,
+          "sensitivity": 0.4090909090909091
+        }
+      },
+      "probknot_crossing_count": 0,
+      "reference_pair_count": 22,
+      "restricted_state_count": 19220696,
+      "restricted_state_count_exact": "19220696"
+    },
+    {
+      "arbitrary_prefix_length": 10,
+      "arbitrary_state_count": 67,
+      "hybrid_crossing_count": 36,
+      "id": "SRV_1",
+      "length": 38,
+      "methods": {
+        "hybrid": {
+          "precision": 0.7857142857142857,
+          "predicted_pair_count": 14,
+          "sensitivity": 1.0
+        },
+        "matching_centroid": {
+          "precision": 0.0,
+          "predicted_pair_count": 10,
+          "sensitivity": 0.0
+        },
+        "matching_mea": {
+          "precision": 0.0,
+          "predicted_pair_count": 10,
+          "sensitivity": 0.0
+        },
+        "probknot": {
+          "precision": 0.0,
+          "predicted_pair_count": 12,
+          "sensitivity": 0.0
+        },
+        "restricted_centroid": {
+          "precision": 0.9166666666666666,
+          "predicted_pair_count": 12,
+          "sensitivity": 1.0
+        },
+        "restricted_mea": {
+          "precision": 0.9166666666666666,
+          "predicted_pair_count": 12,
+          "sensitivity": 1.0
+        },
+        "restricted_mfe": {
+          "precision": 0.9166666666666666,
+          "predicted_pair_count": 12,
+          "sensitivity": 1.0
+        }
+      },
+      "probknot_crossing_count": 0,
+      "reference_pair_count": 11,
+      "restricted_state_count": 6201,
+      "restricted_state_count_exact": "6201"
+    },
+    {
+      "arbitrary_prefix_length": 10,
+      "arbitrary_state_count": 25,
+      "hybrid_crossing_count": 35,
+      "id": "T2_gene32",
+      "length": 33,
+      "methods": {
+        "hybrid": {
+          "precision": 1.0,
+          "predicted_pair_count": 12,
+          "sensitivity": 1.0
+        },
+        "matching_centroid": {
+          "precision": 0.875,
+          "predicted_pair_count": 8,
+          "sensitivity": 0.5833333333333334
+        },
+        "matching_mea": {
+          "precision": 0.875,
+          "predicted_pair_count": 8,
+          "sensitivity": 0.5833333333333334
+        },
+        "probknot": {
+          "precision": 1.0,
+          "predicted_pair_count": 7,
+          "sensitivity": 0.5833333333333334
+        },
+        "restricted_centroid": {
+          "precision": 1.0,
+          "predicted_pair_count": 12,
+          "sensitivity": 1.0
+        },
+        "restricted_mea": {
+          "precision": 1.0,
+          "predicted_pair_count": 12,
+          "sensitivity": 1.0
+        },
+        "restricted_mfe": {
+          "precision": 1.0,
+          "predicted_pair_count": 12,
+          "sensitivity": 1.0
+        }
+      },
+      "probknot_crossing_count": 0,
+      "reference_pair_count": 12,
+      "restricted_state_count": 1450,
+      "restricted_state_count_exact": "1450"
+    },
+    {
+      "arbitrary_prefix_length": 10,
+      "arbitrary_state_count": 34,
+      "hybrid_crossing_count": 28,
+      "id": "T4_gene32",
+      "length": 28,
+      "methods": {
+        "hybrid": {
+          "precision": 1.0,
+          "predicted_pair_count": 11,
+          "sensitivity": 1.0
+        },
+        "matching_centroid": {
+          "precision": 0.875,
+          "predicted_pair_count": 8,
+          "sensitivity": 0.6363636363636364
+        },
+        "matching_mea": {
+          "precision": 0.875,
+          "predicted_pair_count": 8,
+          "sensitivity": 0.6363636363636364
+        },
+        "probknot": {
+          "precision": 1.0,
+          "predicted_pair_count": 7,
+          "sensitivity": 0.6363636363636364
+        },
+        "restricted_centroid": {
+          "precision": 1.0,
+          "predicted_pair_count": 11,
+          "sensitivity": 1.0
+        },
+        "restricted_mea": {
+          "precision": 1.0,
+          "predicted_pair_count": 11,
+          "sensitivity": 1.0
+        },
+        "restricted_mfe": {
+          "precision": 1.0,
+          "predicted_pair_count": 11,
+          "sensitivity": 1.0
+        }
+      },
+      "probknot_crossing_count": 0,
+      "reference_pair_count": 11,
+      "restricted_state_count": 655,
+      "restricted_state_count_exact": "655"
+    },
+    {
+      "arbitrary_prefix_length": 10,
+      "arbitrary_state_count": 51,
+      "hybrid_crossing_count": 20,
+      "id": "TMV_L",
+      "length": 84,
+      "methods": {
+        "hybrid": {
+          "precision": 0.7727272727272727,
+          "predicted_pair_count": 22,
+          "sensitivity": 0.68
+        },
+        "matching_centroid": {
+          "precision": 0.65,
+          "predicted_pair_count": 20,
+          "sensitivity": 0.52
+        },
+        "matching_mea": {
+          "precision": 0.6190476190476191,
+          "predicted_pair_count": 21,
+          "sensitivity": 0.52
+        },
+        "probknot": {
+          "precision": 0.5909090909090909,
+          "predicted_pair_count": 22,
+          "sensitivity": 0.52
+        },
+        "restricted_centroid": {
+          "precision": 0.9230769230769231,
+          "predicted_pair_count": 26,
+          "sensitivity": 0.96
+        },
+        "restricted_mea": {
+          "precision": 0.9230769230769231,
+          "predicted_pair_count": 26,
+          "sensitivity": 0.96
+        },
+        "restricted_mfe": {
+          "precision": 0.9230769230769231,
+          "predicted_pair_count": 26,
+          "sensitivity": 0.96
+        }
+      },
+      "probknot_crossing_count": 0,
+      "reference_pair_count": 25,
+      "restricted_state_count": 4294967295,
+      "restricted_state_count_exact": "28032555107"
+    },
+    {
+      "arbitrary_prefix_length": 10,
+      "arbitrary_state_count": 7,
+      "hybrid_crossing_count": 45,
+      "id": "Tt_LSU_P3P7",
+      "length": 65,
+      "methods": {
+        "hybrid": {
+          "precision": 0.8571428571428571,
+          "predicted_pair_count": 21,
+          "sensitivity": 0.9
+        },
+        "matching_centroid": {
+          "precision": 0.7333333333333333,
+          "predicted_pair_count": 15,
+          "sensitivity": 0.55
+        },
+        "matching_mea": {
+          "precision": 0.7333333333333333,
+          "predicted_pair_count": 15,
+          "sensitivity": 0.55
+        },
+        "probknot": {
+          "precision": 0.8095238095238095,
+          "predicted_pair_count": 21,
+          "sensitivity": 0.85
+        },
+        "restricted_centroid": {
+          "precision": 0.3888888888888889,
+          "predicted_pair_count": 18,
+          "sensitivity": 0.35
+        },
+        "restricted_mea": {
+          "precision": 0.3684210526315789,
+          "predicted_pair_count": 19,
+          "sensitivity": 0.35
+        },
+        "restricted_mfe": {
+          "precision": 0.3684210526315789,
+          "predicted_pair_count": 19,
+          "sensitivity": 0.35
+        }
+      },
+      "probknot_crossing_count": 40,
+      "reference_pair_count": 20,
+      "restricted_state_count": 4073508,
+      "restricted_state_count_exact": "4073508"
+    },
+    {
+      "arbitrary_prefix_length": 10,
+      "arbitrary_state_count": 9,
+      "hybrid_crossing_count": 28,
+      "id": "TYMV",
+      "length": 86,
+      "methods": {
+        "hybrid": {
+          "precision": 0.9130434782608695,
+          "predicted_pair_count": 23,
+          "sensitivity": 0.84
+        },
+        "matching_centroid": {
+          "precision": 1.0,
+          "predicted_pair_count": 18,
+          "sensitivity": 0.72
+        },
+        "matching_mea": {
+          "precision": 0.782608695652174,
+          "predicted_pair_count": 23,
+          "sensitivity": 0.72
+        },
+        "probknot": {
+          "precision": 0.782608695652174,
+          "predicted_pair_count": 23,
+          "sensitivity": 0.72
+        },
+        "restricted_centroid": {
+          "precision": 0.64,
+          "predicted_pair_count": 25,
+          "sensitivity": 0.64
+        },
+        "restricted_mea": {
+          "precision": 0.6333333333333333,
+          "predicted_pair_count": 30,
+          "sensitivity": 0.76
+        },
+        "restricted_mfe": {
+          "precision": 0.7142857142857143,
+          "predicted_pair_count": 28,
+          "sensitivity": 0.8
+        }
+      },
+      "probknot_crossing_count": 0,
+      "reference_pair_count": 25,
+      "restricted_state_count": 2259963177,
+      "restricted_state_count_exact": "2259963177"
+    },
+    {
+      "arbitrary_prefix_length": 10,
+      "arbitrary_state_count": 11,
+      "hybrid_crossing_count": 35,
+      "id": "AKV_MuLV",
+      "length": 50,
+      "methods": {
+        "hybrid": {
+          "precision": 0.7333333333333333,
+          "predicted_pair_count": 15,
+          "sensitivity": 0.7333333333333333
+        },
+        "matching_centroid": {
+          "precision": 0.0,
+          "predicted_pair_count": 12,
+          "sensitivity": 0.0
+        },
+        "matching_mea": {
+          "precision": 0.0,
+          "predicted_pair_count": 15,
+          "sensitivity": 0.0
+        },
+        "probknot": {
+          "precision": 0.0,
+          "predicted_pair_count": 15,
+          "sensitivity": 0.0
+        },
+        "restricted_centroid": {
+          "precision": 0.8571428571428571,
+          "predicted_pair_count": 7,
+          "sensitivity": 0.4
+        },
+        "restricted_mea": {
+          "precision": 0.9090909090909091,
+          "predicted_pair_count": 11,
+          "sensitivity": 0.6666666666666666
+        },
+        "restricted_mfe": {
+          "precision": 0.9166666666666666,
+          "predicted_pair_count": 12,
+          "sensitivity": 0.7333333333333333
+        }
+      },
+      "probknot_crossing_count": 0,
+      "reference_pair_count": 15,
+      "restricted_state_count": 504282,
+      "restricted_state_count_exact": "504282"
+    }
+  ],
+  "source": "Andronescu-Pop-Condon S-Test ShPK"
+}

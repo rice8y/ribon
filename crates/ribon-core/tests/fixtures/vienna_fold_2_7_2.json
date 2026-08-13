@@ -1,0 +1,59 @@
+{
+  "source": "ViennaRNA 2.7.2, vrna_mfe/vrna_pf/vrna_centroid/vrna_MEA",
+  "commit": "1ffec79f5e258896160f7362ced8263450f371dc",
+  "temperature_celsius": 37.0,
+  "dangles": 0,
+  "uniq_ml": true,
+  "cases": [
+    {
+      "sequence": "GGGAAACCC",
+      "vienna_mfe_structure": "(((...)))",
+      "vienna_mfe_energy_kcal_mol": -1.20000005,
+      "vienna_ensemble_free_energy_kcal_mol": -1.41624585,
+      "vienna_centroid_structure": "(((...)))",
+      "vienna_mea_structure": "(((...)))",
+      "ribon_ensemble_free_energy_kcal_mol": -1.4162562280938014,
+      "vienna_pair_probabilities": [
+        {"i":1,"j":7,"probability":0.000558640051},
+        {"i":1,"j":8,"probability":0.139170274},
+        {"i":1,"j":9,"probability":0.727828681},
+        {"i":2,"j":7,"probability":0.139932841},
+        {"i":2,"j":8,"probability":0.730843186},
+        {"i":2,"j":9,"probability":0.0276215915},
+        {"i":3,"j":7,"probability":0.707443535},
+        {"i":3,"j":8,"probability":0.027622506},
+        {"i":3,"j":9,"probability":0.000110274595}
+      ]
+    },
+    {
+      "sequence": "CGCUUCAUAUAAUCCUAAUGACCUAU",
+      "vienna_mfe_structure": "..........................",
+      "vienna_mfe_energy_kcal_mol": 0.0,
+      "vienna_ensemble_free_energy_kcal_mol": -0.246808679,
+      "vienna_centroid_structure": "..........................",
+      "vienna_mea_structure": "..........................",
+      "ribon_ensemble_free_energy_kcal_mol": -0.24682249586411106,
+      "vienna_pair_probabilities": []
+    },
+    {
+      "sequence": "GCGCUUCGCC",
+      "vienna_mfe_structure": "(((...))).",
+      "vienna_mfe_energy_kcal_mol": -0.400000006,
+      "vienna_ensemble_free_energy_kcal_mol": -0.728182385,
+      "vienna_centroid_structure": "(((...))).",
+      "vienna_mea_structure": "(((...))).",
+      "ribon_ensemble_free_energy_kcal_mol": -0.7281929947934667,
+      "vienna_pair_probabilities": []
+    },
+    {
+      "sequence": "GGGGAAAACCCCNNNNGGGAAACCC",
+      "vienna_mfe_structure": "((((....))))....(((...)))",
+      "vienna_mfe_energy_kcal_mol": -6.59999990,
+      "vienna_ensemble_free_energy_kcal_mol": -7.08792720,
+      "vienna_centroid_structure": "((((....)))).....(.....).",
+      "vienna_mea_structure": "((((....))))....(((...)))",
+      "ribon_ensemble_free_energy_kcal_mol": -7.087948531497121,
+      "vienna_pair_probabilities": []
+    }
+  ]
+}

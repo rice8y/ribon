@@ -1,0 +1,576 @@
+{
+  "all_dangles_0_and_2_full_ensembles_complete": true,
+  "all_decoders_preserve_fixed_seed": true,
+  "all_energy_components_finite_and_additive": true,
+  "all_full_ensembles_complete": true,
+  "all_mfe_energy_round_trips_exact": true,
+  "all_production_and_oracle_reference_pair_tables_exact": true,
+  "all_production_derivations_unique": true,
+  "cases": 24,
+  "empty_seed_prefix_pf_and_marginals_match_planar_dp_and_exhaustive_oracle": true,
+  "maximum_observed_density": 2,
+  "minimum_content_margin_pixels": 38.0,
+  "minimum_ink_fraction": 0.04048099999999999,
+  "native_vector_only": true,
+  "pages": 24,
+  "pages_detail": [
+    {
+      "content_margins_pixels": [
+        38.0,
+        38.0,
+        39.0,
+        281.0
+      ],
+      "grayscale_standard_deviation": 0.177901,
+      "ink_fraction": 0.05003800000000003,
+      "page": 1
+    },
+    {
+      "content_margins_pixels": [
+        38.0,
+        38.0,
+        39.0,
+        282.0
+      ],
+      "grayscale_standard_deviation": 0.16629,
+      "ink_fraction": 0.04155399999999998,
+      "page": 2
+    },
+    {
+      "content_margins_pixels": [
+        38.0,
+        38.0,
+        39.0,
+        282.0
+      ],
+      "grayscale_standard_deviation": 0.171338,
+      "ink_fraction": 0.04510499999999995,
+      "page": 3
+    },
+    {
+      "content_margins_pixels": [
+        38.0,
+        38.0,
+        39.0,
+        276.0
+      ],
+      "grayscale_standard_deviation": 0.186494,
+      "ink_fraction": 0.05683899999999997,
+      "page": 4
+    },
+    {
+      "content_margins_pixels": [
+        38.0,
+        38.0,
+        39.0,
+        278.0
+      ],
+      "grayscale_standard_deviation": 0.179511,
+      "ink_fraction": 0.05212499999999998,
+      "page": 5
+    },
+    {
+      "content_margins_pixels": [
+        38.0,
+        38.0,
+        39.0,
+        275.0
+      ],
+      "grayscale_standard_deviation": 0.187895,
+      "ink_fraction": 0.05923400000000001,
+      "page": 6
+    },
+    {
+      "content_margins_pixels": [
+        38.0,
+        38.0,
+        39.0,
+        272.0
+      ],
+      "grayscale_standard_deviation": 0.19414,
+      "ink_fraction": 0.06403099999999995,
+      "page": 7
+    },
+    {
+      "content_margins_pixels": [
+        38.0,
+        38.0,
+        39.0,
+        273.0
+      ],
+      "grayscale_standard_deviation": 0.168216,
+      "ink_fraction": 0.04351499999999997,
+      "page": 8
+    },
+    {
+      "content_margins_pixels": [
+        38.0,
+        38.0,
+        39.0,
+        273.0
+      ],
+      "grayscale_standard_deviation": 0.168432,
+      "ink_fraction": 0.04361899999999996,
+      "page": 9
+    },
+    {
+      "content_margins_pixels": [
+        38.0,
+        38.0,
+        39.0,
+        273.0
+      ],
+      "grayscale_standard_deviation": 0.168071,
+      "ink_fraction": 0.043464999999999976,
+      "page": 10
+    },
+    {
+      "content_margins_pixels": [
+        38.0,
+        38.0,
+        39.0,
+        281.0
+      ],
+      "grayscale_standard_deviation": 0.163958,
+      "ink_fraction": 0.04149199999999997,
+      "page": 11
+    },
+    {
+      "content_margins_pixels": [
+        38.0,
+        38.0,
+        39.0,
+        282.0
+      ],
+      "grayscale_standard_deviation": 0.169173,
+      "ink_fraction": 0.04354400000000003,
+      "page": 12
+    },
+    {
+      "content_margins_pixels": [
+        38.0,
+        38.0,
+        39.0,
+        281.0
+      ],
+      "grayscale_standard_deviation": 0.186619,
+      "ink_fraction": 0.05619799999999997,
+      "page": 13
+    },
+    {
+      "content_margins_pixels": [
+        38.0,
+        38.0,
+        39.0,
+        276.0
+      ],
+      "grayscale_standard_deviation": 0.170964,
+      "ink_fraction": 0.044830000000000036,
+      "page": 14
+    },
+    {
+      "content_margins_pixels": [
+        38.0,
+        38.0,
+        39.0,
+        276.0
+      ],
+      "grayscale_standard_deviation": 0.171809,
+      "ink_fraction": 0.045216000000000034,
+      "page": 15
+    },
+    {
+      "content_margins_pixels": [
+        38.0,
+        38.0,
+        39.0,
+        271.0
+      ],
+      "grayscale_standard_deviation": 0.171925,
+      "ink_fraction": 0.04564800000000002,
+      "page": 16
+    },
+    {
+      "content_margins_pixels": [
+        38.0,
+        38.0,
+        39.0,
+        272.0
+      ],
+      "grayscale_standard_deviation": 0.182267,
+      "ink_fraction": 0.053876000000000035,
+      "page": 17
+    },
+    {
+      "content_margins_pixels": [
+        38.0,
+        38.0,
+        39.0,
+        269.0
+      ],
+      "grayscale_standard_deviation": 0.169086,
+      "ink_fraction": 0.04371400000000003,
+      "page": 18
+    },
+    {
+      "content_margins_pixels": [
+        38.0,
+        38.0,
+        39.0,
+        280.0
+      ],
+      "grayscale_standard_deviation": 0.17386,
+      "ink_fraction": 0.04668099999999997,
+      "page": 19
+    },
+    {
+      "content_margins_pixels": [
+        38.0,
+        38.0,
+        39.0,
+        282.0
+      ],
+      "grayscale_standard_deviation": 0.169576,
+      "ink_fraction": 0.04391900000000004,
+      "page": 20
+    },
+    {
+      "content_margins_pixels": [
+        38.0,
+        38.0,
+        39.0,
+        272.0
+      ],
+      "grayscale_standard_deviation": 0.164435,
+      "ink_fraction": 0.04119799999999996,
+      "page": 21
+    },
+    {
+      "content_margins_pixels": [
+        38.0,
+        38.0,
+        39.0,
+        275.0
+      ],
+      "grayscale_standard_deviation": 0.176557,
+      "ink_fraction": 0.050216999999999956,
+      "page": 22
+    },
+    {
+      "content_margins_pixels": [
+        38.0,
+        38.0,
+        39.0,
+        274.0
+      ],
+      "grayscale_standard_deviation": 0.16287,
+      "ink_fraction": 0.04048099999999999,
+      "page": 23
+    },
+    {
+      "content_margins_pixels": [
+        38.0,
+        38.0,
+        39.0,
+        282.0
+      ],
+      "grayscale_standard_deviation": 0.17802,
+      "ink_fraction": 0.04988899999999996,
+      "page": 24
+    }
+  ],
+  "pdf": "target/qa/ribon-conditional-density2-validation.pdf",
+  "pixel_exact": true,
+  "probability_mass_normalized": true,
+  "results": [
+    {
+      "conditional_energy_kcal_mol": -17.126999999999995,
+      "density": 2,
+      "ensemble_free_energy_kcal_mol": -22.308707846666177,
+      "full_pair_probability_entries": 203,
+      "id": "Bt_PrP",
+      "length": 45,
+      "mfe_energy_kcal_mol": -22.158999999999992,
+      "oracle_diagnostic_energy_kcal_mol": -6.126999999999998,
+      "prefix_state_count": 13,
+      "pseudoknot_bands": 2
+    },
+    {
+      "conditional_energy_kcal_mol": -13.246,
+      "density": 2,
+      "ensemble_free_energy_kcal_mol": -13.304562573083844,
+      "full_pair_probability_entries": 41,
+      "id": "BWYV",
+      "length": 28,
+      "mfe_energy_kcal_mol": -13.246,
+      "oracle_diagnostic_energy_kcal_mol": -1.9459999999999993,
+      "prefix_state_count": 19,
+      "pseudoknot_bands": 2
+    },
+    {
+      "conditional_energy_kcal_mol": -15.915999999999997,
+      "density": 2,
+      "ensemble_free_energy_kcal_mol": -15.948499000017147,
+      "full_pair_probability_entries": 44,
+      "id": "Ec_PK1",
+      "length": 30,
+      "mfe_energy_kcal_mol": -15.915999999999997,
+      "oracle_diagnostic_energy_kcal_mol": -6.5159999999999965,
+      "prefix_state_count": 12,
+      "pseudoknot_bands": 2
+    },
+    {
+      "conditional_energy_kcal_mol": -21.034999999999997,
+      "density": 2,
+      "ensemble_free_energy_kcal_mol": -21.09933188181853,
+      "full_pair_probability_entries": 103,
+      "id": "Ec_PK4",
+      "length": 52,
+      "mfe_energy_kcal_mol": -21.034999999999997,
+      "oracle_diagnostic_energy_kcal_mol": -9.894999999999994,
+      "prefix_state_count": 23,
+      "pseudoknot_bands": 2
+    },
+    {
+      "conditional_energy_kcal_mol": -20.679,
+      "density": 2,
+      "ensemble_free_energy_kcal_mol": -23.926779646639385,
+      "full_pair_probability_entries": 424,
+      "id": "EC_S15",
+      "length": 67,
+      "mfe_energy_kcal_mol": -23.559,
+      "oracle_diagnostic_energy_kcal_mol": -6.4890000000000025,
+      "prefix_state_count": 19,
+      "pseudoknot_bands": 2
+    },
+    {
+      "conditional_energy_kcal_mol": -42.905,
+      "density": 2,
+      "ensemble_free_energy_kcal_mol": -44.23031891782464,
+      "full_pair_probability_entries": 265,
+      "id": "HDV",
+      "length": 87,
+      "mfe_energy_kcal_mol": -43.864999999999995,
+      "oracle_diagnostic_energy_kcal_mol": -33.974999999999994,
+      "prefix_state_count": 11,
+      "pseudoknot_bands": 2
+    },
+    {
+      "conditional_energy_kcal_mol": -27.005999999999997,
+      "density": 2,
+      "ensemble_free_energy_kcal_mol": -43.79923425216301,
+      "full_pair_probability_entries": 408,
+      "id": "HDV_anti",
+      "length": 91,
+      "mfe_energy_kcal_mol": -43.356,
+      "oracle_diagnostic_energy_kcal_mol": -15.802,
+      "prefix_state_count": 17,
+      "pseudoknot_bands": 2
+    },
+    {
+      "conditional_energy_kcal_mol": -14.494,
+      "density": 2,
+      "ensemble_free_energy_kcal_mol": -14.762149067858624,
+      "full_pair_probability_entries": 70,
+      "id": "HIVRT32",
+      "length": 35,
+      "mfe_energy_kcal_mol": -14.494,
+      "oracle_diagnostic_energy_kcal_mol": -2.993999999999999,
+      "prefix_state_count": 10,
+      "pseudoknot_bands": 2
+    },
+    {
+      "conditional_energy_kcal_mol": -14.582999999999998,
+      "density": 2,
+      "ensemble_free_energy_kcal_mol": -14.85114907120304,
+      "full_pair_probability_entries": 70,
+      "id": "HIVRT322",
+      "length": 35,
+      "mfe_energy_kcal_mol": -14.582999999999998,
+      "oracle_diagnostic_energy_kcal_mol": -3.083000000000001,
+      "prefix_state_count": 10,
+      "pseudoknot_bands": 2
+    },
+    {
+      "conditional_energy_kcal_mol": -12.18,
+      "density": 2,
+      "ensemble_free_energy_kcal_mol": -12.44814893402015,
+      "full_pair_probability_entries": 70,
+      "id": "HIVRT33",
+      "length": 35,
+      "mfe_energy_kcal_mol": -12.18,
+      "oracle_diagnostic_energy_kcal_mol": -0.17999999999999955,
+      "prefix_state_count": 10,
+      "pseudoknot_bands": 2
+    },
+    {
+      "conditional_energy_kcal_mol": -12.528,
+      "density": 2,
+      "ensemble_free_energy_kcal_mol": -17.189424595148175,
+      "full_pair_probability_entries": 221,
+      "id": "Hs_Prp",
+      "length": 45,
+      "mfe_energy_kcal_mol": -16.211,
+      "oracle_diagnostic_energy_kcal_mol": -0.8279999999999998,
+      "prefix_state_count": 26,
+      "pseudoknot_bands": 2
+    },
+    {
+      "conditional_energy_kcal_mol": -9.154,
+      "density": 2,
+      "ensemble_free_energy_kcal_mol": -9.193360561456402,
+      "full_pair_probability_entries": 51,
+      "id": "LP_PK1",
+      "length": 30,
+      "mfe_energy_kcal_mol": -9.154,
+      "oracle_diagnostic_energy_kcal_mol": 1.605999999999999,
+      "prefix_state_count": 4,
+      "pseudoknot_bands": 2
+    },
+    {
+      "conditional_energy_kcal_mol": -28.433999999999997,
+      "density": 2,
+      "ensemble_free_energy_kcal_mol": -30.408946703509617,
+      "full_pair_probability_entries": 87,
+      "id": "minimalIBV",
+      "length": 45,
+      "mfe_energy_kcal_mol": -30.363,
+      "oracle_diagnostic_energy_kcal_mol": -18.133999999999993,
+      "prefix_state_count": 14,
+      "pseudoknot_bands": 2
+    },
+    {
+      "conditional_energy_kcal_mol": -20.452999999999996,
+      "density": 2,
+      "ensemble_free_energy_kcal_mol": -20.52212486464984,
+      "full_pair_probability_entries": 64,
+      "id": "MMTV",
+      "length": 34,
+      "mfe_energy_kcal_mol": -20.452999999999996,
+      "oracle_diagnostic_energy_kcal_mol": -8.653,
+      "prefix_state_count": 36,
+      "pseudoknot_bands": 2
+    },
+    {
+      "conditional_energy_kcal_mol": -18.228,
+      "density": 2,
+      "ensemble_free_energy_kcal_mol": -18.297086626529502,
+      "full_pair_probability_entries": 60,
+      "id": "MMTV_vpk",
+      "length": 34,
+      "mfe_energy_kcal_mol": -18.228,
+      "oracle_diagnostic_energy_kcal_mol": -7.427999999999999,
+      "prefix_state_count": 15,
+      "pseudoknot_bands": 2
+    },
+    {
+      "conditional_energy_kcal_mol": -22.766999999999996,
+      "density": 2,
+      "ensemble_free_energy_kcal_mol": -22.84240714348057,
+      "full_pair_probability_entries": 80,
+      "id": "pKA_A",
+      "length": 36,
+      "mfe_energy_kcal_mol": -22.766999999999996,
+      "oracle_diagnostic_energy_kcal_mol": -11.967,
+      "prefix_state_count": 12,
+      "pseudoknot_bands": 2
+    },
+    {
+      "conditional_energy_kcal_mol": -22.85,
+      "density": 2,
+      "ensemble_free_energy_kcal_mol": -23.4839412328959,
+      "full_pair_probability_entries": 207,
+      "id": "satRPV",
+      "length": 73,
+      "mfe_energy_kcal_mol": -23.15000000000001,
+      "oracle_diagnostic_energy_kcal_mol": -8.346000000000004,
+      "prefix_state_count": 6,
+      "pseudoknot_bands": 3
+    },
+    {
+      "conditional_energy_kcal_mol": -22.170999999999992,
+      "density": 2,
+      "ensemble_free_energy_kcal_mol": -24.19145941452887,
+      "full_pair_probability_entries": 85,
+      "id": "SRV_1",
+      "length": 38,
+      "mfe_energy_kcal_mol": -24.15999999999999,
+      "oracle_diagnostic_energy_kcal_mol": -11.971,
+      "prefix_state_count": 20,
+      "pseudoknot_bands": 2
+    },
+    {
+      "conditional_energy_kcal_mol": -15.916,
+      "density": 2,
+      "ensemble_free_energy_kcal_mol": -15.953243879001276,
+      "full_pair_probability_entries": 50,
+      "id": "T2_gene32",
+      "length": 33,
+      "mfe_energy_kcal_mol": -15.916,
+      "oracle_diagnostic_energy_kcal_mol": -5.816000000000001,
+      "prefix_state_count": 8,
+      "pseudoknot_bands": 2
+    },
+    {
+      "conditional_energy_kcal_mol": -13.188,
+      "density": 2,
+      "ensemble_free_energy_kcal_mol": -13.325862573326358,
+      "full_pair_probability_entries": 32,
+      "id": "T4_gene32",
+      "length": 28,
+      "mfe_energy_kcal_mol": -13.188,
+      "oracle_diagnostic_energy_kcal_mol": -3.3879999999999995,
+      "prefix_state_count": 12,
+      "pseudoknot_bands": 2
+    },
+    {
+      "conditional_energy_kcal_mol": -25.62100000000001,
+      "density": 2,
+      "ensemble_free_energy_kcal_mol": -30.470482604358516,
+      "full_pair_probability_entries": 523,
+      "id": "TMV_L",
+      "length": 84,
+      "mfe_energy_kcal_mol": -29.835,
+      "oracle_diagnostic_energy_kcal_mol": 6.938999999999995,
+      "prefix_state_count": 15,
+      "pseudoknot_bands": 6
+    },
+    {
+      "conditional_energy_kcal_mol": -19.064,
+      "density": 2,
+      "ensemble_free_energy_kcal_mol": -20.839807361607683,
+      "full_pair_probability_entries": 221,
+      "id": "Tt_LSU_P3P7",
+      "length": 65,
+      "mfe_energy_kcal_mol": -19.98,
+      "oracle_diagnostic_energy_kcal_mol": -4.7339999999999955,
+      "prefix_state_count": 6,
+      "pseudoknot_bands": 2
+    },
+    {
+      "conditional_energy_kcal_mol": -29.819999999999993,
+      "density": 2,
+      "ensemble_free_energy_kcal_mol": -35.657972331144926,
+      "full_pair_probability_entries": 247,
+      "id": "TYMV",
+      "length": 86,
+      "mfe_energy_kcal_mol": -34.245,
+      "oracle_diagnostic_energy_kcal_mol": -19.71999999999999,
+      "prefix_state_count": 5,
+      "pseudoknot_bands": 2
+    },
+    {
+      "conditional_energy_kcal_mol": -26.501999999999995,
+      "density": 2,
+      "ensemble_free_energy_kcal_mol": -27.66923233349005,
+      "full_pair_probability_entries": 184,
+      "id": "AKV_MuLV",
+      "length": 50,
+      "mfe_energy_kcal_mol": -27.401999999999997,
+      "oracle_diagnostic_energy_kcal_mol": -16.042000000000005,
+      "prefix_state_count": 6,
+      "pseudoknot_bands": 2
+    }
+  ],
+  "source": "Andronescu-Pop-Condon S-Test ShPK"
+}

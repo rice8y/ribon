@@ -1,0 +1,49 @@
+{
+  "source": "ViennaRNA 2.7.2 dangles=2, pf_smooth=true, uniq_ML=true",
+  "commit": "1ffec79f5e258896160f7362ced8263450f371dc",
+  "temperature_celsius": 37.0,
+  "cases": [
+    {
+      "sequence": "GGGAAACCC",
+      "mfe_structure": "(((...)))",
+      "mfe_energy": -1.20000005,
+      "ensemble_energy": -1.61919636,
+      "centroid_structure": "(((...)))",
+      "mea_structure": "(((...)))",
+      "pair_probabilities": [
+        {"i": 1, "j": 8, "probability": 0.366658121},
+        {"i": 1, "j": 9, "probability": 0.523623049},
+        {"i": 2, "j": 8, "probability": 0.535850823},
+        {"i": 3, "j": 7, "probability": 0.518753350}
+      ]
+    },
+    {
+      "sequence": "ACGAAUGGCCAUCUAGUGAUACUAUAAUCG",
+      "mfe_structure": ".(((((((..(((....))).))))..)))",
+      "mfe_energy": -2.70000005,
+      "ensemble_energy": -3.22499529,
+      "centroid_structure": ".(((((((..(((....))).))))..)))",
+      "mea_structure": ".(((((((..(((....))).))))..)))",
+      "pair_probabilities": [
+        {"i": 2, "j": 30, "probability": 0.744539022},
+        {"i": 3, "j": 29, "probability": 0.821034610},
+        {"i": 6, "j": 24, "probability": 0.839699149},
+        {"i": 12, "j": 19, "probability": 0.872149169}
+      ]
+    },
+    {
+      "sequence": "GUCCCGGCCUCGAGACCUAUCCGGUUCGUCACGGAGCGCAGCCCGUGACGCGGGGUGACU",
+      "mfe_structure": "(((...((((((.((((.....))))((((((((.((...))))))))))))))))))).",
+      "mfe_energy": -26.2999992,
+      "ensemble_energy": -26.6585775,
+      "centroid_structure": "(((...((((((.((((.....))))((((((((.((...))))))))))))))))))).",
+      "mea_structure": "(((...((((((.((((.....))))((((((((.((...))))))))))))))))))).",
+      "pair_probabilities": [
+        {"i": 1, "j": 59, "probability": 0.852908254},
+        {"i": 16, "j": 24, "probability": 0.931983948},
+        {"i": 28, "j": 49, "probability": 0.998177648},
+        {"i": 34, "j": 43, "probability": 0.998812675}
+      ]
+    }
+  ]
+}

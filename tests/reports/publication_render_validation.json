@@ -1,0 +1,95 @@
+{
+  "aspect_preserving_circle_ratio": 0.9903846153846154,
+  "embedded_raster_images": 0,
+  "golden_updated": false,
+  "pages": 4,
+  "pages_detail": [
+    {
+      "grayscale_standard_deviation": 0.0999624,
+      "ink_fraction": 0.018777000000000044,
+      "margins": [
+        47.0,
+        45.0,
+        83.0,
+        747.0
+      ],
+      "page": 1
+    },
+    {
+      "grayscale_standard_deviation": 0.100502,
+      "ink_fraction": 0.018749000000000016,
+      "margins": [
+        47.0,
+        45.0,
+        58.0,
+        328.0
+      ],
+      "page": 2
+    },
+    {
+      "grayscale_standard_deviation": 0.114642,
+      "ink_fraction": 0.024723999999999968,
+      "margins": [
+        47.0,
+        45.0,
+        76.0,
+        585.0
+      ],
+      "page": 3
+    },
+    {
+      "grayscale_standard_deviation": 0.0653476,
+      "ink_fraction": 0.007318000000000047,
+      "margins": [
+        47.0,
+        45.0,
+        75.0,
+        766.0
+      ],
+      "page": 4
+    }
+  ],
+  "pdf": "target/qa/typst/publication.pdf",
+  "pixel_exact": true,
+  "semantic_metadata": {
+    "alternative-only-pairs": 2,
+    "annotation-controls": [
+      "nucleotide-label",
+      "strand-label",
+      "interaction-label"
+    ],
+    "hairpins": 2,
+    "reference-only-pairs": 3,
+    "resource-errors": [
+      "resource_limit",
+      "resource_limit",
+      "resource_limit"
+    ],
+    "schema": "ribon.publication-qa/1",
+    "sequence-length": 18,
+    "shared-pairs": 3,
+    "stems": 2
+  },
+  "vector_text_labels": [
+    "Aspect-preserving circular layout",
+    "Rotation, reflection, and direction",
+    "apical loop",
+    "reactive site",
+    "tertiary contact",
+    "Reference/alternative pair classification",
+    "Multi-strand identifiers and termini",
+    "guide",
+    "target",
+    "SHAPE reactivity",
+    "Two-ensemble probability dot plot",
+    "Expected and discrete mountain profiles",
+    "Fixed-structure evaluation",
+    "Boltzmann sample",
+    "Suboptimal structure",
+    "Accessibility overlay",
+    "Local accessibility overlay",
+    "MFE, centroid, and MEA comparison",
+    "600 nt linear overview",
+    "Hand-edited scene coordinates"
+  ]
+}

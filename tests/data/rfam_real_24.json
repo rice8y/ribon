@@ -1,0 +1,249 @@
+{
+  "cases": [
+    {
+      "accession": "RF00001",
+      "description": "5S ribosomal RNA",
+      "family_id": "5S_rRNA",
+      "length": 135,
+      "reference_structure": "(((((((((....((.(((((..((..((((((......))..))))..)).....................)))))..))(((.((....(.((.....((....)).....)).)..)).)))))))))))).",
+      "sequence": "GCAUGGACUCAUACCAGCACUAAGCACCGGAUCCCAUCAGAACUCCAAAGUUAAGCGUGCUUGGGCGAGAGUAGUGCUUGGGCGAGAGUAGUACUAGGAUGGGUGACCUCCUGGGAAGUCCUCGUGUUGCAUUCC",
+      "sequence_id": "AY034715.1/370-504",
+      "structure_source": "Published; PMID:11283358"
+    },
+    {
+      "accession": "RF00002",
+      "description": "5.8S ribosomal RNA",
+      "family_id": "5_8S_rRNA",
+      "length": 177,
+      "reference_structure": "......................................((((((((......)))).......(((.........((......))..................)))......))))...(((...)))(((((((((............)))))))))...................",
+      "sequence": "AACCCUAGUGAUGGAUGUCUAGGCUCCCGUAUCGAUGAAGAACGUAGCAGAAAGCGACAUGCGAUGAUACGCGCAUAGACCAGGAUUCCGCGGACUCGUGAAUCAUUGAAUCUUCGAACGCAUCUGGCGCUCAGCAGUGGAGCCGUAGCAGGCUGAGCAUGCCCUGGAGUAGUGACA",
+      "sequence_id": "U58510.1/2022-2198",
+      "structure_source": "Published; PMID:11125083"
+    },
+    {
+      "accession": "RF00003",
+      "description": "U1 spliceosomal RNA",
+      "family_id": "U1",
+      "length": 172,
+      "reference_structure": "...........((((((((((.(((((..........)))))))))))(((..(.(((.(((((..........)).))))))..).........))).((((((.((.......)).))).))).))))...............((((((.((((....)))).)))))).",
+      "sequence": "AUACUUACCUGACGGUGAAGCAAACCUGGUCAACAUGGGGCUUCUUCCAGGGUGAGGCUUUUGCAUUGCACUUCGCCUGGGCUGACUCUGGGUUGACUGCGAUUACCGCUAACGUCGGUAACUCGACCGUACACUUUCUGGCUGUGGGGGCCUGCGUUGGCGCUCGCCCCUU",
+      "sequence_id": "DQ092354.1/1778-1949",
+      "structure_source": "Published; PMID:2405391"
+    },
+    {
+      "accession": "RF00004",
+      "description": "U2 spliceosomal RNA",
+      "family_id": "U2",
+      "length": 214,
+      "reference_structure": "...(((.((((....)))).)))....................((((((........))))))(((((((...))))))).........................................((((((((...........(((((..)))))....))))))))..((((((.((((((..............))))))..)))))).......",
+      "sequence": "AUCUCUUUGCCAUUUGGCUUAGAUCCAGUGUAGUAUCUGUUCUUUUCAGUGUAACAGCUGAAAUGUCAUCAUUGAUGACUUUACAUUAUGUUACAAAUUUAUACUUAUUUUUGGAUAUUGGGUAGAUUGAUGUAUUAAAGUGGGCUUGCUCACAGUCUUUCUACAUAGUGUCGUUGCCACUGUACUUUUAUUUUGGCUUCUGACGCAAAUUCUU",
+      "sequence_id": "AAFN02000024.1/475809-475596",
+      "structure_source": "Published; PMID:2339054; Griffiths-Jones SR"
+    },
+    {
+      "accession": "RF00005",
+      "description": "tRNA",
+      "family_id": "tRNA",
+      "length": 93,
+      "reference_structure": "(((((((..((((.........)))).(((((.......)))))........................(((((.......)))))))))))).",
+      "sequence": "GGAGAGAUGGCUGAGUGGUUGAUAGCUCCGGUCUUGAAAACCGGCAUAGUUCUUUAUUCAGAACUAUCGAGGGUUCGAAUCCCUCUCUCUCCU",
+      "sequence_id": "AJ400848.1/34280-34188",
+      "structure_source": "Published; PMID:8256282"
+    },
+    {
+      "accession": "RF00008",
+      "description": "Hammerhead ribozyme (type III)",
+      "family_id": "Hammerhead_3",
+      "length": 82,
+      "reference_structure": "((((((.(((((.........)))))(....).((((................................))))...))))))",
+      "sequence": "UCCAGUCGAGACCUGAAGUGGGUUUCCUGACGAGGCUGUGGAGAGAGCAAAUUGCUUUACUCCCGCACAAGCCGAAACUGGA",
+      "sequence_id": "AJ247113.1/134-53",
+      "structure_source": "Published; PMID:7969422"
+    },
+    {
+      "accession": "RF00010",
+      "description": "Bacterial RNase P class A",
+      "family_id": "RNaseP_bact_a",
+      "length": 480,
+      "reference_structure": "(((((((((((((((((.(((((((((...........)))))))))....[[[.[[[[[((((....[[[[.((((((((((.....)))))(((((....)))).)((...(((((............(((((((((((...............................................................)))))))))..)).......((((((.......))))))(((((((((....)))))))).)..)))..)))))))))))))...((((......((((((.......................................(((((.]]]].))))).)))))).....))))......((((((((....))))))))..........))))))).....................................]]]]]]]].).)))))))))....",
+      "sequence": "CAGUCGGCCGGACGGCCGCUCCGGCAAGUGCCGAAAGGCCGCCGGGGAGGAAAGUCCGGGCUCCAUCGACAUACGGUGCCGGAUAACGUCCGGCGGGGGCGACCCCAGGGAAAGUGCCACAGAGAACGAACCGCCCGCCUUCGCAGCUUCGCUGCUUCGGCGCGGCAAGCCCUCGGGCUCGCUGCGCCAUAACCCGCAAGGGUGAAGGCGAGUAAGGGUGAAAAGGUGCGGUAAGAGCGCACCGCGUCGCCGGCAACGGGGACGGCAUGGUAAACCCCACCGGGAGCAAAACCGAAUAGGGACGGCAUCGCGGAUAGUUCGCUGCUCGCAGCGAUAACUCCGCAGGGCGAUGUCAGGCUCGCCGUCCGGGUAGGUUGCUCGAGGCGCUGUGCAAACAGUGUCCCAGAGGAAUGGCCGUCGCGCAUCGCCUCCGCAAGGAAGCGGUGCCCUCCAGAACCCGGCUUACAGGCCGGCUGAUAC",
+      "sequence_id": "BX572604.1/165137-165616",
+      "structure_source": "Published; PMID:9847214"
+    },
+    {
+      "accession": "RF00012",
+      "description": "Small nucleolar RNA U3",
+      "family_id": "U3",
+      "length": 226,
+      "reference_structure": "(((((.(((((....(((((....))))).))))).))))).......(((.((......)))))...........(((((..............((((((((((((...(((.......((((..((((......(((((......))))).))))..)))).........)))((((((((..........))))))).))))))))))))).......)))))",
+      "sequence": "AAGACCGUACUUUUACAGGAUCAUUUCUAUAGUACUCUCUAUUCUACUUUCUUUCCAAAAGUAGACAAUUUCAAUAACUUUGAUGAUCGUAUUCGACUUCAUUCAUUGACUCGGGAUGUCGGUGGUUGCAGCGCUGGGUUCUCUUUUGGACUCGGCCCACCCCAUUGAUGAACGUCCGCUGUCGCUAUUCCAAGGCAGCGUGAGUGAGUGGAGUGAUAUGAGAAGU",
+      "sequence_id": "AAQX01000976.1/70933-71158",
+      "structure_source": "Published; PMID:19875933; Gardner PP"
+    },
+    {
+      "accession": "RF00017",
+      "description": "Metazoan signal recognition particle RNA",
+      "family_id": "Metazoa_SRP",
+      "length": 307,
+      "reference_structure": "(((((((((((....))))))))..............))).(((((....(.(((((...(((.(((....(((((..................................((((((((.((.((((.(((.(((((.((((((((((((.(.(((....))).)))))))))))))((...))((((((...(((((....(((....)))....))))).)))))).))))).)))..)))).))....))))))))........)))))....)).).)))...))))).....)...)))))..",
+      "sequence": "GUUGGGUACAGUCGCGUGUGCCUGUAACCGAAGCCGGGACUGGGAUAUGAAUGUACGCGCUGUGGGAUUUCGGGCCUUGGUUGUUCUUCGGAACAGUUUGGUCUUGCAGAGAGUCAGUCCAUGAUGAACUUUGAGUUCAACAUUGGCACUCUUGCGGAAGCAGGGUGUCGAGGUUGUUAAAGAGCUGUGGAAAGCGUGAGGCUAGAAAUAGAGCAGCGAAAAGCAGCCGCUUGAAGUGGUGUUGCGGAUAGCUGGCUUGAGAGAUUCGCCUUGGCUUGCCACGUCGAGUAUCAGACUUCCAUCCCUU",
+      "sequence_id": "AATT01000260.1/65731-65425",
+      "structure_source": "Published; PMID:19838050"
+    },
+    {
+      "accession": "RF00023",
+      "description": "transfer-messenger RNA",
+      "family_id": "tmRNA",
+      "length": 437,
+      "reference_structure": "(((((((..........((((((((((((...(((((((((.((((((((((...[[[[[[[...))))).......]]]]]]]...........................................................................(((((((((..))))))))).......................................................................((((((...((((..(((....[[[[[[[.))).)))).)))))).....]]]]]]]............((((((((.....(((.[[[..[[)))..))..))))))........]]..]]]...))))).))))))))).....)))))))))))).(((((.......))))))))))))....",
+      "sequence": "GGGCCUGACAAGGUUUCGACUGGUCGAUGGACAACUGAACAGCGGGCGAGUGUUGGCCGCACUUCUACUCUGAGUGAACGCGGCAACUGAUAAACGCAACCGACACGGAUGCAACGGUGACCGACGCCGAGAUCGAGGCCUUCUUUGCUGAAGAGGCUGCCGCUCUCGUCUGAAGGAACCAGCCUGGCUCAGCGUGCUGCUGUGCAGCGGCCAGGCUUCAUCUCUAACAGCAGCGAACGGACAUGAGGGAGCGCAAACCCUCGUCCCAAACAUCAUGAAUGCGUCGCACGGGCUCCAGCGUCAGGGGCCAGAGGUGGGAAACGGUGUGAAACUCCUGUCCUGGGGAUCACCGACCGAUACGCCAAACCAGGACUACGCCCGUAGAACGCAGUGAGAAAGACACCAGGACAGGGGUUCGAGUCCCCUCAGGUCCACGU",
+      "sequence_id": "AY129337.1/100059-100495",
+      "structure_source": "Published; PMID:19617710"
+    },
+    {
+      "accession": "RF00026",
+      "description": "U6 spliceosomal RNA",
+      "family_id": "U6",
+      "length": 167,
+      "reference_structure": "(((((..........)))))...................................................................................................................................................",
+      "sequence": "GCCAGCGGGUAACCGCUGGCCUAUGGUCACAUUGAAACGAUACAGAGAAGAUGUAGGUGUUCUUCCCCCCUAAGUUCCAGCGUUCGAGCACGCACUAACAUCUCUAUAGUAGCAUGGCCCCUGCACUAAGGAUGACACAUGUAAUCAAAGAGACGCAACCCAUUUUU",
+      "sequence_id": "AFQF01002057.1/12805-12639",
+      "structure_source": "Published; PMID:2339054; Griffiths-Jones SR"
+    },
+    {
+      "accession": "RF00029",
+      "description": "Group II catalytic intron",
+      "family_id": "Intron_gpII",
+      "length": 154,
+      "reference_structure": "..((((((((.(((((....)))))...))))))))..((((.((.................................................................................................))..))))....",
+      "sequence": "GAGAGCCGUAUGCGAGGAGACUUGCACGUACGGUUCGGAGGAAGGCCAUUGAUACCUAAUGAAAAUAUCACCAUGACUAAGGUAUAAGCCGCGCCUUGAAAGUCCAGAGGACUUGGUUUUAUUGGGUAGUUGAGGUUGGUGGCCCAUCUCUUAC",
+      "sequence_id": "M68929.1/7762-7915",
+      "structure_source": "Predicted; PFOLD"
+    },
+    {
+      "accession": "RF00050",
+      "description": "FMN riboswitch aptamer (RFN element)",
+      "family_id": "FMN",
+      "length": 201,
+      "reference_structure": "..((((((((......(((.......))).((((((((............................................[[))))..(((..................................................)))...(((((.......)))))]])).[[[.....))]]].......))))))))..",
+      "sequence": "GCUUAUUCUCAGGGCGGGGUGUAAUUCCCCACCGGCGGUAAACCAGUGAACGUAUGAACGAAUAAGGUUCUGCGCACUGGAAGCCCGCGAGCGCUCAGGCUGUGUUUUCCGAUAUCAAUUGUCGGUUUUCGCAACAUGAGGUCAGCAGACCCGGUGUAAUUCCGGGGCCGACGGUUAAAGUCCGGAUGGGAGAGAGUAACG",
+      "sequence_id": "BX950851.1/1001970-1002170",
+      "structure_source": "Published; PMID:12456892"
+    },
+    {
+      "accession": "RF00059",
+      "description": "TPP riboswitch aptamer (THI element)",
+      "family_id": "TPP",
+      "length": 148,
+      "reference_structure": ".....(((((((((.((((())))......(((((..................................................))))))..)))).....((((..((((......))))...))))..)))))............",
+      "sequence": "AGGCGUCACAAGAGGAGCUUUUGCUGAGAAUGACCUCCAGUUUUAAGUAAAUUCCAUAACAUUGGAGUUUUGCGCAAAGUCUGGGUGUCUAAACUCUUUGAACCUGAACAAGGUAAUGCUUGCGUAAGGGAUGUGCAGAAAUAAGUGG",
+      "sequence_id": "AB042239.3/9807-9660",
+      "structure_source": "Published; PMID:12376536;"
+    },
+    {
+      "accession": "RF00080",
+      "description": "Manganese Mn2+ riboswitch aptamer (yybP-ykoY)",
+      "family_id": "Manganese",
+      "length": 196,
+      "reference_structure": "...................................(((...........))).((((((((((.......(((((.....))))))))))))))).....((............................................................................................))",
+      "sequence": "CCGUUAGAAUCCCCCGGUCACUGGGGAGUAGCCUUCCUUCAUCGUUUGAAGGAGAACGCGUCAACAUACUUGGCCUUGCAGGUCAUGGCGCGUUCGGCCGUGUCGGUUUGGCGAGACCAUUGACGCACUGCCUCGUUCUGGUCGGACGGGCGGCGGUGCGUCAUUGGUUUGUCGUCUACGUCCGACCGUGGAGUUG",
+      "sequence_id": "CP000270.1/4748060-4747865",
+      "structure_source": "Predicted; Barrick JE, Breaker RR"
+    },
+    {
+      "accession": "RF00094",
+      "description": "Hepatitis delta virus ribozyme",
+      "family_id": "HDV_ribozyme",
+      "length": 100,
+      "reference_structure": "..(((((((..[[[[.[[[........(((.[[....))))))))))]].(((((((.(((.(......).)))..)))))))........]]]]]]]..",
+      "sequence": "UCGGGUCGGCAUGGCAUCUCCACCUCCACCUCCUCGCGGUCCGACCUGGGCAUCCGAAGGAGGAGCGGACGUCCACUCGGAUGGCUAAGGGAGAGCCCAG",
+      "sequence_id": "EF514904.1/897-798",
+      "structure_source": "Published; PMID:9783582"
+    },
+    {
+      "accession": "RF00162",
+      "description": "SAM riboswitch aptamer (S box leader)",
+      "family_id": "SAM",
+      "length": 169,
+      "reference_structure": "((((((((....(..(((...(((..[[[[)))......))))((((.((((((..............................................................))))..))))))...(]]]]((((((..........))))))..)))))))))",
+      "sequence": "CUCUUAUCAAGAGUUGGCUGAGGGAAUUGGCCCAAUGAAGCCCAGCAACCGACCGUAAUACUAUCGUGAGAUAGGGCGCACGCCAAGGGCGGCGCCGGAAGCGUCAUGCUUCCGCAGGGCACGGUGCUAAGUCCAACAGAAAGACCGAUGUCUUUCUGAAAGAUAAGAG",
+      "sequence_id": "BA000043.1/972359-972191",
+      "structure_source": "Published; PMID:10094622"
+    },
+    {
+      "accession": "RF00167",
+      "description": "Purine riboswitch aptamer",
+      "family_id": "Purine",
+      "length": 105,
+      "reference_structure": ".................((((((((...(((((((.......)))))))........(((((((.......))))))...)..))))))))..............",
+      "sequence": "AAAAAGUUAAUAAUAUUCACUUAUAUAAAUCUGAUAAUAAGGGUCGGAUGUUUCUACCAAGCUACCGUAAAUUGCUAUAGGACUAUAAGUGUCUACUUAAAAAUU",
+      "sequence_id": "CP000721.1/2204674-2204778",
+      "structure_source": "Published; PMID:12787499"
+    },
+    {
+      "accession": "RF00168",
+      "description": "Lysine riboswitch aptamer",
+      "family_id": "Lysine",
+      "length": 236,
+      "reference_structure": ".....((((((....(((((((((......((((((((..................))))))))......)))))))))...(((((.((((((........)))))))))))((((.((((((......)))))))))).(((((((..................................................................)))))))....)))))).....",
+      "sequence": "AUUGCCAGAAGAGGUGCGUUGCCCAGGUAACCGUAUUGGAGGAACCAGUCCGGGGAAGAUACGUGAGGGGGAGCAACGCCGAGGUGAAAGAGCGUCUGGUCACGCUCCUCGCCGGCCACAGGGGCUGAAUCCCCUGGGUUGUCACCAGAAACGUUCGCAGUCGGGCGUUUCAUACCCGAACACCUCAGCGCCCAAAGCGGUGAGUCGGGUCUACAAGGUGGAGCACUUCUGGGUGA",
+      "sequence_id": "CP000647.1/4829910-4829675",
+      "structure_source": "Published; PMID:12787499"
+    },
+    {
+      "accession": "RF00174",
+      "description": "Cobalamin riboswitch aptamer",
+      "family_id": "Cobalamin",
+      "length": 247,
+      "reference_structure": ".......((((.((((.((((((((((........................))))))(....)(((...(((((.......)))))((((.....))[[[(...((((....(...((.((....(((.((((((...............))))))...))))))))...)......................................))))..))]].]...))))))))))).)))).......",
+      "sequence": "ACGCUGAUGCCCGCAGUUGGUUCGCGCCUCCUGUCCGAUCAGGUCUCGGCGGCGCGACGCAAGAGGGAACCCGGUGGGAAUCCGGGACUGUCCCGCAGCGGUGAGUGGGAACGAAAGCCGUCAACAGCACUGGGCCCCAGAUGAGUUGGAGCCCGGGAAGCGACGGCCGGUAGGUGCCCGCCGGUGAUCCGUGUCCCCGGUGAGCGCGCCCACGAGUCCGAAGACCUGCCACUGCGCCCGUACGCGA",
+      "sequence_id": "AL939107.1/141879-142125",
+      "structure_source": "Predicted; PFOLD"
+    },
+    {
+      "accession": "RF00234",
+      "description": "glmS glucosamine-6-phosphate activated ribozyme aptamer",
+      "family_id": "glmS",
+      "length": 218,
+      "reference_structure": "...................((((((((.(..........................................................).))))))))........(((((....((((......)))).......)))))((((((.....))))))....(((((((.......(((((((....)))))))........)))))))..........",
+      "sequence": "UUAAUAAUUAAAGCGCCUGUGCAAAAUACCUAAAUAGUUAUCAAGUAUUAAAAGUUAAAAUAGUAGAACUUUUAUAGAUAACGAUUUGGAUUUUGUAGACGAGGAGGAUAGUGAUCGAAUCAGAUCGGCGGAUGCUAUCCCGGAUGUGGCACAUUCGUUAGCUUAUUAAGUAAAUCAUUAAGGUGACUUAGUGGACAAAGUUAAUAAGAUCGCCAAAC",
+      "sequence_id": "AF270378.1/2268-2051",
+      "structure_source": "Published; PMID:15029187"
+    },
+    {
+      "accession": "RF00504",
+      "description": "Glycine riboswitch aptamer",
+      "family_id": "Glycine",
+      "length": 139,
+      "reference_structure": ".....((((((((......(((....))).(((((..(((...((...........................................................))....))))).))).......)))))))).....",
+      "sequence": "AGACGAUACUCUGGAGAGACCAUAUAAGGCACCGAAGGAGCAAAUUUAAUUGAGAUCUUUAUAUAAAUAAAAAAGCUCAUCCCUUUUUUAGAUCAAGCGAUUAAAUGAAUCUCUCAGGUAAAAGGACAGAGAACUGAAU",
+      "sequence_id": "AJ312125.1/453-315",
+      "structure_source": "Predicted; Barrick JE, Breaker RR"
+    },
+    {
+      "accession": "RF01051",
+      "description": "c-di-GMP-I riboswitch aptamer",
+      "family_id": "c-di-GMP-I",
+      "length": 121,
+      "reference_structure": "...........((...((((((....))))))...))..((((.((((((....((((......................................))))...)))..)))))))......",
+      "sequence": "AAUGUACAAAGGCAAACCAAUCGAAAGGUUGGGACGCAAAGCUUCCGGUCUAAGGGGAUAGUGUUUGAGAGGGUCGCACUCUUAACGUUAUUUUGGUACCUAUGAUAGCGGGGAUGUUACA",
+      "sequence_id": "CP000961.1/1418939-1419059",
+      "structure_source": "Published; PMID:17621584"
+    },
+    {
+      "accession": "RF01734",
+      "description": "Fluoride riboswitch aptamer (crcB RNA motif)",
+      "family_id": "Fluoride",
+      "length": 106,
+      "reference_structure": ".........((((..[[[[[[)))).....................................................((.....))....]]]]]].........",
+      "sequence": "UUGCGUGCUGGAGAUGGCAUUCUCCAAUGGGUGUCCGGCGUGCGCUUCAACACACGCGCUCGCGCGAACCCAUUAACCGCCUCGUGCUGAUGAUGCCUGCUUCCCC",
+      "sequence_id": "ABLD01000041.1/16968-17073",
+      "structure_source": "Published; PMID:20230605;"
+    }
+  ],
+  "license": "CC0-1.0",
+  "retrieved": "2026-08-10",
+  "selection": "one minimum-gap 20-500 nt IUPAC sequence from each curated SEED family",
+  "source": "Rfam SEED alignments",
+  "source_url": "https://rfam.org/"
+}

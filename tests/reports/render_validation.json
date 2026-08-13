@@ -1,0 +1,807 @@
+{
+  "all_accession_labels_extractable": true,
+  "all_feature_labels_extractable_per_case": true,
+  "embedded_raster_images": 0,
+  "feature_panels_per_case": 18,
+  "maximum_ink_fraction": 0.023380999999999985,
+  "minimum_content_margin_pixels": 20.0,
+  "minimum_grayscale_standard_deviation": 0.0549285,
+  "minimum_ink_fraction": 0.005581999999999976,
+  "pages": 72,
+  "pages_detail": [
+    {
+      "content_margins_pixels": [
+        53.0,
+        38.0,
+        54.0,
+        20.0
+      ],
+      "grayscale_standard_deviation": 0.0947308,
+      "ink_fraction": 0.01796399999999998,
+      "page": 1
+    },
+    {
+      "content_margins_pixels": [
+        52.0,
+        37.0,
+        46.0,
+        20.0
+      ],
+      "grayscale_standard_deviation": 0.103413,
+      "ink_fraction": 0.020405000000000006,
+      "page": 2
+    },
+    {
+      "content_margins_pixels": [
+        109.0,
+        38.0,
+        144.0,
+        20.0
+      ],
+      "grayscale_standard_deviation": 0.0550262,
+      "ink_fraction": 0.005588000000000037,
+      "page": 3
+    },
+    {
+      "content_margins_pixels": [
+        53.0,
+        38.0,
+        54.0,
+        20.0
+      ],
+      "grayscale_standard_deviation": 0.0701511,
+      "ink_fraction": 0.009843999999999964,
+      "page": 4
+    },
+    {
+      "content_margins_pixels": [
+        52.0,
+        37.0,
+        46.0,
+        20.0
+      ],
+      "grayscale_standard_deviation": 0.102829,
+      "ink_fraction": 0.020120000000000027,
+      "page": 5
+    },
+    {
+      "content_margins_pixels": [
+        109.0,
+        38.0,
+        144.0,
+        20.0
+      ],
+      "grayscale_standard_deviation": 0.0551619,
+      "ink_fraction": 0.005616999999999983,
+      "page": 6
+    },
+    {
+      "content_margins_pixels": [
+        53.0,
+        38.0,
+        54.0,
+        20.0
+      ],
+      "grayscale_standard_deviation": 0.0841972,
+      "ink_fraction": 0.014406999999999948,
+      "page": 7
+    },
+    {
+      "content_margins_pixels": [
+        52.0,
+        37.0,
+        46.0,
+        20.0
+      ],
+      "grayscale_standard_deviation": 0.104957,
+      "ink_fraction": 0.020483999999999947,
+      "page": 8
+    },
+    {
+      "content_margins_pixels": [
+        109.0,
+        38.0,
+        144.0,
+        20.0
+      ],
+      "grayscale_standard_deviation": 0.0550286,
+      "ink_fraction": 0.005592999999999959,
+      "page": 9
+    },
+    {
+      "content_margins_pixels": [
+        53.0,
+        38.0,
+        54.0,
+        20.0
+      ],
+      "grayscale_standard_deviation": 0.0740364,
+      "ink_fraction": 0.011301000000000005,
+      "page": 10
+    },
+    {
+      "content_margins_pixels": [
+        52.0,
+        37.0,
+        46.0,
+        20.0
+      ],
+      "grayscale_standard_deviation": 0.104478,
+      "ink_fraction": 0.02021700000000004,
+      "page": 11
+    },
+    {
+      "content_margins_pixels": [
+        109.0,
+        38.0,
+        144.0,
+        20.0
+      ],
+      "grayscale_standard_deviation": 0.0549285,
+      "ink_fraction": 0.005588999999999955,
+      "page": 12
+    },
+    {
+      "content_margins_pixels": [
+        53.0,
+        38.0,
+        54.0,
+        20.0
+      ],
+      "grayscale_standard_deviation": 0.0877056,
+      "ink_fraction": 0.015654999999999974,
+      "page": 13
+    },
+    {
+      "content_margins_pixels": [
+        52.0,
+        37.0,
+        46.0,
+        20.0
+      ],
+      "grayscale_standard_deviation": 0.102531,
+      "ink_fraction": 0.019947999999999966,
+      "page": 14
+    },
+    {
+      "content_margins_pixels": [
+        109.0,
+        38.0,
+        144.0,
+        20.0
+      ],
+      "grayscale_standard_deviation": 0.0553888,
+      "ink_fraction": 0.005653000000000019,
+      "page": 15
+    },
+    {
+      "content_margins_pixels": [
+        53.0,
+        37.0,
+        54.0,
+        20.0
+      ],
+      "grayscale_standard_deviation": 0.0892582,
+      "ink_fraction": 0.015445000000000042,
+      "page": 16
+    },
+    {
+      "content_margins_pixels": [
+        52.0,
+        37.0,
+        46.0,
+        20.0
+      ],
+      "grayscale_standard_deviation": 0.10794,
+      "ink_fraction": 0.022402000000000033,
+      "page": 17
+    },
+    {
+      "content_margins_pixels": [
+        109.0,
+        38.0,
+        141.0,
+        20.0
+      ],
+      "grayscale_standard_deviation": 0.0553335,
+      "ink_fraction": 0.005628999999999995,
+      "page": 18
+    },
+    {
+      "content_margins_pixels": [
+        53.0,
+        38.0,
+        54.0,
+        20.0
+      ],
+      "grayscale_standard_deviation": 0.0985435,
+      "ink_fraction": 0.019552000000000014,
+      "page": 19
+    },
+    {
+      "content_margins_pixels": [
+        52.0,
+        37.0,
+        46.0,
+        20.0
+      ],
+      "grayscale_standard_deviation": 0.103853,
+      "ink_fraction": 0.020395000000000052,
+      "page": 20
+    },
+    {
+      "content_margins_pixels": [
+        109.0,
+        38.0,
+        141.0,
+        20.0
+      ],
+      "grayscale_standard_deviation": 0.0552914,
+      "ink_fraction": 0.005622000000000016,
+      "page": 21
+    },
+    {
+      "content_margins_pixels": [
+        53.0,
+        38.0,
+        54.0,
+        20.0
+      ],
+      "grayscale_standard_deviation": 0.0979714,
+      "ink_fraction": 0.018948999999999994,
+      "page": 22
+    },
+    {
+      "content_margins_pixels": [
+        52.0,
+        37.0,
+        46.0,
+        20.0
+      ],
+      "grayscale_standard_deviation": 0.101074,
+      "ink_fraction": 0.019418999999999964,
+      "page": 23
+    },
+    {
+      "content_margins_pixels": [
+        109.0,
+        38.0,
+        141.0,
+        20.0
+      ],
+      "grayscale_standard_deviation": 0.0552074,
+      "ink_fraction": 0.005606,
+      "page": 24
+    },
+    {
+      "content_margins_pixels": [
+        53.0,
+        38.0,
+        54.0,
+        20.0
+      ],
+      "grayscale_standard_deviation": 0.0962834,
+      "ink_fraction": 0.01849400000000001,
+      "page": 25
+    },
+    {
+      "content_margins_pixels": [
+        52.0,
+        37.0,
+        46.0,
+        20.0
+      ],
+      "grayscale_standard_deviation": 0.105759,
+      "ink_fraction": 0.020934000000000008,
+      "page": 26
+    },
+    {
+      "content_margins_pixels": [
+        109.0,
+        38.0,
+        141.0,
+        20.0
+      ],
+      "grayscale_standard_deviation": 0.0551899,
+      "ink_fraction": 0.005607000000000029,
+      "page": 27
+    },
+    {
+      "content_margins_pixels": [
+        53.0,
+        38.0,
+        54.0,
+        20.0
+      ],
+      "grayscale_standard_deviation": 0.087391,
+      "ink_fraction": 0.015181,
+      "page": 28
+    },
+    {
+      "content_margins_pixels": [
+        52.0,
+        37.0,
+        46.0,
+        20.0
+      ],
+      "grayscale_standard_deviation": 0.10879,
+      "ink_fraction": 0.022341999999999973,
+      "page": 29
+    },
+    {
+      "content_margins_pixels": [
+        109.0,
+        38.0,
+        141.0,
+        20.0
+      ],
+      "grayscale_standard_deviation": 0.0554551,
+      "ink_fraction": 0.005654000000000048,
+      "page": 30
+    },
+    {
+      "content_margins_pixels": [
+        53.0,
+        38.0,
+        53.0,
+        20.0
+      ],
+      "grayscale_standard_deviation": 0.0590186,
+      "ink_fraction": 0.0064790000000000125,
+      "page": 31
+    },
+    {
+      "content_margins_pixels": [
+        52.0,
+        37.0,
+        46.0,
+        20.0
+      ],
+      "grayscale_standard_deviation": 0.109609,
+      "ink_fraction": 0.021969000000000016,
+      "page": 32
+    },
+    {
+      "content_margins_pixels": [
+        109.0,
+        38.0,
+        141.0,
+        20.0
+      ],
+      "grayscale_standard_deviation": 0.059492,
+      "ink_fraction": 0.006619999999999959,
+      "page": 33
+    },
+    {
+      "content_margins_pixels": [
+        53.0,
+        38.0,
+        54.0,
+        20.0
+      ],
+      "grayscale_standard_deviation": 0.0785484,
+      "ink_fraction": 0.012028999999999956,
+      "page": 34
+    },
+    {
+      "content_margins_pixels": [
+        52.0,
+        37.0,
+        46.0,
+        20.0
+      ],
+      "grayscale_standard_deviation": 0.110115,
+      "ink_fraction": 0.023380999999999985,
+      "page": 35
+    },
+    {
+      "content_margins_pixels": [
+        109.0,
+        38.0,
+        141.0,
+        20.0
+      ],
+      "grayscale_standard_deviation": 0.0555589,
+      "ink_fraction": 0.005669999999999953,
+      "page": 36
+    },
+    {
+      "content_margins_pixels": [
+        53.0,
+        37.0,
+        54.0,
+        20.0
+      ],
+      "grayscale_standard_deviation": 0.0992606,
+      "ink_fraction": 0.01914899999999997,
+      "page": 37
+    },
+    {
+      "content_margins_pixels": [
+        52.0,
+        37.0,
+        46.0,
+        20.0
+      ],
+      "grayscale_standard_deviation": 0.107523,
+      "ink_fraction": 0.022425999999999946,
+      "page": 38
+    },
+    {
+      "content_margins_pixels": [
+        109.0,
+        38.0,
+        141.0,
+        20.0
+      ],
+      "grayscale_standard_deviation": 0.0552244,
+      "ink_fraction": 0.00562600000000002,
+      "page": 39
+    },
+    {
+      "content_margins_pixels": [
+        53.0,
+        37.0,
+        54.0,
+        20.0
+      ],
+      "grayscale_standard_deviation": 0.0878273,
+      "ink_fraction": 0.014931999999999945,
+      "page": 40
+    },
+    {
+      "content_margins_pixels": [
+        52.0,
+        37.0,
+        46.0,
+        20.0
+      ],
+      "grayscale_standard_deviation": 0.103021,
+      "ink_fraction": 0.020455,
+      "page": 41
+    },
+    {
+      "content_margins_pixels": [
+        109.0,
+        38.0,
+        141.0,
+        20.0
+      ],
+      "grayscale_standard_deviation": 0.055405,
+      "ink_fraction": 0.005658000000000052,
+      "page": 42
+    },
+    {
+      "content_margins_pixels": [
+        53.0,
+        37.0,
+        54.0,
+        20.0
+      ],
+      "grayscale_standard_deviation": 0.084706,
+      "ink_fraction": 0.013639999999999985,
+      "page": 43
+    },
+    {
+      "content_margins_pixels": [
+        52.0,
+        37.0,
+        46.0,
+        20.0
+      ],
+      "grayscale_standard_deviation": 0.107472,
+      "ink_fraction": 0.02242999999999995,
+      "page": 44
+    },
+    {
+      "content_margins_pixels": [
+        109.0,
+        38.0,
+        141.0,
+        20.0
+      ],
+      "grayscale_standard_deviation": 0.0554084,
+      "ink_fraction": 0.005650000000000044,
+      "page": 45
+    },
+    {
+      "content_margins_pixels": [
+        53.0,
+        38.0,
+        54.0,
+        20.0
+      ],
+      "grayscale_standard_deviation": 0.102375,
+      "ink_fraction": 0.021355000000000013,
+      "page": 46
+    },
+    {
+      "content_margins_pixels": [
+        52.0,
+        37.0,
+        46.0,
+        20.0
+      ],
+      "grayscale_standard_deviation": 0.100164,
+      "ink_fraction": 0.01938099999999998,
+      "page": 47
+    },
+    {
+      "content_margins_pixels": [
+        109.0,
+        38.0,
+        141.0,
+        20.0
+      ],
+      "grayscale_standard_deviation": 0.0554082,
+      "ink_fraction": 0.005664000000000002,
+      "page": 48
+    },
+    {
+      "content_margins_pixels": [
+        53.0,
+        37.0,
+        54.0,
+        20.0
+      ],
+      "grayscale_standard_deviation": 0.0976324,
+      "ink_fraction": 0.018399999999999972,
+      "page": 49
+    },
+    {
+      "content_margins_pixels": [
+        52.0,
+        37.0,
+        46.0,
+        20.0
+      ],
+      "grayscale_standard_deviation": 0.101773,
+      "ink_fraction": 0.019801999999999986,
+      "page": 50
+    },
+    {
+      "content_margins_pixels": [
+        109.0,
+        38.0,
+        141.0,
+        20.0
+      ],
+      "grayscale_standard_deviation": 0.0551422,
+      "ink_fraction": 0.005600000000000049,
+      "page": 51
+    },
+    {
+      "content_margins_pixels": [
+        53.0,
+        38.0,
+        54.0,
+        20.0
+      ],
+      "grayscale_standard_deviation": 0.0860721,
+      "ink_fraction": 0.014673999999999965,
+      "page": 52
+    },
+    {
+      "content_margins_pixels": [
+        52.0,
+        37.0,
+        46.0,
+        20.0
+      ],
+      "grayscale_standard_deviation": 0.102801,
+      "ink_fraction": 0.020174000000000025,
+      "page": 53
+    },
+    {
+      "content_margins_pixels": [
+        109.0,
+        38.0,
+        141.0,
+        20.0
+      ],
+      "grayscale_standard_deviation": 0.0551574,
+      "ink_fraction": 0.005599000000000021,
+      "page": 54
+    },
+    {
+      "content_margins_pixels": [
+        52.0,
+        38.0,
+        54.0,
+        20.0
+      ],
+      "grayscale_standard_deviation": 0.0968151,
+      "ink_fraction": 0.01845399999999997,
+      "page": 55
+    },
+    {
+      "content_margins_pixels": [
+        52.0,
+        37.0,
+        46.0,
+        20.0
+      ],
+      "grayscale_standard_deviation": 0.10589,
+      "ink_fraction": 0.02146999999999999,
+      "page": 56
+    },
+    {
+      "content_margins_pixels": [
+        109.0,
+        38.0,
+        141.0,
+        20.0
+      ],
+      "grayscale_standard_deviation": 0.0552871,
+      "ink_fraction": 0.005627000000000049,
+      "page": 57
+    },
+    {
+      "content_margins_pixels": [
+        53.0,
+        38.0,
+        54.0,
+        20.0
+      ],
+      "grayscale_standard_deviation": 0.103433,
+      "ink_fraction": 0.021129999999999982,
+      "page": 58
+    },
+    {
+      "content_margins_pixels": [
+        52.0,
+        37.0,
+        46.0,
+        20.0
+      ],
+      "grayscale_standard_deviation": 0.102872,
+      "ink_fraction": 0.020596999999999976,
+      "page": 59
+    },
+    {
+      "content_margins_pixels": [
+        109.0,
+        38.0,
+        141.0,
+        20.0
+      ],
+      "grayscale_standard_deviation": 0.0550951,
+      "ink_fraction": 0.005601999999999996,
+      "page": 60
+    },
+    {
+      "content_margins_pixels": [
+        53.0,
+        38.0,
+        54.0,
+        20.0
+      ],
+      "grayscale_standard_deviation": 0.0905161,
+      "ink_fraction": 0.015627999999999975,
+      "page": 61
+    },
+    {
+      "content_margins_pixels": [
+        52.0,
+        37.0,
+        46.0,
+        20.0
+      ],
+      "grayscale_standard_deviation": 0.107678,
+      "ink_fraction": 0.022312,
+      "page": 62
+    },
+    {
+      "content_margins_pixels": [
+        109.0,
+        38.0,
+        141.0,
+        20.0
+      ],
+      "grayscale_standard_deviation": 0.0552118,
+      "ink_fraction": 0.005622000000000016,
+      "page": 63
+    },
+    {
+      "content_margins_pixels": [
+        53.0,
+        38.0,
+        54.0,
+        20.0
+      ],
+      "grayscale_standard_deviation": 0.0898789,
+      "ink_fraction": 0.01567799999999997,
+      "page": 64
+    },
+    {
+      "content_margins_pixels": [
+        52.0,
+        37.0,
+        46.0,
+        20.0
+      ],
+      "grayscale_standard_deviation": 0.104384,
+      "ink_fraction": 0.021040999999999976,
+      "page": 65
+    },
+    {
+      "content_margins_pixels": [
+        109.0,
+        38.0,
+        141.0,
+        20.0
+      ],
+      "grayscale_standard_deviation": 0.0552139,
+      "ink_fraction": 0.005614000000000008,
+      "page": 66
+    },
+    {
+      "content_margins_pixels": [
+        53.0,
+        38.0,
+        54.0,
+        20.0
+      ],
+      "grayscale_standard_deviation": 0.0828836,
+      "ink_fraction": 0.01359699999999997,
+      "page": 67
+    },
+    {
+      "content_margins_pixels": [
+        52.0,
+        37.0,
+        46.0,
+        20.0
+      ],
+      "grayscale_standard_deviation": 0.1031,
+      "ink_fraction": 0.020093999999999945,
+      "page": 68
+    },
+    {
+      "content_margins_pixels": [
+        109.0,
+        38.0,
+        141.0,
+        20.0
+      ],
+      "grayscale_standard_deviation": 0.0550251,
+      "ink_fraction": 0.005581999999999976,
+      "page": 69
+    },
+    {
+      "content_margins_pixels": [
+        53.0,
+        37.0,
+        53.0,
+        20.0
+      ],
+      "grayscale_standard_deviation": 0.0852871,
+      "ink_fraction": 0.013793999999999973,
+      "page": 70
+    },
+    {
+      "content_margins_pixels": [
+        52.0,
+        37.0,
+        46.0,
+        20.0
+      ],
+      "grayscale_standard_deviation": 0.102461,
+      "ink_fraction": 0.020155000000000034,
+      "page": 71
+    },
+    {
+      "content_margins_pixels": [
+        109.0,
+        38.0,
+        141.0,
+        20.0
+      ],
+      "grayscale_standard_deviation": 0.0549321,
+      "ink_fraction": 0.005589999999999984,
+      "page": 72
+    }
+  ],
+  "pdf": "target/qa/ribon-real-data-validation.pdf",
+  "qpdf_syntax_check": true
+}

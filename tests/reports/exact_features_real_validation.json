@@ -1,0 +1,1974 @@
+{
+  "case_count": 24,
+  "distinct_rfam_accessions": 24,
+  "inverse_design_fixed_template_count_exact": true,
+  "inverse_design_search_complete": true,
+  "landscape_state_space_complete": true,
+  "ligand_state_space_complete": true,
+  "maximum_landscape_saddle_error_kcal_mol": 0.0,
+  "maximum_landscape_state_count": 26,
+  "maximum_ligand_probability_mass_error": 2.220446049250313e-16,
+  "minimum_landscape_state_count": 5,
+  "prefix_length": 10,
+  "rows": [
+    {
+      "accession": "RF00001",
+      "inverse-design": {
+        "candidate-sequence-count": 1,
+        "evaluated-sequence-count": 1,
+        "search-complete": true,
+        "sequence": "GCAUGGACUC",
+        "target-probability": 0.9969360601102184
+      },
+      "landscape": {
+        "edge-count": 18,
+        "path": [
+          {
+            "energy_kcal_mol": 0.0,
+            "step": 0,
+            "structure": ".........."
+          }
+        ],
+        "saddle-energy": 0.0,
+        "state-count": 14,
+        "state-space-complete": true
+      },
+      "ligand": {
+        "occupancy": 0.005024999710189711,
+        "pair-probabilities": [
+          {
+            "i": 1,
+            "j": 8,
+            "probability": 0.001006854274518131
+          },
+          {
+            "i": 1,
+            "j": 9,
+            "probability": 3.6396063934231216e-05
+          },
+          {
+            "i": 1,
+            "j": 10,
+            "probability": 0.00031436116268592943
+          },
+          {
+            "i": 2,
+            "j": 6,
+            "probability": 0.00023773247089924784
+          },
+          {
+            "i": 3,
+            "j": 9,
+            "probability": 8.505050991118015e-05
+          },
+          {
+            "i": 5,
+            "j": 9,
+            "probability": 3.0837954796230946e-05
+          },
+          {
+            "i": 5,
+            "j": 10,
+            "probability": 0.0012805234875689245
+          },
+          {
+            "i": 6,
+            "j": 10,
+            "probability": 0.00015535813944808828
+          }
+        ],
+        "state-space-complete": true,
+        "unpaired-probabilities": [
+          0.9986423884988616,
+          0.9997622675291008,
+          0.9999149494900887,
+          1.0,
+          0.9986886385576348,
+          0.9996069093896528,
+          1.0,
+          0.998993145725482,
+          0.9998477154713584,
+          0.9982497572102972
+        ]
+      },
+      "sequence": "GCAUGGACUC"
+    },
+    {
+      "accession": "RF00002",
+      "inverse-design": {
+        "candidate-sequence-count": 1,
+        "evaluated-sequence-count": 1,
+        "search-complete": true,
+        "sequence": "AACCCUAGUG",
+        "target-probability": 0.9856932801376928
+      },
+      "landscape": {
+        "edge-count": 22,
+        "path": [
+          {
+            "energy_kcal_mol": 0.0,
+            "step": 0,
+            "structure": ".........."
+          }
+        ],
+        "saddle-energy": 0.0,
+        "state-count": 17,
+        "state-space-complete": true
+      },
+      "ligand": {
+        "occupancy": 0.004968612679217476,
+        "pair-probabilities": [
+          {
+            "i": 1,
+            "j": 6,
+            "probability": 0.00011104571386839692
+          },
+          {
+            "i": 1,
+            "j": 9,
+            "probability": 6.097117126745901e-05
+          },
+          {
+            "i": 2,
+            "j": 6,
+            "probability": 3.0386997387165303e-05
+          },
+          {
+            "i": 2,
+            "j": 9,
+            "probability": 0.008958445185808643
+          },
+          {
+            "i": 3,
+            "j": 8,
+            "probability": 0.009454266322138378
+          },
+          {
+            "i": 3,
+            "j": 10,
+            "probability": 0.0006307967646393438
+          },
+          {
+            "i": 4,
+            "j": 8,
+            "probability": 0.00022727707195229112
+          },
+          {
+            "i": 4,
+            "j": 10,
+            "probability": 0.00034574936991129345
+          },
+          {
+            "i": 5,
+            "j": 10,
+            "probability": 0.0033518192533491557
+          },
+          {
+            "i": 6,
+            "j": 10,
+            "probability": 3.0323305870365373e-05
+          }
+        ],
+        "state-space-complete": true,
+        "unpaired-probabilities": [
+          0.999827983114864,
+          0.9910111678168042,
+          0.9899149369132224,
+          0.9994269735581364,
+          0.9966481807466508,
+          0.999828243982874,
+          1.0,
+          0.9903184566059092,
+          0.990980583642924,
+          0.9956413113062298
+        ]
+      },
+      "sequence": "AACCCUAGUG"
+    },
+    {
+      "accession": "RF00003",
+      "inverse-design": {
+        "candidate-sequence-count": 1,
+        "evaluated-sequence-count": 1,
+        "search-complete": true,
+        "sequence": "AUACUUACCU",
+        "target-probability": 0.9993424543158212
+      },
+      "landscape": {
+        "edge-count": 7,
+        "path": [
+          {
+            "energy_kcal_mol": 0.0,
+            "step": 0,
+            "structure": ".........."
+          }
+        ],
+        "saddle-energy": 0.0,
+        "state-count": 7,
+        "state-space-complete": true
+      },
+      "ligand": {
+        "occupancy": 0.005037067907726404,
+        "pair-probabilities": [
+          {
+            "i": 1,
+            "j": 5,
+            "probability": 3.074108623814979e-05
+          },
+          {
+            "i": 1,
+            "j": 6,
+            "probability": 0.0003505129434985637
+          },
+          {
+            "i": 1,
+            "j": 10,
+            "probability": 9.588566605488912e-05
+          },
+          {
+            "i": 2,
+            "j": 7,
+            "probability": 8.155007999147722e-05
+          },
+          {
+            "i": 3,
+            "j": 10,
+            "probability": 9.571473609351008e-05
+          }
+        ],
+        "state-space-complete": true,
+        "unpaired-probabilities": [
+          0.9995228603042084,
+          0.9999184499200086,
+          0.9999042852639064,
+          1.0,
+          0.999969258913762,
+          0.9996494870565016,
+          0.9999184499200086,
+          1.0,
+          1.0,
+          0.9998083995978516
+        ]
+      },
+      "sequence": "AUACUUACCU"
+    },
+    {
+      "accession": "RF00004",
+      "inverse-design": {
+        "candidate-sequence-count": 1,
+        "evaluated-sequence-count": 1,
+        "search-complete": true,
+        "sequence": "AUCUCUUUGC",
+        "target-probability": 0.9959650085170568
+      },
+      "landscape": {
+        "edge-count": 7,
+        "path": [
+          {
+            "energy_kcal_mol": 0.0,
+            "step": 0,
+            "structure": ".........."
+          }
+        ],
+        "saddle-energy": 0.0,
+        "state-count": 8,
+        "state-space-complete": true
+      },
+      "ligand": {
+        "occupancy": 0.005020129750846474,
+        "pair-probabilities": [
+          {
+            "i": 1,
+            "j": 6,
+            "probability": 8.110549622292e-05
+          },
+          {
+            "i": 1,
+            "j": 7,
+            "probability": 0.0002970130554111706
+          },
+          {
+            "i": 1,
+            "j": 8,
+            "probability": 0.0004832507197989101
+          },
+          {
+            "i": 2,
+            "j": 9,
+            "probability": 6.895799554775244e-05
+          },
+          {
+            "i": 3,
+            "j": 9,
+            "probability": 0.002879351820304508
+          },
+          {
+            "i": 4,
+            "j": 9,
+            "probability": 4.984864017136422e-05
+          },
+          {
+            "i": 5,
+            "j": 9,
+            "probability": 0.00015520757469855852
+          }
+        ],
+        "state-space-complete": true,
+        "unpaired-probabilities": [
+          0.999138630728567,
+          0.9999310420044524,
+          0.9971206481796956,
+          0.9999501513598288,
+          0.9998447924253014,
+          0.9999188945037772,
+          0.9997029869445888,
+          0.9995167492802012,
+          0.996846633969278,
+          1.0
+        ]
+      },
+      "sequence": "AUCUCUUUGC"
+    },
+    {
+      "accession": "RF00005",
+      "inverse-design": {
+        "candidate-sequence-count": 1,
+        "evaluated-sequence-count": 1,
+        "search-complete": true,
+        "sequence": "GGAGAGAUGG",
+        "target-probability": 0.9992337150804494
+      },
+      "landscape": {
+        "edge-count": 4,
+        "path": [
+          {
+            "energy_kcal_mol": 0.0,
+            "step": 0,
+            "structure": ".........."
+          }
+        ],
+        "saddle-energy": 0.0,
+        "state-count": 5,
+        "state-space-complete": true
+      },
+      "ligand": {
+        "occupancy": 0.0050365225808752506,
+        "pair-probabilities": [
+          {
+            "i": 1,
+            "j": 8,
+            "probability": 0.00035047499600147415
+          },
+          {
+            "i": 2,
+            "j": 8,
+            "probability": 3.0737758123447674e-05
+          },
+          {
+            "i": 3,
+            "j": 8,
+            "probability": 0.00035047499600147447
+          },
+          {
+            "i": 4,
+            "j": 8,
+            "probability": 3.0737758123447674e-05
+          }
+        ],
+        "state-space-complete": true,
+        "unpaired-probabilities": [
+          0.9996495250039984,
+          0.9999692622418764,
+          0.9996495250039984,
+          0.9999692622418764,
+          1.0,
+          1.0,
+          1.0,
+          0.99923757449175,
+          1.0,
+          1.0
+        ]
+      },
+      "sequence": "GGAGAGAUGG"
+    },
+    {
+      "accession": "RF00008",
+      "inverse-design": {
+        "candidate-sequence-count": 1,
+        "evaluated-sequence-count": 1,
+        "search-complete": true,
+        "sequence": "UCCAGUCGAG",
+        "target-probability": 0.9828516817304576
+      },
+      "landscape": {
+        "edge-count": 21,
+        "path": [
+          {
+            "energy_kcal_mol": 0.0,
+            "step": 0,
+            "structure": ".........."
+          }
+        ],
+        "saddle-energy": 0.0,
+        "state-count": 16,
+        "state-space-complete": true
+      },
+      "ligand": {
+        "occupancy": 0.004954359916687345,
+        "pair-probabilities": [
+          {
+            "i": 1,
+            "j": 5,
+            "probability": 3.023725647222937e-05
+          },
+          {
+            "i": 1,
+            "j": 8,
+            "probability": 8.004291511431879e-05
+          },
+          {
+            "i": 1,
+            "j": 9,
+            "probability": 0.012332771649479287
+          },
+          {
+            "i": 1,
+            "j": 10,
+            "probability": 0.00016605442906089495
+          },
+          {
+            "i": 2,
+            "j": 8,
+            "probability": 0.01280624852987008
+          },
+          {
+            "i": 2,
+            "j": 10,
+            "probability": 0.0008540545463102567
+          },
+          {
+            "i": 3,
+            "j": 8,
+            "probability": 0.0019613597019840934
+          },
+          {
+            "i": 3,
+            "j": 10,
+            "probability": 0.0017465071764443435
+          },
+          {
+            "i": 6,
+            "j": 10,
+            "probability": 3.023725647222937e-05
+          }
+        ],
+        "state-space-complete": true,
+        "unpaired-probabilities": [
+          0.9873908937498732,
+          0.9863396969238196,
+          0.9962921331215716,
+          1.0,
+          0.9999697627435278,
+          0.9999697627435278,
+          1.0,
+          0.9851523488530316,
+          0.9876672283505208,
+          0.9972031465917124
+        ]
+      },
+      "sequence": "UCCAGUCGAG"
+    },
+    {
+      "accession": "RF00010",
+      "inverse-design": {
+        "candidate-sequence-count": 1,
+        "evaluated-sequence-count": 1,
+        "search-complete": true,
+        "sequence": "CAGUCGGCCG",
+        "target-probability": 0.9934471873124808
+      },
+      "landscape": {
+        "edge-count": 11,
+        "path": [
+          {
+            "energy_kcal_mol": 0.0,
+            "step": 0,
+            "structure": ".........."
+          }
+        ],
+        "saddle-energy": 0.0,
+        "state-count": 10,
+        "state-space-complete": true
+      },
+      "ligand": {
+        "occupancy": 0.005007502303842179,
+        "pair-probabilities": [
+          {
+            "i": 1,
+            "j": 6,
+            "probability": 0.001276064613719814
+          },
+          {
+            "i": 1,
+            "j": 7,
+            "probability": 0.0009224468498461592
+          },
+          {
+            "i": 1,
+            "j": 10,
+            "probability": 0.0018468427813198708
+          },
+          {
+            "i": 3,
+            "j": 8,
+            "probability": 0.0009630881424038644
+          },
+          {
+            "i": 3,
+            "j": 9,
+            "probability": 0.0005317584217375697
+          },
+          {
+            "i": 4,
+            "j": 10,
+            "probability": 4.972325276242427e-05
+          },
+          {
+            "i": 5,
+            "j": 10,
+            "probability": 0.001276064613719814
+          }
+        ],
+        "state-space-complete": true,
+        "unpaired-probabilities": [
+          0.9959546457551142,
+          1.0,
+          0.9985051534358586,
+          0.9999502767472376,
+          0.9987239353862802,
+          0.9987239353862802,
+          0.9990775531501538,
+          0.999036911857596,
+          0.9994682415782624,
+          0.9968273693521978
+        ]
+      },
+      "sequence": "CAGUCGGCCG"
+    },
+    {
+      "accession": "RF00012",
+      "inverse-design": {
+        "candidate-sequence-count": 1,
+        "evaluated-sequence-count": 1,
+        "search-complete": true,
+        "sequence": "AAGACCGUAC",
+        "target-probability": 0.998580821926891
+      },
+      "landscape": {
+        "edge-count": 7,
+        "path": [
+          {
+            "energy_kcal_mol": 0.0,
+            "step": 0,
+            "structure": ".........."
+          }
+        ],
+        "saddle-energy": 0.0,
+        "state-count": 7,
+        "state-space-complete": true
+      },
+      "ligand": {
+        "occupancy": 0.00503324831162765,
+        "pair-probabilities": [
+          {
+            "i": 1,
+            "j": 8,
+            "probability": 0.00011249028409467834
+          },
+          {
+            "i": 2,
+            "j": 8,
+            "probability": 0.00025318810433514616
+          },
+          {
+            "i": 3,
+            "j": 8,
+            "probability": 8.131744042251127e-05
+          },
+          {
+            "i": 3,
+            "j": 10,
+            "probability": 0.0009343213932675411
+          },
+          {
+            "i": 4,
+            "j": 8,
+            "probability": 3.784957032251368e-05
+          }
+        ],
+        "state-space-complete": true,
+        "unpaired-probabilities": [
+          0.9998875097159052,
+          0.9997468118956648,
+          0.99898436116631,
+          0.9999621504296776,
+          1.0,
+          1.0,
+          1.0,
+          0.9995151546008252,
+          1.0,
+          0.9990656786067325
+        ]
+      },
+      "sequence": "AAGACCGUAC"
+    },
+    {
+      "accession": "RF00017",
+      "inverse-design": {
+        "candidate-sequence-count": 1,
+        "evaluated-sequence-count": 1,
+        "search-complete": true,
+        "sequence": "GUUGGGUACA",
+        "target-probability": 0.9007625349178758
+      },
+      "landscape": {
+        "edge-count": 27,
+        "path": [
+          {
+            "energy_kcal_mol": 0.0,
+            "step": 0,
+            "structure": ".........."
+          }
+        ],
+        "saddle-energy": 0.0,
+        "state-count": 19,
+        "state-space-complete": true
+      },
+      "ligand": {
+        "occupancy": 0.004542444489724979,
+        "pair-probabilities": [
+          {
+            "i": 1,
+            "j": 7,
+            "probability": 4.846873636719063e-05
+          },
+          {
+            "i": 1,
+            "j": 9,
+            "probability": 0.013527248512754582
+          },
+          {
+            "i": 2,
+            "j": 6,
+            "probability": 3.138078529927843e-05
+          },
+          {
+            "i": 2,
+            "j": 8,
+            "probability": 0.013363721264162728
+          },
+          {
+            "i": 2,
+            "j": 10,
+            "probability": 0.0001938597215202899
+          },
+          {
+            "i": 3,
+            "j": 8,
+            "probability": 8.636885222688121e-05
+          },
+          {
+            "i": 3,
+            "j": 10,
+            "probability": 0.07874632915081836
+          },
+          {
+            "i": 4,
+            "j": 9,
+            "probability": 0.0846700811034849
+          },
+          {
+            "i": 5,
+            "j": 9,
+            "probability": 0.00014468981868087525
+          }
+        ],
+        "state-space-complete": true,
+        "unpaired-probabilities": [
+          0.9864242827508782,
+          0.9864110382290175,
+          0.9211673019969548,
+          0.9153299188965152,
+          0.9998553101813192,
+          0.9999686192147008,
+          0.9999515312636328,
+          0.9865499098836104,
+          0.9016579805650796,
+          0.9210598111276612
+        ]
+      },
+      "sequence": "GUUGGGUACA"
+    },
+    {
+      "accession": "RF00023",
+      "inverse-design": {
+        "candidate-sequence-count": 1,
+        "evaluated-sequence-count": 1,
+        "search-complete": true,
+        "sequence": "GGGCCUGACA",
+        "target-probability": 0.9868065535695189
+      },
+      "landscape": {
+        "edge-count": 11,
+        "path": [
+          {
+            "energy_kcal_mol": 0.0,
+            "step": 0,
+            "structure": ".........."
+          }
+        ],
+        "saddle-energy": 0.0,
+        "state-count": 10,
+        "state-space-complete": true
+      },
+      "ligand": {
+        "occupancy": 0.004974196475117802,
+        "pair-probabilities": [
+          {
+            "i": 1,
+            "j": 5,
+            "probability": 0.0001537922082242312
+          },
+          {
+            "i": 1,
+            "j": 6,
+            "probability": 0.00011117050858311476
+          },
+          {
+            "i": 1,
+            "j": 9,
+            "probability": 0.0033559090917791904
+          },
+          {
+            "i": 2,
+            "j": 6,
+            "probability": 3.068040104753166e-05
+          },
+          {
+            "i": 2,
+            "j": 9,
+            "probability": 0.008883054439529952
+          },
+          {
+            "i": 3,
+            "j": 9,
+            "probability": 0.0005631786203907943
+          },
+          {
+            "i": 6,
+            "j": 10,
+            "probability": 3.0362138275972495e-05
+          }
+        ],
+        "state-space-complete": true,
+        "unpaired-probabilities": [
+          0.9963791281914136,
+          0.9910862651594226,
+          0.9994368213796092,
+          1.0,
+          0.9998462077917758,
+          0.9998277869520934,
+          1.0,
+          1.0,
+          0.9871978578483,
+          0.999969637861724
+        ]
+      },
+      "sequence": "GGGCCUGACA"
+    },
+    {
+      "accession": "RF00026",
+      "inverse-design": {
+        "candidate-sequence-count": 1,
+        "evaluated-sequence-count": 1,
+        "search-complete": true,
+        "sequence": "GCCAGCGGGU",
+        "target-probability": 0.13787488672589557
+      },
+      "landscape": {
+        "edge-count": 37,
+        "path": [
+          {
+            "energy_kcal_mol": 0.0,
+            "step": 0,
+            "structure": ".........."
+          },
+          {
+            "energy_kcal_mol": 4.199999999999999,
+            "step": 1,
+            "structure": "..(....).."
+          },
+          {
+            "energy_kcal_mol": 0.8999999999999995,
+            "step": 2,
+            "structure": ".((....))."
+          },
+          {
+            "energy_kcal_mol": -1.1000000000000003,
+            "step": 3,
+            "structure": "(((....)))"
+          }
+        ],
+        "saddle-energy": 4.199999999999999,
+        "state-count": 23,
+        "state-space-complete": true
+      },
+      "ligand": {
+        "occupancy": 0.0006979728091337157,
+        "pair-probabilities": [
+          {
+            "i": 1,
+            "j": 6,
+            "probability": 9.294528962824428e-05
+          },
+          {
+            "i": 1,
+            "j": 10,
+            "probability": 0.8242538516906954
+          },
+          {
+            "i": 2,
+            "j": 7,
+            "probability": 9.31405132790276e-05
+          },
+          {
+            "i": 2,
+            "j": 8,
+            "probability": 0.00488146364760507
+          },
+          {
+            "i": 2,
+            "j": 9,
+            "probability": 0.8560850024016247
+          },
+          {
+            "i": 3,
+            "j": 7,
+            "probability": 0.005087942665004229
+          },
+          {
+            "i": 3,
+            "j": 8,
+            "probability": 0.8530753869479646
+          },
+          {
+            "i": 3,
+            "j": 9,
+            "probability": 0.0001355063375513348
+          },
+          {
+            "i": 4,
+            "j": 10,
+            "probability": 3.511021143419307e-05
+          },
+          {
+            "i": 5,
+            "j": 10,
+            "probability": 8.151593876599238e-06
+          }
+        ],
+        "state-space-complete": true,
+        "unpaired-probabilities": [
+          0.17565320301967635,
+          0.1389403934374912,
+          0.14170116404947986,
+          0.9999648897885658,
+          0.9999918484061234,
+          0.9999070547103718,
+          0.9948189168217167,
+          0.1420431494044303,
+          0.143779491260824,
+          0.1757028865039938
+        ]
+      },
+      "sequence": "GCCAGCGGGU"
+    },
+    {
+      "accession": "RF00029",
+      "inverse-design": {
+        "candidate-sequence-count": 1,
+        "evaluated-sequence-count": 1,
+        "search-complete": true,
+        "sequence": "GAGAGCCGUA",
+        "target-probability": 0.9968641552907616
+      },
+      "landscape": {
+        "edge-count": 12,
+        "path": [
+          {
+            "energy_kcal_mol": 0.0,
+            "step": 0,
+            "structure": ".........."
+          }
+        ],
+        "saddle-energy": 0.0,
+        "state-count": 11,
+        "state-space-complete": true
+      },
+      "ligand": {
+        "occupancy": 0.005024639099113244,
+        "pair-probabilities": [
+          {
+            "i": 1,
+            "j": 6,
+            "probability": 0.0009256036697246308
+          },
+          {
+            "i": 1,
+            "j": 7,
+            "probability": 0.001088656135411967
+          },
+          {
+            "i": 1,
+            "j": 9,
+            "probability": 0.00013789923947131696
+          },
+          {
+            "i": 2,
+            "j": 9,
+            "probability": 0.0004156171670394739
+          },
+          {
+            "i": 3,
+            "j": 7,
+            "probability": 0.0002552013627687345
+          },
+          {
+            "i": 3,
+            "j": 9,
+            "probability": 6.90199372968975e-05
+          },
+          {
+            "i": 4,
+            "j": 9,
+            "probability": 0.0002972798483773081
+          },
+          {
+            "i": 5,
+            "j": 9,
+            "probability": 3.066523356266203e-05
+          }
+        ],
+        "state-space-complete": true,
+        "unpaired-probabilities": [
+          0.997847840955392,
+          0.9995843828329604,
+          0.9996757786999344,
+          0.9997027201516226,
+          0.9999693347664372,
+          0.9990743963302754,
+          0.9986561425018192,
+          1.0,
+          0.9990495185742524,
+          1.0
+        ]
+      },
+      "sequence": "GAGAGCCGUA"
+    },
+    {
+      "accession": "RF00050",
+      "inverse-design": {
+        "candidate-sequence-count": 1,
+        "evaluated-sequence-count": 1,
+        "search-complete": true,
+        "sequence": "GCUUAUUCUC",
+        "target-probability": 0.999162680343552
+      },
+      "landscape": {
+        "edge-count": 8,
+        "path": [
+          {
+            "energy_kcal_mol": 0.0,
+            "step": 0,
+            "structure": ".........."
+          }
+        ],
+        "saddle-energy": 0.0,
+        "state-count": 8,
+        "state-space-complete": true
+      },
+      "ligand": {
+        "occupancy": 0.005036166341617514,
+        "pair-probabilities": [
+          {
+            "i": 1,
+            "j": 6,
+            "probability": 5.881716619135485e-05
+          },
+          {
+            "i": 1,
+            "j": 7,
+            "probability": 5.881716619135485e-05
+          },
+          {
+            "i": 1,
+            "j": 8,
+            "probability": 0.00035045020648640185
+          },
+          {
+            "i": 1,
+            "j": 9,
+            "probability": 3.61499021633952e-05
+          },
+          {
+            "i": 1,
+            "j": 10,
+            "probability": 0.0002981327503394371
+          },
+          {
+            "i": 5,
+            "j": 9,
+            "probability": 3.090648337236172e-05
+          }
+        ],
+        "state-space-complete": true,
+        "unpaired-probabilities": [
+          0.999197632808628,
+          1.0,
+          1.0,
+          1.0,
+          0.9999690935166275,
+          0.9999411828338086,
+          0.9999411828338086,
+          0.9996495497935136,
+          0.9999329436144644,
+          0.9997018672496606
+        ]
+      },
+      "sequence": "GCUUAUUCUC"
+    },
+    {
+      "accession": "RF00059",
+      "inverse-design": {
+        "candidate-sequence-count": 1,
+        "evaluated-sequence-count": 1,
+        "search-complete": true,
+        "sequence": "AGGCGUCACA",
+        "target-probability": 0.988478576010189
+      },
+      "landscape": {
+        "edge-count": 10,
+        "path": [
+          {
+            "energy_kcal_mol": 0.0,
+            "step": 0,
+            "structure": ".........."
+          }
+        ],
+        "saddle-energy": 0.0,
+        "state-count": 10,
+        "state-space-complete": true
+      },
+      "ligand": {
+        "occupancy": 0.004982582645760561,
+        "pair-probabilities": [
+          {
+            "i": 1,
+            "j": 6,
+            "probability": 0.00029479160278805214
+          },
+          {
+            "i": 2,
+            "j": 6,
+            "probability": 3.0408564190108543e-05
+          },
+          {
+            "i": 2,
+            "j": 7,
+            "probability": 0.001269714323308654
+          },
+          {
+            "i": 2,
+            "j": 9,
+            "probability": 0.008966472926953545
+          },
+          {
+            "i": 3,
+            "j": 7,
+            "probability": 0.00022248896652481097
+          },
+          {
+            "i": 3,
+            "j": 9,
+            "probability": 0.0005641281027919371
+          },
+          {
+            "i": 5,
+            "j": 9,
+            "probability": 0.0001540467291812978
+          },
+          {
+            "i": 6,
+            "j": 10,
+            "probability": 3.0408564190108543e-05
+          }
+        ],
+        "state-space-complete": true,
+        "unpaired-probabilities": [
+          0.999705208397212,
+          0.9897334041855476,
+          0.9992133829306832,
+          1.0,
+          0.9998459532708188,
+          0.9996443912688318,
+          0.9985077967101664,
+          1.0,
+          0.9903153522410733,
+          0.99996959143581
+        ]
+      },
+      "sequence": "AGGCGUCACA"
+    },
+    {
+      "accession": "RF00080",
+      "inverse-design": {
+        "candidate-sequence-count": 1,
+        "evaluated-sequence-count": 1,
+        "search-complete": true,
+        "sequence": "CCGUUAGAAU",
+        "target-probability": 0.993902194742574
+      },
+      "landscape": {
+        "edge-count": 13,
+        "path": [
+          {
+            "energy_kcal_mol": 0.0,
+            "step": 0,
+            "structure": ".........."
+          }
+        ],
+        "saddle-energy": 0.0,
+        "state-count": 11,
+        "state-space-complete": true
+      },
+      "ligand": {
+        "occupancy": 0.005009784293500617,
+        "pair-probabilities": [
+          {
+            "i": 1,
+            "j": 7,
+            "probability": 0.0004822548392226777
+          },
+          {
+            "i": 2,
+            "j": 7,
+            "probability": 0.004675152569452518
+          },
+          {
+            "i": 3,
+            "j": 10,
+            "probability": 0.000749309547195568
+          },
+          {
+            "i": 4,
+            "j": 8,
+            "probability": 3.119714004826182e-05
+          },
+          {
+            "i": 4,
+            "j": 9,
+            "probability": 0.0007359419501193081
+          },
+          {
+            "i": 5,
+            "j": 9,
+            "probability": 3.119714004826182e-05
+          },
+          {
+            "i": 6,
+            "j": 10,
+            "probability": 3.057457509453057e-05
+          }
+        ],
+        "state-space-complete": true,
+        "unpaired-probabilities": [
+          0.9995177451607772,
+          0.9953248474305476,
+          0.9992506904528043,
+          0.9992328609098324,
+          0.9999688028599516,
+          0.9999694254249056,
+          0.9948425925913248,
+          0.9999688028599516,
+          0.9992328609098324,
+          0.99922011587771
+        ]
+      },
+      "sequence": "CCGUUAGAAU"
+    },
+    {
+      "accession": "RF00094",
+      "inverse-design": {
+        "candidate-sequence-count": 1,
+        "evaluated-sequence-count": 1,
+        "search-complete": true,
+        "sequence": "UCGGGUCGGC",
+        "target-probability": 0.9337126671082976
+      },
+      "landscape": {
+        "edge-count": 22,
+        "path": [
+          {
+            "energy_kcal_mol": 0.0,
+            "step": 0,
+            "structure": ".........."
+          }
+        ],
+        "saddle-energy": 0.0,
+        "state-count": 16,
+        "state-space-complete": true
+      },
+      "ligand": {
+        "occupancy": 0.0047078260423373645,
+        "pair-probabilities": [
+          {
+            "i": 1,
+            "j": 5,
+            "probability": 2.873173223249728e-05
+          },
+          {
+            "i": 1,
+            "j": 8,
+            "probability": 7.737668346056647e-05
+          },
+          {
+            "i": 1,
+            "j": 9,
+            "probability": 0.041422160222401146
+          },
+          {
+            "i": 2,
+            "j": 8,
+            "probability": 0.0495473114945675
+          },
+          {
+            "i": 2,
+            "j": 9,
+            "probability": 0.007163172015337549
+          },
+          {
+            "i": 3,
+            "j": 7,
+            "probability": 0.043531118159800736
+          },
+          {
+            "i": 3,
+            "j": 10,
+            "probability": 0.005167289872439378
+          },
+          {
+            "i": 4,
+            "j": 10,
+            "probability": 0.00317589294817203
+          },
+          {
+            "i": 5,
+            "j": 10,
+            "probability": 0.0006269159046002448
+          }
+        ],
+        "state-space-complete": true,
+        "unpaired-probabilities": [
+          0.9584717313619058,
+          0.943289516490095,
+          0.95130159196776,
+          0.996824107051828,
+          0.9993443523631672,
+          1.0,
+          0.9564688818401992,
+          0.950375311821972,
+          0.9514146677622614,
+          0.9910299012747884
+        ]
+      },
+      "sequence": "UCGGGUCGGC"
+    },
+    {
+      "accession": "RF00162",
+      "inverse-design": {
+        "candidate-sequence-count": 1,
+        "evaluated-sequence-count": 1,
+        "search-complete": true,
+        "sequence": "CUCUUAUCAA",
+        "target-probability": 0.9994549412074918
+      },
+      "landscape": {
+        "edge-count": 13,
+        "path": [
+          {
+            "energy_kcal_mol": 0.0,
+            "step": 0,
+            "structure": ".........."
+          }
+        ],
+        "saddle-energy": 0.0,
+        "state-count": 11,
+        "state-space-complete": true
+      },
+      "ligand": {
+        "occupancy": 0.005037632028430588,
+        "pair-probabilities": [
+          {
+            "i": 2,
+            "j": 6,
+            "probability": 3.074452905121761e-05
+          },
+          {
+            "i": 2,
+            "j": 9,
+            "probability": 8.138826399565544e-05
+          },
+          {
+            "i": 2,
+            "j": 10,
+            "probability": 3.675726239421743e-05
+          },
+          {
+            "i": 4,
+            "j": 9,
+            "probability": 5.936654706683667e-05
+          },
+          {
+            "i": 4,
+            "j": 10,
+            "probability": 0.00019125586078902365
+          },
+          {
+            "i": 5,
+            "j": 9,
+            "probability": 0.00016323068221692525
+          },
+          {
+            "i": 5,
+            "j": 10,
+            "probability": 0.00011258825771291112
+          }
+        ],
+        "state-space-complete": true,
+        "unpaired-probabilities": [
+          1.0,
+          0.999851109944559,
+          1.0,
+          0.999749377592144,
+          0.9997241810600702,
+          0.9999692554709488,
+          1.0,
+          1.0,
+          0.9996960145067206,
+          0.9996593986191038
+        ]
+      },
+      "sequence": "CUCUUAUCAA"
+    },
+    {
+      "accession": "RF00167",
+      "inverse-design": {
+        "candidate-sequence-count": 1,
+        "evaluated-sequence-count": 1,
+        "search-complete": true,
+        "sequence": "AAAAAGUUAA",
+        "target-probability": 0.998935799164911
+      },
+      "landscape": {
+        "edge-count": 13,
+        "path": [
+          {
+            "energy_kcal_mol": 0.0,
+            "step": 0,
+            "structure": ".........."
+          }
+        ],
+        "saddle-energy": 0.0,
+        "state-count": 11,
+        "state-space-complete": true
+      },
+      "ligand": {
+        "occupancy": 0.005035028530631361,
+        "pair-probabilities": [
+          {
+            "i": 1,
+            "j": 7,
+            "probability": 6.916264961867554e-05
+          },
+          {
+            "i": 1,
+            "j": 8,
+            "probability": 0.0005063172273864157
+          },
+          {
+            "i": 2,
+            "j": 7,
+            "probability": 0.0004317172317123818
+          },
+          {
+            "i": 2,
+            "j": 8,
+            "probability": 0.00022802912383112497
+          },
+          {
+            "i": 3,
+            "j": 7,
+            "probability": 0.00016335977658626157
+          },
+          {
+            "i": 3,
+            "j": 8,
+            "probability": 0.00011253007099353184
+          },
+          {
+            "i": 4,
+            "j": 8,
+            "probability": 3.0728639976098314e-05
+          }
+        ],
+        "state-space-complete": true,
+        "unpaired-probabilities": [
+          0.9994245201229948,
+          0.9993402536444564,
+          0.9997241101524202,
+          0.999969271360024,
+          1.0,
+          1.0,
+          0.9993357603420828,
+          0.9991223949378129,
+          1.0,
+          1.0
+        ]
+      },
+      "sequence": "AAAAAGUUAA"
+    },
+    {
+      "accession": "RF00168",
+      "inverse-design": {
+        "candidate-sequence-count": 1,
+        "evaluated-sequence-count": 1,
+        "search-complete": true,
+        "sequence": "AUUGCCAGAA",
+        "target-probability": 0.9942810853096664
+      },
+      "landscape": {
+        "edge-count": 20,
+        "path": [
+          {
+            "energy_kcal_mol": 0.0,
+            "step": 0,
+            "structure": ".........."
+          }
+        ],
+        "saddle-energy": 0.0,
+        "state-count": 15,
+        "state-space-complete": true
+      },
+      "ligand": {
+        "occupancy": 0.005011684527792081,
+        "pair-probabilities": [
+          {
+            "i": 2,
+            "j": 7,
+            "probability": 5.853124415964256e-05
+          },
+          {
+            "i": 2,
+            "j": 8,
+            "probability": 0.00013950029888791298
+          },
+          {
+            "i": 2,
+            "j": 9,
+            "probability": 0.0018622243114310385
+          },
+          {
+            "i": 2,
+            "j": 10,
+            "probability": 0.0021176854212564544
+          },
+          {
+            "i": 3,
+            "j": 7,
+            "probability": 0.00011189617814310088
+          },
+          {
+            "i": 3,
+            "j": 8,
+            "probability": 0.0019847708674839803
+          },
+          {
+            "i": 3,
+            "j": 9,
+            "probability": 0.002560373933523202
+          },
+          {
+            "i": 3,
+            "j": 10,
+            "probability": 0.0007849432571151974
+          }
+        ],
+        "state-space-complete": true,
+        "unpaired-probabilities": [
+          1.0,
+          0.995822058724265,
+          0.9945580157637344,
+          1.0,
+          1.0,
+          1.0,
+          0.9998295725776972,
+          0.997875728833628,
+          0.9955774017550456,
+          0.9970973713216283
+        ]
+      },
+      "sequence": "AUUGCCAGAA"
+    },
+    {
+      "accession": "RF00174",
+      "inverse-design": {
+        "candidate-sequence-count": 1,
+        "evaluated-sequence-count": 1,
+        "search-complete": true,
+        "sequence": "ACGCUGAUGC",
+        "target-probability": 0.5381601053332661
+      },
+      "landscape": {
+        "edge-count": 19,
+        "path": [
+          {
+            "energy_kcal_mol": 0.0,
+            "step": 0,
+            "structure": ".........."
+          }
+        ],
+        "saddle-energy": 0.0,
+        "state-count": 15,
+        "state-space-complete": true
+      },
+      "ligand": {
+        "occupancy": 0.002718852678925433,
+        "pair-probabilities": [
+          {
+            "i": 1,
+            "j": 5,
+            "probability": 1.6595681614602352e-05
+          },
+          {
+            "i": 1,
+            "j": 8,
+            "probability": 4.671080505195009e-05
+          },
+          {
+            "i": 2,
+            "j": 6,
+            "probability": 8.684375869591943e-05
+          },
+          {
+            "i": 2,
+            "j": 9,
+            "probability": 0.0016512946205592615
+          },
+          {
+            "i": 3,
+            "j": 8,
+            "probability": 0.000724600110723026
+          },
+          {
+            "i": 3,
+            "j": 10,
+            "probability": 0.45681902043885614
+          },
+          {
+            "i": 4,
+            "j": 9,
+            "probability": 0.4581477757060772
+          },
+          {
+            "i": 5,
+            "j": 9,
+            "probability": 2.1124163759394127e-05
+          },
+          {
+            "i": 6,
+            "j": 10,
+            "probability": 8.406148800513692e-05
+          }
+        ],
+        "state-space-complete": true,
+        "unpaired-probabilities": [
+          0.9999366935133336,
+          0.9982618616207448,
+          0.5424563794504209,
+          0.5418522242939228,
+          0.999962280154626,
+          0.999829094753299,
+          1.0,
+          0.999228689084225,
+          0.5401798055096041,
+          0.5430969180731386
+        ]
+      },
+      "sequence": "ACGCUGAUGC"
+    },
+    {
+      "accession": "RF00234",
+      "inverse-design": {
+        "candidate-sequence-count": 1,
+        "evaluated-sequence-count": 1,
+        "search-complete": true,
+        "sequence": "UUAAUAAUUA",
+        "target-probability": 0.9964748102891672
+      },
+      "landscape": {
+        "edge-count": 41,
+        "path": [
+          {
+            "energy_kcal_mol": 0.0,
+            "step": 0,
+            "structure": ".........."
+          }
+        ],
+        "saddle-energy": 0.0,
+        "state-count": 26,
+        "state-space-complete": true
+      },
+      "ligand": {
+        "occupancy": 0.005022686483869575,
+        "pair-probabilities": [
+          {
+            "i": 1,
+            "j": 6,
+            "probability": 0.0002148153711974554
+          },
+          {
+            "i": 1,
+            "j": 7,
+            "probability": 0.00019068844677905912
+          },
+          {
+            "i": 1,
+            "j": 10,
+            "probability": 0.00026297884726727736
+          },
+          {
+            "i": 2,
+            "j": 6,
+            "probability": 0.00016271567301226608
+          },
+          {
+            "i": 2,
+            "j": 7,
+            "probability": 0.00011249001359194094
+          },
+          {
+            "i": 2,
+            "j": 10,
+            "probability": 0.0019261642921082785
+          },
+          {
+            "i": 3,
+            "j": 8,
+            "probability": 8.76962961526167e-05
+          },
+          {
+            "i": 3,
+            "j": 9,
+            "probability": 0.002106307724255748
+          },
+          {
+            "i": 4,
+            "j": 8,
+            "probability": 0.0012548414742227397
+          },
+          {
+            "i": 4,
+            "j": 9,
+            "probability": 0.00035629722114287094
+          },
+          {
+            "i": 5,
+            "j": 10,
+            "probability": 8.114680294422791e-05
+          }
+        ],
+        "state-space-complete": true,
+        "unpaired-probabilities": [
+          0.9993315173347562,
+          0.9977986300212875,
+          0.9978059959795916,
+          0.9983888613046344,
+          0.9999188531970558,
+          0.9996224689557904,
+          0.999696821539629,
+          0.9986574622296246,
+          0.9975373950546014,
+          0.9977297100576802
+        ]
+      },
+      "sequence": "UUAAUAAUUA"
+    },
+    {
+      "accession": "RF00504",
+      "inverse-design": {
+        "candidate-sequence-count": 1,
+        "evaluated-sequence-count": 1,
+        "search-complete": true,
+        "sequence": "AGACGAUACU",
+        "target-probability": 0.9856942220844752
+      },
+      "landscape": {
+        "edge-count": 29,
+        "path": [
+          {
+            "energy_kcal_mol": 0.0,
+            "step": 0,
+            "structure": ".........."
+          }
+        ],
+        "saddle-energy": 0.0,
+        "state-count": 20,
+        "state-space-complete": true
+      },
+      "ligand": {
+        "occupancy": 0.004968617403724429,
+        "pair-probabilities": [
+          {
+            "i": 1,
+            "j": 7,
+            "probability": 0.0002939653573695931
+          },
+          {
+            "i": 1,
+            "j": 10,
+            "probability": 0.012500280502861843
+          },
+          {
+            "i": 2,
+            "j": 7,
+            "probability": 3.573994321766623e-05
+          },
+          {
+            "i": 2,
+            "j": 9,
+            "probability": 0.013291307178463071
+          },
+          {
+            "i": 2,
+            "j": 10,
+            "probability": 5.841461180868036e-05
+          },
+          {
+            "i": 3,
+            "j": 7,
+            "probability": 0.00013228762209470624
+          },
+          {
+            "i": 3,
+            "j": 10,
+            "probability": 9.874105632390985e-05
+          },
+          {
+            "i": 5,
+            "j": 9,
+            "probability": 0.00015843324919252456
+          },
+          {
+            "i": 5,
+            "j": 10,
+            "probability": 0.00011104581945848442
+          },
+          {
+            "i": 6,
+            "j": 10,
+            "probability": 3.032333470390076e-05
+          }
+        ],
+        "state-space-complete": true,
+        "unpaired-probabilities": [
+          0.9872057541397684,
+          0.9866145382665106,
+          0.9997689713215814,
+          1.0,
+          0.999730520931349,
+          0.999969676665296,
+          0.999538007077318,
+          1.0,
+          0.9865502595723444,
+          0.9872011946748432
+        ]
+      },
+      "sequence": "AGACGAUACU"
+    },
+    {
+      "accession": "RF01051",
+      "inverse-design": {
+        "candidate-sequence-count": 1,
+        "evaluated-sequence-count": 1,
+        "search-complete": true,
+        "sequence": "AAUGUACAAA",
+        "target-probability": 0.9984640927007022
+      },
+      "landscape": {
+        "edge-count": 8,
+        "path": [
+          {
+            "energy_kcal_mol": 0.0,
+            "step": 0,
+            "structure": ".........."
+          }
+        ],
+        "saddle-energy": 0.0,
+        "state-count": 8,
+        "state-space-complete": true
+      },
+      "ligand": {
+        "occupancy": 0.005032662910484802,
+        "pair-probabilities": [
+          {
+            "i": 1,
+            "j": 5,
+            "probability": 3.071420266171934e-05
+          },
+          {
+            "i": 3,
+            "j": 8,
+            "probability": 8.13079826490001e-05
+          },
+          {
+            "i": 3,
+            "j": 9,
+            "probability": 0.0004844571942760997
+          },
+          {
+            "i": 3,
+            "j": 10,
+            "probability": 0.0007885068126434374
+          },
+          {
+            "i": 5,
+            "j": 9,
+            "probability": 3.099206852842592e-05
+          },
+          {
+            "i": 5,
+            "j": 10,
+            "probability": 0.00011247720070661756
+          }
+        ],
+        "state-space-complete": true,
+        "unpaired-probabilities": [
+          0.9999692857973382,
+          1.0,
+          0.9986457280104316,
+          1.0,
+          0.9998258165281032,
+          1.0,
+          1.0,
+          0.999918692017351,
+          0.9994845507371954,
+          0.99909901598665
+        ]
+      },
+      "sequence": "AAUGUACAAA"
+    },
+    {
+      "accession": "RF01734",
+      "inverse-design": {
+        "candidate-sequence-count": 1,
+        "evaluated-sequence-count": 1,
+        "search-complete": true,
+        "sequence": "UUGCGUGCUG",
+        "target-probability": 0.996755080203412
+      },
+      "landscape": {
+        "edge-count": 28,
+        "path": [
+          {
+            "energy_kcal_mol": 0.0,
+            "step": 0,
+            "structure": ".........."
+          }
+        ],
+        "saddle-energy": 0.0,
+        "state-count": 20,
+        "state-space-complete": true
+      },
+      "ligand": {
+        "occupancy": 0.005024092074298454,
+        "pair-probabilities": [
+          {
+            "i": 1,
+            "j": 5,
+            "probability": 3.066284306050831e-05
+          },
+          {
+            "i": 1,
+            "j": 7,
+            "probability": 0.0001826927096242757
+          },
+          {
+            "i": 1,
+            "j": 10,
+            "probability": 0.00030289539381141866
+          },
+          {
+            "i": 2,
+            "j": 7,
+            "probability": 8.134000137562568e-05
+          },
+          {
+            "i": 2,
+            "j": 10,
+            "probability": 8.459629959803293e-05
+          },
+          {
+            "i": 3,
+            "j": 8,
+            "probability": 0.0007249719445282729
+          },
+          {
+            "i": 3,
+            "j": 9,
+            "probability": 9.48151314475972e-05
+          },
+          {
+            "i": 4,
+            "j": 10,
+            "probability": 0.001757568968236128
+          },
+          {
+            "i": 5,
+            "j": 9,
+            "probability": 0.0006997913053071948
+          },
+          {
+            "i": 6,
+            "j": 10,
+            "probability": 3.066284306050831e-05
+          }
+        ],
+        "state-space-complete": true,
+        "unpaired-probabilities": [
+          0.9994837490535038,
+          0.9998340636990264,
+          0.999180212924024,
+          0.998242431031764,
+          0.9992695458516324,
+          0.9999693371569396,
+          0.999735967289,
+          0.9992750280554716,
+          0.9992053935632452,
+          0.997824276495294
+        ]
+      },
+      "sequence": "UUGCGUGCUG"
+    }
+  ],
+  "schema": 1
+}
