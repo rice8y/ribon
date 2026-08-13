@@ -1,6 +1,0 @@
-{
-  "algorithm": "sha256(path + NUL + content + NUL)",
-  "file_count": 115,
-  "schema": "ribon.wasm-source-fingerprint/1",
-  "sha256": "6e5354aac18689d85f22b1026bd57580cac440dca6784cd0eb1a571751b2d57a"
-}

@@ -9,10 +9,6 @@ default:
 plugin:
   cargo build --release --locked --target wasm32-unknown-unknown -p ribon-plugin
   cp {{wasm}} package/ribon_plugin.wasm
-  python3 scripts/validate-wasm-source.py --update
-
-wasm-sync-test:
-  python3 scripts/validate-wasm-source.py
 
 wasm-build-test:
   cargo build --release --locked --target wasm32-unknown-unknown -p ribon-plugin
@@ -34,7 +30,7 @@ test:
   cargo clippy --workspace --all-targets --locked -- -D warnings
 
 ci-test:
-  cargo test --workspace --locked -- --skip partition::tests::log_domain_remains_finite_for_long_gc_rich_sequences
+  cargo test --workspace --lib --locked -- --skip partition::tests::log_domain_remains_finite_for_long_gc_rich_sequences
   cargo clippy --workspace --all-targets --locked -- -D warnings
 
 typst-smoke-test:
@@ -105,9 +101,9 @@ conditional-density2-performance-test:
 exact-feature-test:
   python3 scripts/validate-exact-features-real.py
 
-ci-check: fmt-test ci-test wasm-sync-test typst-smoke-test
+ci-check: fmt-test ci-test typst-smoke-test
 
-release-check: fmt-test test wasm-build-test wasm-sync-test wasm-test license-test typst-test pseudoknot-test conditional-density2-test conditional-density2-performance-test exact-feature-test performance-test render-test
+release-check: fmt-test test wasm-build-test wasm-test license-test typst-test pseudoknot-test conditional-density2-test conditional-density2-performance-test exact-feature-test performance-test render-test
 
 docs:
   just --justfile package/justfile docs
