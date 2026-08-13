@@ -1,0 +1,17 @@
+[workspace]
+members = ["crates/ribon-core", "crates/ribon-plugin"]
+resolver = "2"
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+license = "GPL-2.0-only"
+repository = "https://github.com/yoneyama/ribon"
+rust-version = "1.82"
+
+[profile.release]
+codegen-units = 1
+lto = true
+opt-level = "s"
+panic = "abort"
+strip = true

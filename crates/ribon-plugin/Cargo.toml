@@ -1,0 +1,17 @@
+[package]
+name = "ribon-plugin"
+description = "Typst WASM bridge for Ribon RNA secondary-structure analysis"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+rust-version.workspace = true
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+ribon-core = { path = "../ribon-core" }
+serde = "1.0"
+serde_json = "1.0"
+wasm-minimal-protocol = "0.2.0"
