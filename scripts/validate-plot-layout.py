@@ -12,16 +12,17 @@ import subprocess
 import tempfile
 
 from imagemagick import convert_command
+from pixel_golden import validate_pixel_golden
 
 
-def run(command: list[str], root: Path, *, stderr_to_stdout: bool = False) -> str:
+def run(command: list[str], root: Path) -> str:
     result = subprocess.run(
         command,
         cwd=root,
         check=True,
         text=True,
         stdout=subprocess.PIPE,
-        stderr=subprocess.STDOUT if stderr_to_stdout else subprocess.PIPE,
+        stderr=subprocess.PIPE,
     )
     return result.stdout
 
@@ -139,11 +140,9 @@ def main() -> int:
                 }
             )
 
-    renderer = run(["pdftoppm", "-v"], root, stderr_to_stdout=True).splitlines()[0]
     manifest = {
         "schema": "ribon.plot-layout-pixel-golden/1",
         "source": "tests/typst/plot_layout_quality.typ",
-        "renderer": renderer,
         "resolution_ppi": 150,
         "page_count": 3,
         "sha256": hashes,
@@ -154,15 +153,7 @@ def main() -> int:
         golden.write_text(json.dumps(manifest, indent=2, sort_keys=True) + "\n")
     else:
         expected = json.loads(golden.read_text())
-        if manifest != expected:
-            changed = [
-                index
-                for index, (actual, wanted) in enumerate(
-                    zip(manifest["sha256"], expected.get("sha256", []), strict=False), 1
-                )
-                if actual != wanted
-            ]
-            raise AssertionError(f"plot layout pixel golden drift: pages={changed}")
+        validate_pixel_golden(manifest, expected, label="plot layout")
 
     report = {
         "schema": "ribon.plot-layout-validation/1",

@@ -12,6 +12,7 @@ import subprocess
 import tempfile
 
 from imagemagick import convert_command
+from pixel_golden import validate_pixel_golden
 
 
 def run(command: list[str], root: Path) -> str:
@@ -23,18 +24,6 @@ def run(command: list[str], root: Path) -> str:
         stdout=subprocess.PIPE,
         stderr=subprocess.PIPE,
     ).stdout
-
-
-def first_line(command: list[str], root: Path) -> str:
-    output = subprocess.run(
-        command,
-        cwd=root,
-        check=True,
-        text=True,
-        stdout=subprocess.PIPE,
-        stderr=subprocess.STDOUT,
-    ).stdout
-    return output.splitlines()[0].strip()
 
 
 def digest(path: Path) -> str:
@@ -153,7 +142,6 @@ def main() -> int:
     manifest = {
         "schema": "ribon.plot-pixel-golden/1",
         "source": "tests/typst/plot_quality.typ",
-        "renderer": first_line(["pdftoppm", "-v"], root),
         "resolution_ppi": 150,
         "page_count": 2,
         "sha256": hashes,
@@ -164,20 +152,7 @@ def main() -> int:
         golden.write_text(json.dumps(manifest, indent=2, sort_keys=True) + "\n")
     else:
         expected = json.loads(golden.read_text())
-        stable_keys = ("schema", "source", "renderer", "resolution_ppi", "page_count")
-        for key in stable_keys:
-            if manifest[key] != expected.get(key):
-                raise AssertionError(f"plot golden environment differs for {key}")
-        if manifest["sha256"] != expected.get("sha256"):
-            changed = [
-                index
-                for index, (actual, wanted) in enumerate(
-                    zip(manifest["sha256"], expected.get("sha256", []), strict=False),
-                    1,
-                )
-                if actual != wanted
-            ]
-            raise AssertionError(f"plot pixel golden drift: pages={changed}")
+        validate_pixel_golden(manifest, expected, label="plot quality")
 
     report = {
         "schema": "ribon.plot-validation/1",

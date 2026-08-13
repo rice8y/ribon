@@ -1,7 +1,6 @@
 {
   "dpi": 120,
   "page_count": 4,
-  "rasterizer": "pdftoppm version 25.11.0",
   "schema": 1,
   "sha256": [
     "9e086a3df61981ef5b0c6c7740b15de7311f36454fde41d877cff90332d8323b",
@@ -9,6 +8,5 @@
     "f11cbbfc6521abe8f8e00ce1df7c9771b7409e63ae7c9ae7aca4510b953ff75d",
     "5ffe20858b3cfff485929572b08f8a84e67aaec776e9af374f7964efc7103675"
   ],
-  "source": "tests/typst/publication.typ",
-  "typst": "typst 0.15.0 (unknown commit)"
+  "source": "tests/typst/publication.typ"
 }

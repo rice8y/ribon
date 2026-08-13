@@ -15,6 +15,8 @@ import subprocess
 import tempfile
 from pathlib import Path
 
+from pixel_golden import validate_pixel_golden
+
 
 def run(command: list[str], root: Path) -> str:
     return subprocess.run(
@@ -91,8 +93,6 @@ def main() -> int:
         "dpi": arguments.dpi,
         "page_count": len(hashes),
         "sha256": hashes,
-        "rasterizer": version(["pdftoppm", "-v"], root),
-        "typst": version(["typst", "--version"], root),
     }
     golden_path = root / arguments.golden
     if arguments.update_golden:
@@ -104,28 +104,7 @@ def main() -> int:
                 f"visual golden is missing: run {Path(__file__).name} --update-golden"
             )
         golden = json.loads(golden_path.read_text())
-        for key in ("schema", "dpi", "page_count", "rasterizer", "typst"):
-            if manifest[key] != golden.get(key):
-                raise AssertionError(
-                    f"visual golden environment differs for {key}: "
-                    f"{manifest[key]!r} != {golden.get(key)!r}"
-                )
-        changed = [
-            index + 1
-            for index, (actual, expected) in enumerate(
-                zip(manifest["sha256"], golden.get("sha256", []), strict=False)
-            )
-            if actual != expected
-        ]
-        if len(manifest["sha256"]) != len(golden.get("sha256", [])):
-            changed.extend(
-                range(
-                    min(len(manifest["sha256"]), len(golden.get("sha256", []))) + 1,
-                    max(len(manifest["sha256"]), len(golden.get("sha256", []))) + 1,
-                )
-            )
-        if changed:
-            raise AssertionError(f"pixel-exact render drift on pages {changed}")
+        validate_pixel_golden(manifest, golden, label="real-data render")
 
     report = {
         "pdf": arguments.pdf.as_posix(),
@@ -134,8 +113,8 @@ def main() -> int:
         "dpi": arguments.dpi,
         "pixel_exact": True,
         "changed_pages": [],
-        "rasterizer": manifest["rasterizer"],
-        "typst": manifest["typst"],
+        "rasterizer": version(["pdftoppm", "-v"], root),
+        "typst": version(["typst", "--version"], root),
         "golden_updated": arguments.update_golden,
     }
     output = root / arguments.output

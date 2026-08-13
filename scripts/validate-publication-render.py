@@ -12,6 +12,7 @@ import tempfile
 from pathlib import Path
 
 from imagemagick import convert_command
+from pixel_golden import validate_pixel_golden
 
 
 def run(command: list[str], root: Path) -> str:
@@ -31,18 +32,6 @@ def digest(path: Path) -> str:
         for block in iter(lambda: stream.read(1024 * 1024), b""):
             value.update(block)
     return value.hexdigest()
-
-
-def version(command: list[str], root: Path) -> str:
-    output = subprocess.run(
-        command,
-        cwd=root,
-        check=True,
-        text=True,
-        stdout=subprocess.PIPE,
-        stderr=subprocess.STDOUT,
-    ).stdout
-    return output.splitlines()[0].strip()
 
 
 def main() -> int:
@@ -207,8 +196,6 @@ def main() -> int:
         "dpi": 120,
         "page_count": 4,
         "sha256": hashes,
-        "rasterizer": version(["pdftoppm", "-v"], root),
-        "typst": version(["typst", "--version"], root),
     }
     golden = root / arguments.golden
     if arguments.update_golden:
@@ -216,15 +203,7 @@ def main() -> int:
         golden.write_text(json.dumps(manifest, indent=2, sort_keys=True) + "\n")
     else:
         expected = json.loads(golden.read_text())
-        if manifest != expected:
-            changed = [
-                index + 1
-                for index, (actual, reference) in enumerate(
-                    zip(manifest["sha256"], expected.get("sha256", []), strict=False)
-                )
-                if actual != reference
-            ]
-            raise AssertionError(f"publication pixel golden drift: pages={changed}")
+        validate_pixel_golden(manifest, expected, label="publication")
 
     report = {
         "pdf": arguments.pdf.as_posix(),

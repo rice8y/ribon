@@ -1,7 +1,6 @@
 {
   "dpi": 110,
   "page_count": 24,
-  "rasterizer": "pdftoppm version 25.11.0",
   "schema": 1,
   "sha256": [
     "5529ec0d549650acf077f83eeb573bf46fbfafa983e255ff671cfc5cdaf652da",
@@ -29,6 +28,5 @@
     "12127b08eb58b102fcd1e41e2508a39f132940eca4f098854406b7fa35f11d97",
     "d47678f25d9fba39082fb6e46c524ed2713d3fcf39769d3e2791454fd0ffd022"
   ],
-  "source": "tests/typst/conditional_density2_render.typ",
-  "typst": "typst 0.15.0 (unknown commit)"
+  "source": "tests/typst/conditional_density2_render.typ"
 }

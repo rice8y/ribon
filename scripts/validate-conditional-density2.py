@@ -13,6 +13,7 @@ import tempfile
 from pathlib import Path
 
 from imagemagick import convert_command
+from pixel_golden import validate_pixel_golden
 
 
 OPEN = {"(": ")", "[": "]", "{": "}", "<": ">"}
@@ -155,18 +156,6 @@ def validate_planar_reduction(
 
 def digest(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
-
-
-def version(command: list[str], root: Path) -> str:
-    output = subprocess.run(
-        command,
-        cwd=root,
-        check=True,
-        text=True,
-        stdout=subprocess.PIPE,
-        stderr=subprocess.STDOUT,
-    ).stdout
-    return output.splitlines()[0].strip()
 
 
 def main() -> int:
@@ -406,17 +395,13 @@ def main() -> int:
         "dpi": 110,
         "page_count": len(hashes),
         "sha256": hashes,
-        "rasterizer": version(["pdftoppm", "-v"], root),
-        "typst": version(["typst", "--version"], root),
     }
     golden_path = root / "tests/golden/conditional_density2_golden_sha256.json"
     if arguments.update_golden:
         golden_path.write_text(json.dumps(manifest, indent=2, sort_keys=True) + "\n")
     else:
         golden = json.loads(golden_path.read_text())
-        for key in ("schema", "dpi", "page_count", "rasterizer", "typst", "sha256"):
-            if manifest[key] != golden.get(key):
-                raise AssertionError(f"conditional visual golden differs for {key}")
+        validate_pixel_golden(manifest, golden, label="conditional density-2")
 
     report = {
         "source": "Andronescu-Pop-Condon S-Test ShPK",
