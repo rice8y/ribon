@@ -1,0 +1,9 @@
+/target/
+*.log
+.DS_Store
+__pycache__/
+/artifacts/
+/crates/ribon-core/data/rna_*.par
+/ribon-docs/
+.vercel
+.env*
