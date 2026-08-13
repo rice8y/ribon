@@ -3,6 +3,7 @@ set -euo pipefail
 
 typst_version="${TYPST_VERSION:-0.15.0}"
 typage_version="${TYPAGE_VERSION:-0.1.5}"
+typage_rust_version="${TYPAGE_RUST_VERSION:-1.92.0}"
 starter_version="${TYPST_DOCS_STARTER_VERSION:-0.1.3}"
 starter="${TYPST_DOCS_STARTER:-github:rice8y/typage-starter-typst-docs#v${starter_version}}"
 docs_root="${TYPAGE_DOCS_ROOT:-ribon-docs}"
@@ -46,7 +47,11 @@ tar -xJf "$typst_archive" -C "$typst_dir"
 cp "${typst_dir}/typst-${typst_target}/typst" .bin/typst
 chmod +x .bin/typst
 
-echo "[setup] installing Typage ${typage_version}"
+echo "[setup] installing Rust ${typage_rust_version} for Typage"
+rustup toolchain install "$typage_rust_version" --profile minimal
+export RUSTUP_TOOLCHAIN="$typage_rust_version"
+
+echo "[setup] installing Typage ${typage_version} with $(rustc --version)"
 cargo install typage --version "$typage_version" --locked
 
 export PATH="$PWD/.bin:$HOME/.cargo/bin:/rust/bin:$PATH"
