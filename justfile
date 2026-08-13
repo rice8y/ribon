@@ -2,7 +2,6 @@ wasm := "target/wasm32-unknown-unknown/release/ribon_plugin.wasm"
 qa-dir := "target/qa"
 typst-test-dir := qa-dir / "typst"
 typage-docs-dir := "ribon-docs"
-export RUSTUP_TOOLCHAIN := "1.82"
 
 default:
   @just --list
