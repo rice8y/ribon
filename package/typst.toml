@@ -2,7 +2,7 @@
 name = "ribon"
 version = "0.1.0"
 entrypoint = "lib.typ"
-authors = ["Ribon contributors"]
+authors = ["Eito Yoneyama"]
 license = "GPL-2.0-only"
 description = "RNA secondary-structure visualization and analysis."
 repository = "https://github.com/rice8y/ribon"
