@@ -9,6 +9,8 @@ import subprocess
 import tempfile
 from pathlib import Path
 
+from imagemagick import convert_command
+
 
 def run(command: list[str], root: Path) -> str:
     return subprocess.run(
@@ -52,8 +54,7 @@ def main() -> int:
         prefix = Path(directory) / "page"
         run(["pdftoppm", "-png", "-r", "140", "-singlefile", str(pdf), str(prefix)], root)
         metric = run(
-            [
-                "magick",
+            convert_command(
                 str(prefix.with_suffix(".png")),
                 "-fuzz",
                 "2%",
@@ -62,7 +63,7 @@ def main() -> int:
                 "%w %h %[fx:page.x] %[fx:page.y] %[fx:page.width] "
                 "%[fx:page.height] %[fx:mean] %[fx:standard_deviation]",
                 "info:",
-            ],
+            ),
             root,
         )
     width, height, x, y, canvas_width, canvas_height, mean, deviation = map(

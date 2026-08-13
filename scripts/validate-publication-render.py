@@ -11,6 +11,8 @@ import subprocess
 import tempfile
 from pathlib import Path
 
+from imagemagick import convert_command
+
 
 def run(command: list[str], root: Path) -> str:
     return subprocess.run(
@@ -140,8 +142,7 @@ def main() -> int:
         hashes = [digest(page) for page in pages]
         for page_number, page in enumerate(pages, 1):
             metric = run(
-                [
-                    "magick",
+                convert_command(
                     str(page),
                     "-fuzz",
                     "2%",
@@ -150,7 +151,7 @@ def main() -> int:
                     "%w %h %[fx:page.x] %[fx:page.y] %[fx:page.width] "
                     "%[fx:page.height] %[fx:mean] %[fx:standard_deviation]",
                     "info:",
-                ],
+                ),
                 root,
             )
             width, height, x, y, canvas_width, canvas_height, mean, deviation = map(
@@ -174,8 +175,7 @@ def main() -> int:
         # saturation mask isolates its colored nucleotide nodes; a near-square
         # box proves that the renderer did not stretch circular coordinates.
         circle = run(
-            [
-                "magick",
+            convert_command(
                 str(pages[0]),
                 "-crop",
                 "400x300+80+50",
@@ -191,7 +191,7 @@ def main() -> int:
                 "-format",
                 "%w %h",
                 "info:",
-            ],
+            ),
             root,
         )
         circle_width, circle_height = map(float, circle.split())

@@ -10,6 +10,8 @@ import subprocess
 import tempfile
 from pathlib import Path
 
+from imagemagick import convert_command
+
 
 def run(command: list[str], root: Path) -> subprocess.CompletedProcess[str]:
     return subprocess.run(
@@ -92,8 +94,7 @@ def main() -> int:
             raise AssertionError(f"rendered {len(rendered)} of {expected_pages} pages")
         for page, image in enumerate(rendered, 1):
             output = run(
-                [
-                    "magick",
+                convert_command(
                     str(image),
                     "-fuzz",
                     "2%",
@@ -102,7 +103,7 @@ def main() -> int:
                     "%w %h %[fx:page.x] %[fx:page.y] %[fx:page.width] "
                     "%[fx:page.height] %[fx:mean] %[fx:standard_deviation]",
                     "info:",
-                ],
+                ),
                 root,
             ).stdout
             width, height, x, y, canvas_width, canvas_height, mean, deviation = map(

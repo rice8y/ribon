@@ -11,6 +11,8 @@ import re
 import subprocess
 import tempfile
 
+from imagemagick import convert_command
+
 
 def run(command: list[str], root: Path) -> str:
     return subprocess.run(
@@ -119,8 +121,7 @@ def main() -> int:
         hashes = [digest(page) for page in pages]
         for page_number, page in enumerate(pages, 1):
             metric = run(
-                [
-                    "magick",
+                convert_command(
                     str(page),
                     "-fuzz",
                     "2%",
@@ -129,7 +130,7 @@ def main() -> int:
                     "%w %h %[fx:page.x] %[fx:page.y] %[fx:page.width] "
                     "%[fx:page.height] %[fx:mean] %[fx:standard_deviation]",
                     "info:",
-                ],
+                ),
                 root,
             )
             width, height, x, y, canvas_width, canvas_height, mean, deviation = map(

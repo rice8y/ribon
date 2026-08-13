@@ -12,6 +12,8 @@ import subprocess
 import tempfile
 from pathlib import Path
 
+from imagemagick import convert_command
+
 
 OPEN = {"(": ")", "[": "]", "{": "}", "<": ">"}
 ENERGY_TERMS = (
@@ -369,8 +371,7 @@ def main() -> int:
         hashes = [digest(page) for page in rendered]
         for page_number, image in enumerate(rendered, 1):
             metrics = run(
-                [
-                    "magick",
+                convert_command(
                     str(image),
                     "-fuzz",
                     "2%",
@@ -379,7 +380,7 @@ def main() -> int:
                     "%w %h %[fx:page.x] %[fx:page.y] %[fx:page.width] "
                     "%[fx:page.height] %[fx:mean] %[fx:standard_deviation]",
                     "info:",
-                ],
+                ),
                 root,
             )
             width, height, x, y, canvas_width, canvas_height, mean, deviation = map(
