@@ -448,21 +448,8 @@ just check
 
 The `docs` recipe builds the manual with the pinned Typst 0.14.2 toolchain through Nix. `docs-current` uses the Typst executable already on `PATH`.
 
-The implementation is separated by responsibility:
-
-```text
-lib.typ                 stable public imports only
-src/protocol.typ        WASM protocol and model values
-src/constraints.typ     hard, soft, and probing constraints
-src/analysis.typ        typed analysis wrappers and result helpers
-src/annotations.typ     themes, annotation values, scales, legends
-src/render.typ          vector scene renderer
-src/chart.typ           axes, coordinate transforms, ticks, plot legends
-src/plots.typ           plot data, comparisons, dot plots, mountain plots
-```
-
 ## License and provenance
 
-Ribon is licensed under `GPL-2.0-only`. The bundled parameter tables require the same license.
+Ribon is licensed under [GPL-2.0-only](LICENSE). The bundled parameter tables require the same license.
 
 See [NOTICE.md](NOTICE.md) and [THIRD_PARTY.md](THIRD_PARTY.md) for bundled-data provenance, dependency notices, hashes, and licensing details.

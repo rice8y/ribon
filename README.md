@@ -454,6 +454,6 @@ The `docs` recipe builds the manual with the pinned Typst 0.14.2 toolchain throu
 
 ## License and provenance
 
-Ribon is licensed under `GPL-2.0-only`. The bundled parameter tables require the same license.
+Ribon is licensed under [GPL-2.0-only](LICENSE). The bundled parameter tables require the same license.
 
 See [the bundled-data notice](package/NOTICE.md) and [third-party notices](package/THIRD_PARTY.md) for provenance, hashes, and licensing details.
