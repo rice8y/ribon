@@ -185,11 +185,11 @@ Use `fold` when only the MFE is needed and `evaluate` for a supplied planar stru
 
 ### Thermodynamic models
 
-Ribon ships Turner 2004 RNA and Mathews 2004 DNA parameter families generated from the official RNAstructure 6.6 tables. Temperature interpolation, dangle models, salt corrections, and model fingerprints are explicit.
+Ribon ships the standard RNA and DNA parameter families generated from the official RNAstructure 6.6 tables. Both families support temperature interpolation and explicit dangle models; the RNA family additionally supports the published monovalent-salt correction. Model identifiers and parameter fingerprints are explicit.
 
 ```typst
 #let rna = analysis-model(temperature: 25, salt: 0.15)
-#let dna = dna-model(temperature: 25, salt: 0.1)
+#let dna = dna-model(temperature: 25)
 #let provenance = data(parameters())
 ```
 
@@ -432,7 +432,7 @@ The release suite covers both numerical output and rendered images:
 - a 72-page real-RNA vector PDF checked for blank pages, clipping, text, raster contamination, and pixel-exact hashes;
 - a rendering contract covering annotations, comparisons, plots, long-RNA detail, and all result-to-render connections.
 
-See the repository's [validation methods](https://github.com/yoneyama/ribon/blob/main/docs/VALIDATION.md), [model boundary](https://github.com/yoneyama/ribon/blob/main/docs/MODEL.md), and [reference index](https://github.com/yoneyama/ribon/blob/main/docs/REFERENCES.md) for exact methods and measured results.
+See the repository's [validation methods](https://github.com/rice8y/ribon/blob/main/docs/VALIDATION.md), [model boundary](https://github.com/rice8y/ribon/blob/main/docs/MODEL.md), and [reference index](https://github.com/rice8y/ribon/blob/main/docs/REFERENCES.md) for exact methods and measured results.
 
 ## Build and test
 

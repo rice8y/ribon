@@ -2,9 +2,9 @@
 
 This document defines the thermodynamic, decoding, pseudoknot, and layout models exposed by Ribon. Citations for the underlying methods are maintained in the [reference bibliography](../package/docs/references.bib) and attached to the corresponding claims in the [complete manual](../package/docs/documentation.pdf).
 
-## Canonical Turner model
+## Standard RNA parameter family
 
-The public RNA model identifier is `ribon-turner-2004`. Its stack, hairpin, bulge, internal-loop, 1-by-1, 1-by-2, and 2-by-2 special internal-loop, terminal-mismatch, dangle, special-hairpin, multiloop, and duplex-initiation tables are generated from the official RNAstructure 6.6 `rna.*` free-energy and enthalpy parameters. Values away from 37 °C are interpolated as follows:
+The public RNA model identifier is `ribon-rnastructure-6.6-rna`. Its stack, hairpin, bulge, internal-loop, 1-by-1, 1-by-2, and 2-by-2 special internal-loop, terminal-mismatch, dangle, special-hairpin, multiloop, and duplex-initiation tables are generated from the official RNAstructure 6.6 `rna.*` free-energy and enthalpy parameters. This is the RNAstructure 6.6 standard RNA family: a Turner 2004 lineage with subsequent RNAstructure revisions. Values away from 37 °C are interpolated as follows:
 
 ```math
 \Delta G(T) = \Delta H - T\frac{\Delta H - \Delta G_{37}}{310.15\,\mathrm{K}}
@@ -16,7 +16,7 @@ MFE folding and fixed-structure evaluation accept dangle models 0–3. Model 3 i
 
 ## DNA and custom parameter families
 
-`ribon-mathews-dna-2004` is generated from the 33 official RNAstructure 6.6 `dna.*` files. It has distinct stack, mismatch, dangle, 1-by-1, 1-by-2, and 2-by-2 internal-loop, loop-initiation, multiloop, duplex-initiation, special-loop, free-energy, and enthalpy tables. Input thymine is normalized to the uracil-shaped internal index only for lookup; the selected tables remain part of the DNA family. The same `EnergyModel` is used by MFE, partition functions, evaluation, sampling, suboptimal folding, accessibility, duplex and cofold, local and circular folding, pseudoknot, conditional density-2, and comparative operations.
+`ribon-rnastructure-6.6-dna` is generated from the 33 official RNAstructure 6.6 `dna.*` files and identifies the standard DNA family compiled by the Mathews group. It has distinct stack, mismatch, dangle, 1-by-1, 1-by-2, and 2-by-2 internal-loop, loop-initiation, multiloop, duplex-initiation, special-loop, free-energy, and enthalpy tables. Input thymine uses the uracil-shaped thermodynamic index only for table lookup and remains `T` in public results and drawings. The RNA salt correction is not applied to DNA; `dna-model` therefore has no `salt` parameter, and low-level DNA requests reject any `salt_molar` other than the neutral internal value `1.021`. The same `EnergyModel` is used by MFE, partition functions, evaluation, sampling, suboptimal folding, accessibility, duplex and cofold, local and circular folding, pseudoknot, conditional density-2, and comparative operations.
 
 `ribon-custom-thermodynamic-v1` starts from an RNA or DNA family and replaces complete normalized centi-kcal/mol tables field by field. Before analysis, Ribon validates the schema version, every table dimension, finite values, ranges, special-loop alphabet and length constraints, duplicate entries, and the 64-character SHA-256 provenance field. Only omitted fields inherit from the base family. Modified-base and G-quadruplex models reject a DNA base family because their calibrations are RNA-specific; a custom RNA overlay composes its canonical tables with those corrections.
 

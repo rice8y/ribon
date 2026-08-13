@@ -185,11 +185,11 @@ Use `fold` when only the MFE is needed and `evaluate` for a supplied planar stru
 
 ### Thermodynamic models
 
-Ribon ships Turner 2004 RNA and Mathews 2004 DNA parameter families generated from the official RNAstructure 6.6 tables. Temperature interpolation, dangle models, salt corrections, and model fingerprints are explicit.
+Ribon ships the standard RNA and DNA parameter families generated from the official RNAstructure 6.6 tables. Both families support temperature interpolation and explicit dangle models; the RNA family additionally supports the published monovalent-salt correction. Model identifiers and parameter fingerprints are explicit.
 
 ```typst
 #let rna = analysis-model(temperature: 25, salt: 0.15)
-#let dna = dna-model(temperature: 25, salt: 0.1)
+#let dna = dna-model(temperature: 25)
 #let provenance = data(parameters())
 ```
 

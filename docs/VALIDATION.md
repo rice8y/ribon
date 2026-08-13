@@ -57,7 +57,7 @@ Every independently enumerated component energy is finite and additive, and maxi
 
 For an independent short-input reduction, the first 10 nt of each sequence are evaluated with an empty seed by both the production polynomial engine and the ordinary planar inside/outside dynamic program under dangle models 0 and 2. Log partition functions and every pair marginal agree within `1e-10`; model 0 adds a third comparison with the exponential density-2 oracle. Rust unit tests compare structure counts with complete enumeration for 14 varied fixed seeds and every small planar seed generated at 12 nt. For a separate nonempty seed, every allowed G-prime layer under models 0 and 2 is independently enumerated and weighted by the production evaluator; log partition function, all pair marginals, MFE, centroid objective, and MEA objective agree within `1e-10`. Outside pair marginals also agree with central finite differences of the log partition function with respect to pair energy within `2e-8`. The polynomial function rejects models 1 and 3, while Rust and WASM tests confirm that the public API dispatches those requests to the complete exhaustive engine.
 
-`scripts/validate-conditional-density2-performance.py` measures release builds with a tracking allocator three times each at sequence lengths `240`, `320`, and `400`. The CI gate requires an adjacent-size time exponent of `2.0–3.8`, a heap exponent of `1.5–2.5`, a maximum-to-minimum cubic-normalized time ratio no greater than `1.5`, a finite partition function, and nonempty pair output. Median measurements, fitted exponents, peak heap use, and normalized spread are written to `tests/reports/conditional_density2_performance.json` on every run.
+`scripts/validate-conditional-density2-performance.py` measures release builds with a tracking allocator three times each at sequence lengths `240`, `320`, and `400`. The release gate requires an adjacent-size time exponent of `2.0–3.8`, a heap exponent of `1.5–2.5`, a maximum-to-minimum cubic-normalized time ratio no greater than `1.5`, a finite partition function, and nonempty pair output. Median measurements, fitted exponents, peak heap use, and normalized spread are written to `tests/reports/conditional_density2_performance.json` on every run.
 
 The same 24 cases are rendered one per page as production MFE, centroid, and MEA structures in `target/qa/ribon-conditional-density2-validation.pdf`. Validation requires a valid qpdf document, 24 pages, every case label, no embedded raster image, and no blank or clipped PNG rendering. The minimum content margin is 38 px and the minimum ink fraction is `0.040481`. Per-page SHA-256 hashes in `tests/golden/conditional_density2_golden_sha256.json` reject any one-pixel drift at the release gate.
 
@@ -92,7 +92,7 @@ imports: typst minimal protocol write_args_to_buffer / send_result_to_host
 exports: memory, run, toolchain data/heap globals
 ```
 
-The byte length and SHA-256 of the release WASM are pinned on every build in `tests/reports/wasm_validation.json`.
+The byte length and SHA-256 of the release WASM are recorded on every WASM validation run in `tests/reports/wasm_validation.json`.
 
 ## Image-level validation
 
@@ -108,7 +108,7 @@ The byte length and SHA-256 of the release WASM are pinned on every build in `te
 - Page 2: cofold, local accessibility, circular, modified-base, G-quadruplex, pseudoknot, comparative, dot plot, DNA model, custom normalized model, fatgraph-topology annotation, and MFE/MEA comparison
 - Page 3: complete-state-space minimum-saddle landscape, complete fixed-template inverse folding, and complete ligand microstate ensemble
 
-`scripts/validate-rendered-pdf.py` checks qpdf syntax, page count, all 24 accessions, 18 labels per case, PNG rendering of every page, blank pages, clipping, content margins, and zero PDF `/Image` XObjects. The current baseline has a minimum margin of 20 px, an ink fraction range of `0.005544–0.024680`, and a minimum grayscale standard deviation of `0.054526`.
+`scripts/validate-rendered-pdf.py` checks qpdf syntax, page count, all 24 accessions, 18 labels per case, PNG rendering of every page, blank pages, clipping, content margins, and zero PDF `/Image` XObjects. The current baseline has a minimum margin of 20 px, an ink fraction range of `0.005582–0.023456`, and a minimum grayscale standard deviation of `0.054929`.
 
 `scripts/validate-render-golden.py` compares all 72 pages with SHA-256 hashes after 110 dpi Poppler rasterization. A one-pixel change fails the gate; only an explicit `--update-golden` operation updates the baseline. The manifest also pins Typst 0.15.0 and Poppler 25.11.0.
 

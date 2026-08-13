@@ -252,7 +252,23 @@ The response retains the resolved model and constraints. Result-driven rendering
 
 == Sequence alphabet
 
-RNA models accept canonical RNA bases. The DNA model accepts DNA input and preserves the selected parameter family. Whitespace is normalized by the engine. Use #raw("&") to separate strands. Modified-nucleotide calculations receive a canonical sequence plus explicit #raw("modified-base") descriptors.
+The accepted sequence alphabet is #raw("ACGUTRYSWKMBDHVN"), case-insensitively. Whitespace is removed, while #raw("T") is preserved in public results and drawings and uses the #raw("U")-shaped thermodynamic lookup index. In built-in models, ambiguity symbols are valid placeholders but do not form base pairs. #raw("&") separates non-empty strands for structure validation and drawing; single-strand prediction operations reject strand separators. Modified-nucleotide calculations receive a canonical sequence plus explicit #raw("modified-base") descriptors.
+
+#let dna-sequence-example = data(validate("a t g t", "...."))
+#paired(
+  "#let parsed = data(validate(\"a t g t\", \"....\"))
+
+#table(
+  columns: 2,
+  [Sequence], [#raw(parsed.sequence)],
+  [Length], [#parsed.length],
+)" ,
+  table(
+    columns: 2,
+    [Sequence], [#raw(dna-sequence-example.sequence)],
+    [Length], [#dna-sequence-example.length],
+  ),
+)
 
 == Extended dot-bracket notation
 
@@ -686,7 +702,7 @@ Every engine call uses #raw("ribon.analysis/1"). Successful responses contain #r
 
 == Thermodynamic models
 
-#raw("analysis-model") constructs an immutable nearest-neighbor model descriptor. Temperature, minimum loop length, dangle treatment, monovalent salt concentration, and MEA gamma are explicit. The bundled RNA tables use the Turner 2004 family described by Mathews et al. @mathews2004, while #raw("dna-model") selects the corresponding Mathews 2004 DNA parameter family. Non-reference monovalent salt concentrations apply the loop, stack, multiloop, and duplex-initiation correction model of Yao et al. @yao2023. #raw("custom-model") applies a normalized, fingerprinted table overlay to an RNA or DNA base family.#footnote[University of Rochester, “Nearest Neighbor Database,” #raw("https://rna2.urmc.rochester.edu/NNDB/"). University of Rochester, “Nearest Neighbor Database: Download,” #raw("https://rna2.urmc.rochester.edu/NNDB/download.html").]
+#raw("analysis-model") constructs an immutable nearest-neighbor model descriptor. Temperature, minimum loop length, dangle treatment, monovalent salt concentration, and MEA gamma are explicit. The bundled families are generated from the RNAstructure 6.6 standard RNA and DNA tables documented by NNDB and RNAstructure @turner_mathews2010 @reuter_mathews2010. The RNA family follows the Turner 2004 lineage, including the revision described by Mathews et al. @mathews2004 and subsequent RNAstructure updates; #raw("dna-model") selects the distinct standard DNA family compiled by the Mathews group. Non-reference monovalent salt concentrations are available only for RNA and apply the loop, stack, multiloop, and duplex-initiation correction model of Yao et al. @yao2023. The DNA API exposes no salt parameter, and low-level DNA requests reject non-default #raw("salt_molar") values. #raw("custom-model") applies a normalized, fingerprinted table overlay to an RNA or DNA base family.#footnote[University of Rochester, “Nearest Neighbor Database,” #raw("https://rna2.urmc.rochester.edu/NNDB/"). University of Rochester, “Nearest Neighbor Database: Download,” #raw("https://rna2.urmc.rochester.edu/NNDB/download.html"). University of Rochester, “RNAstructure Version History,” #raw("https://rna.urmc.rochester.edu/Overview/Updates.html").]
 
 #let physiological-example = analysis-model(
   temperature: 37,
@@ -695,7 +711,7 @@ Every engine call uses #raw("ribon.analysis/1"). Successful responses contain #r
   salt: 0.15,
   mea-gamma: 1,
 )
-#let dna-example = dna-model(temperature: 25, salt: 0.1)
+#let dna-example = dna-model(temperature: 25)
 #paired(
   "#let physiological = analysis-model(
   temperature: 37,
@@ -705,19 +721,19 @@ Every engine call uses #raw("ribon.analysis/1"). Successful responses contain #r
   mea-gamma: 1,
 )
 
-#let dna = dna-model(temperature: 25, salt: 0.1)
+#let dna = dna-model(temperature: 25)
 
 #table(
   columns: 3,
-  [Model], [Temperature], [Salt],
+  [Model], [Temperature], [Salt handling],
   [#physiological.id], [#physiological.temperature_celsius °C], [#physiological.salt_molar M],
-  [#dna.id], [#dna.temperature_celsius °C], [#dna.salt_molar M],
+  [#dna.id], [#dna.temperature_celsius °C], [not applied],
 )" ,
   table(
     columns: 3,
-    [Model], [Temperature], [Salt],
+    [Model], [Temperature], [Salt handling],
     [#raw(physiological-example.id)], [#physiological-example.temperature_celsius °C], [#physiological-example.salt_molar M],
-    [#raw(dna-example.id)], [#dna-example.temperature_celsius °C], [#dna-example.salt_molar M],
+    [#raw(dna-example.id)], [#dna-example.temperature_celsius °C], [not applied],
   ),
 )
 
@@ -1122,14 +1138,14 @@ Extended dot-bracket structures can be drawn directly. Crossing-component annota
 
 #api(
   "analysis-model",
-  "analysis-model(id: \"ribon-turner-2004\", temperature: 37.0, min-loop: 3, dangles: 2, salt: 1.021, mea-gamma: 1.0)",
+  "analysis-model(id: \"ribon-rnastructure-6.6-rna\", temperature: 37.0, min-loop: 3, dangles: 2, salt: 1.021, mea-gamma: 1.0)",
   [Constructs the RNA model descriptor shared across operations.],
 )
 
 #api(
   "dna-model",
-  "dna-model(temperature: 37.0, min-loop: 3, dangles: 2, salt: 1.021, mea-gamma: 1.0)",
-  [Constructs the Mathews 2004 DNA model descriptor.],
+  "dna-model(temperature: 37.0, min-loop: 3, dangles: 2, mea-gamma: 1.0)",
+  [Constructs the RNAstructure 6.6 standard DNA model descriptor. Thymine remains #raw("T") in results and drawings; no additional monovalent-salt correction is applied.],
 )
 
 #api(
@@ -1264,7 +1280,7 @@ Extended dot-bracket structures can be drawn directly. Crossing-component annota
 #api("place-legend", "place-legend(body, legend, style: legend-style())", [Places a standalone legend around or over arbitrary composed content.])
 #api("structure-difference", "structure-difference(sequence, reference, alternative, execution: execution-policy())", [Classifies shared and unique pairs.])
 #api("compare-structures", "compare-structures(sequence, reference, alternative, method: \"naview\", common-color: ..., reference-color: ..., alternative-color: ..., legend: true, legend-position: \"bottom\", legend-theme: plot-theme(), execution: execution-policy(), ..render-arguments)", [Overlays two pair sets on reference coordinates. #raw("legend") accepts a Boolean or #raw("legend-style").])
-#api("dot-plot", "dot-plot(sequence, probabilities: auto, comparison: none, reference-structure: auto, width: 8cm, height: auto, threshold: 0.01, model: analysis-model(), constraints: none, execution: execution-policy(), scale: color-scale(), comparison-scale: color-scale(), legend: true, legend-position: \"bottom\", x-label: ..., y-label: ..., x-axis: axis-style(), y-axis: axis-style(), layout: plot-layout(), theme: plot-theme(), grid-stroke: auto, frame-stroke: auto)", [Draws pair probabilities in an exact square data viewport and optionally compares two ensembles. Axes, viewport, and legend placement are independent.])
+#api("dot-plot", "dot-plot(sequence, probabilities: auto, comparison: none, reference-structure: auto, width: 8cm, height: auto, threshold: 0.01, model: analysis-model(), constraints: none, execution: execution-policy(), scale: color-scale(colors: (rgb(\"#dbe9f6\"), rgb(\"#315eaa\")), label: [Pair probability]), comparison-scale: color-scale(colors: (rgb(\"#fee8c8\"), rgb(\"#d7301f\")), label: [Comparison probability]), legend: true, legend-position: \"bottom\", x-label: ..., y-label: ..., x-axis: axis-style(), y-axis: axis-style(), layout: plot-layout(), theme: plot-theme(), grid-stroke: auto, frame-stroke: auto)", [Draws pair probabilities in an exact square data viewport and optionally compares two ensembles. Axes, viewport, and legend placement are independent.])
 #api("mountain-profile", "mountain-profile(sequence, probabilities: auto, reference-structures: auto, model: analysis-model(), constraints: none, execution: execution-policy())", [Returns the expected and discrete mountain values used for drawing.])
 #api("mountain-plot", "mountain-plot(sequence, probabilities: auto, reference-structures: auto, width: 10cm, height: 3.8cm, model: analysis-model(), constraints: none, execution: execution-policy(), stroke: ..., reference-strokes: (...), y-ticks: 4, legend: true, legend-position: \"bottom\", x-label: ..., y-label: ..., expected-axes: (\"x\", \"y\"), x-axis: axis-style(), y-axis: axis-style(), x2-axis: none, y2-axis: none, layout: plot-layout(), theme: plot-theme())", [Draws expected and discrete mountain profiles. Reference dictionaries select primary or secondary axes through #raw("axes").])
 
@@ -1324,7 +1340,7 @@ Repository validation details are maintained in #raw("docs/VALIDATION.md"). The 
 
 = License, provenance, and citation
 
-Ribon is distributed under #raw("GPL-2.0-only"). The bundled Turner 2004 RNA and Mathews 2004 DNA tables @mathews2004 are generated from the official RNAstructure 6.6 distribution.#footnote[University of Rochester, “RNAstructure,” #raw("https://rna2.urmc.rochester.edu/RNAstructure.html"). Exact archive hashes and licensing details are recorded in the package #raw("NOTICE.md").]
+Ribon is distributed under #raw("GPL-2.0-only"). The bundled standard RNA and DNA parameter families @turner_mathews2010 @reuter_mathews2010 are generated from the official RNAstructure 6.6 distribution.#footnote[University of Rochester, “RNAstructure,” #raw("https://rna2.urmc.rochester.edu/RNAstructure.html"). The reference Bioconda archive and normalized table-bundle hashes are recorded in the package #raw("NOTICE.md").]
 
 When citing Ribon, cite the archived release of the package and the specific thermodynamic, layout, probing, decoding, or pseudoknot model used in the reported analysis. The bibliography below is maintained in #raw("docs/references.bib"). Web-only standards and source archives are cited in footnotes at the claims they support.
 

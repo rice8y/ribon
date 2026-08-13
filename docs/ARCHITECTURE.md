@@ -73,8 +73,8 @@ Document-time execution has explicit default limits, including 500 nt for global
 ## Reproducibility
 
 - Rust dependencies are locked by `Cargo.lock`.
-- Thermodynamic models are identified as `ribon-turner-2004`, `ribon-mathews-dna-2004`, or the fingerprinted `ribon-custom-thermodynamic-v1`.
-- Source archives and normalized parameter bundles are pinned by SHA-256.
+- Thermodynamic models are identified as `ribon-rnastructure-6.6-rna`, `ribon-rnastructure-6.6-dna`, or the fingerprinted `ribon-custom-thermodynamic-v1`.
+- The reference distribution archive and normalized parameter bundles are pinned by SHA-256.
 - Stochastic operations are fixed by a request-level seed.
 - Visual goldens record the Typst and Poppler versions, rasterization resolution, and per-page SHA-256 hashes.
 - External reference programs remain outside the runtime, and each differential report records its program version, artifact hash, and tolerances.
