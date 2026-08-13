@@ -6,7 +6,7 @@ resolver = "2"
 version = "0.1.0"
 edition = "2021"
 license = "GPL-2.0-only"
-repository = "https://github.com/yoneyama/ribon"
+repository = "https://github.com/rice8y/ribon"
 rust-version = "1.82"
 
 [profile.release]
