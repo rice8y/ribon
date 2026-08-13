@@ -1,0 +1,76 @@
+TOML_FILE := "typst.toml"
+
+get_value_from_toml key:
+  #!/bin/bash
+  grep "{{key}}" {{TOML_FILE}} | sed -E 's/.*= "(.*)"/\1/'
+
+get_local_package_dir:
+  #!/bin/bash
+  if [[ "$OSTYPE" == "darwin"* ]]; then
+    echo "$HOME/Library/Application Support/typst/packages"
+  elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
+    echo "${XDG_DATA_HOME:-$HOME/.local/share}/typst/packages"
+  elif [[ "$OSTYPE" == "msys"* || "$OSTYPE" == "cygwin"* ]]; then
+    echo "$APPDATA/typst/packages"
+  else
+    echo "Unsupported OS"
+    exit 1
+  fi
+
+default:
+  @just --list
+
+plugin:
+  just --justfile ../justfile plugin
+
+test:
+  just --justfile ../justfile typst-test
+
+plot-test:
+  just --justfile ../justfile plot-test
+
+check:
+  just --justfile ../justfile release-check
+
+docs: # Typst 0.14.2
+  nix shell github:NixOS/nixpkgs/1412caf7bf9e660f2f962917c14b1ea1c3bc695e#typst -c typst c --root .. docs/documentation.typ
+
+docs-current:
+  typst compile --root .. docs/documentation.typ
+
+images:
+  typst compile --root .. --format png --ppi 180 examples/annotations.typ examples/annotations.png
+  typst compile --root .. --format png --ppi 180 examples/comparison-dot-plot.typ examples/comparison-dot-plot.png
+  typst compile --root .. --format png --ppi 180 examples/continuous-annotation.typ examples/continuous-annotation.png
+  typst compile --root .. --format png --ppi 180 examples/secondary-structure.typ examples/secondary-structure.png
+  typst compile --root .. --format png --ppi 180 examples/dot-plot.typ examples/dot-plot.png
+  typst compile --root .. --format png --ppi 180 examples/edited-scene.typ examples/edited-scene.png
+  typst compile --root .. --format png --ppi 180 examples/decoder-comparison.typ examples/decoder-comparison.png
+  typst compile --root .. --format png --ppi 180 examples/mountain-plot.typ examples/mountain-plot.png
+  typst compile --root .. --format png --ppi 180 examples/multi-strand.typ examples/multi-strand.png
+  typst compile --root .. --format png --ppi 180 examples/predicted-structure.typ examples/predicted-structure.png
+  typst compile --root .. --format png --ppi 180 examples/pseudoknot.typ examples/pseudoknot.png
+  typst compile --root .. --format png --ppi 180 examples/structure-comparison.typ examples/structure-comparison.png
+
+install: plugin
+  #!/bin/bash
+  PACKAGE_NAME=$(just get_value_from_toml name)
+  PACKAGE_VERSION=$(just get_value_from_toml version)
+  LOCAL_PACKAGE_DIR=$(just get_local_package_dir)
+  TARGET_DIR="$LOCAL_PACKAGE_DIR/local/$PACKAGE_NAME/$PACKAGE_VERSION"
+
+  rm -rf "$TARGET_DIR"
+  mkdir -p "$TARGET_DIR"
+  cp -R LICENSE NOTICE.md README.md THIRD_PARTY.md docs examples lib.typ ribon_plugin.wasm src typst.toml "$TARGET_DIR"
+  echo "Installed @local/$PACKAGE_NAME:$PACKAGE_VERSION"
+
+clean:
+  #!/bin/bash
+  PACKAGE_NAME=$(just get_value_from_toml name)
+  PACKAGE_VERSION=$(just get_value_from_toml version)
+  LOCAL_PACKAGE_DIR=$(just get_local_package_dir)
+  TARGET_DIR="$LOCAL_PACKAGE_DIR/local/$PACKAGE_NAME/$PACKAGE_VERSION"
+  rm -rf "$TARGET_DIR"
+
+clean-generated:
+  rm -f docs/documentation.pdf examples/annotations.png examples/comparison-dot-plot.png examples/continuous-annotation.png examples/decoder-comparison.png examples/dot-plot.png examples/edited-scene.png examples/mountain-plot.png examples/multi-strand.png examples/predicted-structure.png examples/pseudoknot.png examples/secondary-structure.png examples/structure-comparison.png
