@@ -5,9 +5,8 @@
 - Source: <https://rfam.org/>
 - API: `https://rfam.org/family/{accession}/alignment`
 - License: CC0 1.0
-- Rebuild: `python3 scripts/fetch-rfam-corpus.py`
 
-The rebuild script chooses the 20-500 nt IUPAC sequence with the smallest gap fraction in each SEED alignment, removes alignment gaps, and projects `SS_cons` pairing onto that sequence. The accession, sequence region identifier, description, structure provenance, retrieval date, and selection rule remain in the JSON file.
+Corpus preparation chooses the 20-500 nt IUPAC sequence with the smallest gap fraction in each SEED alignment, removes alignment gaps, and projects `SS_cons` pairing onto that sequence. The accession, sequence region identifier, description, structure provenance, retrieval date, and selection rule remain in the JSON file.
 
 # Pseudoknot corpus
 

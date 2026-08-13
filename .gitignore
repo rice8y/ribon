@@ -5,5 +5,8 @@ __pycache__/
 /artifacts/
 /crates/ribon-core/data/rna_*.par
 /ribon-docs/
+/scripts/fetch-rfam-corpus.py
+/scripts/format-markdown.py
+/tests/oracles/
 .vercel
 .env*

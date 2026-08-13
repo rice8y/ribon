@@ -1,6 +1,6 @@
-# Development scripts
+# Release validation scripts
 
-This directory contains repository-owned validation and maintenance commands that operate only on Ribon sources and generated artifacts. External comparison programs and their adapters live under `tests/oracles/` so they cannot be confused with release inputs.
+This directory contains the commands used by continuous integration and release validation. They operate only on Ribon sources and generated artifacts.
 
 ## Release validation
 
@@ -12,11 +12,6 @@ This directory contains repository-owned validation and maintenance commands tha
 - `validate-pseudoknot.py`, `validate-conditional-density2.py`, `validate-exact-features-real.py`, and the performance scripts check advanced numerical behavior.
 
 The root `justfile` is the supported entry point for these commands. Generated PDFs and rasterized pages are written below `target/qa/`; machine-readable summaries are written to `tests/reports/`.
-
-## Maintenance
-
-- `format-markdown.py` enforces one physical source line per prose paragraph and requires alternative text for images.
-- `fetch-rfam-corpus.py` refreshes the pinned real-data corpus and is not run by ordinary CI.
 
 Run the complete local gate with:
 

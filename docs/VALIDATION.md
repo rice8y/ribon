@@ -4,7 +4,7 @@ Ribon validates numerical outputs, algorithmic invariants, the public WASM and T
 
 ## RNAstructure 6.6 differential validation
 
-`tests/oracles/rnastructure.py` uses the official macOS ARM64 conda package as an external oracle; its archive SHA-256 is `8a2904c4b9e16854a2aac3c6f3e510c844685f8cf330601e986d12f7d97dadc8`. The corpus contains the first 80 nucleotides from 24 distinct Rfam families. Both programs run at 37 °C with isolated pairs permitted.
+The differential validation recorded in `tests/reports/rnastructure_6_6_validation.json` uses the official macOS ARM64 conda package as an external oracle; its archive SHA-256 is `8a2904c4b9e16854a2aac3c6f3e510c844685f8cf330601e986d12f7d97dadc8`. The corpus contains the first 80 nucleotides from 24 distinct Rfam families. Both programs run at 37 °C with isolated pairs permitted.
 
 The comparison covers MFE structure and energy, ensemble free energy, every base-pair probability, the 0.5-threshold centroid, and MEA with gamma set to 1. Ribon uses dangles=3, including coaxial stacking, for MFE and dangles=2 for the integrated ensemble. The programs use the same parameter family but not an identical grammar, so the report records both structural statistics and numerical errors instead of requiring bitwise equality.
 
@@ -63,7 +63,7 @@ The same 24 cases are rendered one per page as production MFE, centroid, and MEA
 
 ## CParty CLI black-box differential validation
 
-`tests/oracles/cparty.py` invokes only the documented CParty 1.0 command-line interface as an external process. It evaluates the 24 published ShPK RNAs with fixed seeds under dangle models 0 and 2 and DNA homologs of the first eight sequences with an empty seed under both models, for 64 conditions in total. The report pins the external binary, RNA parameter file, and version by SHA-256. None of these external artifacts is part of the distributed WASM module.
+The black-box differential validation recorded in `tests/reports/cparty_blackbox_validation.json` invokes only the documented CParty 1.0 command-line interface as an external process. It evaluates the 24 published ShPK RNAs with fixed seeds under dangle models 0 and 2 and DNA homologs of the first eight sequences with an empty seed under both models, for 64 conditions in total. The report pins the external binary, RNA parameter file, and version by SHA-256. None of these external artifacts is part of the distributed WASM module.
 
 For RNA, MFE pair sets agree in 24/24 cases under both dangle conditions. With the standard dangles=2 setting, MFE-energy MAE is `0.04329 kcal/mol`, with a maximum of `0.395`. The MAE against the CLI's displayed ensemble energy is `0.20403`. Ensemble energy reconstructed from the same CLI's MFE frequency uses:
 
@@ -124,13 +124,6 @@ Run the complete reproducible release gate with:
 just release-check
 ```
 
-This task covers Markdown formatting, Rust formatting and tests, Clippy, WASM synchronization and validation, license boundaries, Typst API and renderer tests, pseudoknots, conditional density-2 exactness and performance, exact-feature validation, general performance, and real-data image validation.
+This task covers Rust formatting and tests, Clippy, WASM synchronization and validation, license boundaries, Typst API and renderer tests, pseudoknots, conditional density-2 exactness and performance, exact-feature validation, general performance, and real-data image validation.
 
-External differential tools are optional because they are not distributed with Ribon. In an environment with the CParty 1.0 CLI or official RNAstructure CLI installed, run:
-
-```sh
-just cparty-blackbox-test
-python3 tests/oracles/rnastructure.py --enforce
-```
-
-Differences against an external oracle may reflect either an implementation defect or a declared model boundary. Passing the release gate therefore does not imply identity with RNAstructure, ViennaRNA, or another package. Ribon's reproducibility unit is the model identifier, parameter-bundle hash, API schema, and package version.
+External differential adapters and their reference installations are maintained as local development tools rather than distributed with Ribon. Their pinned results remain available in `tests/reports/`. Differences against an external oracle may reflect either an implementation defect or a declared model boundary. Passing the release gate therefore does not imply identity with RNAstructure, ViennaRNA, or another package. Ribon's reproducibility unit is the model identifier, parameter-bundle hash, API schema, and package version.

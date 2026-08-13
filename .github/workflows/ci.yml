@@ -34,8 +34,8 @@ jobs:
         run: sudo apt-get update && sudo apt-get install -y poppler-utils imagemagick librsvg2-bin qpdf
       - name: Install pinned WebAssembly validator
         run: cargo install wasm-tools --version 1.245.1 --locked
-      - name: Source formatting, Rust tests, and lints
-        run: just markdown-test fmt-test test
+      - name: Rust formatting, tests, and lints
+        run: just fmt-test test
       - name: Typst/WASM and license boundary
         run: just wasm-sync-test wasm-test license-test typst-test
       - name: Advanced numerical and performance gates

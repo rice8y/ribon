@@ -19,9 +19,6 @@ wasm-test: plugin
 license-test:
   python3 scripts/validate-licenses.py
 
-markdown-test:
-  python3 scripts/format-markdown.py --check
-
 contrast-test:
   python3 scripts/validate-contrast.py
 
@@ -95,13 +92,7 @@ conditional-density2-performance-test:
 exact-feature-test: plugin
   python3 scripts/validate-exact-features-real.py
 
-cparty-blackbox-test: plugin
-  python3 tests/oracles/cparty.py
-
-reference-test:
-  python3 tests/oracles/rnastructure.py
-
-release-check: markdown-test fmt-test test wasm-sync-test wasm-test license-test typst-test pseudoknot-test conditional-density2-test conditional-density2-performance-test exact-feature-test performance-test render-test
+release-check: fmt-test test wasm-sync-test wasm-test license-test typst-test pseudoknot-test conditional-density2-test conditional-density2-performance-test exact-feature-test performance-test render-test
 
 docs:
   just --justfile package/justfile docs

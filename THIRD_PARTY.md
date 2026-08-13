@@ -48,7 +48,7 @@ The following programs and publications are used only for algorithm research or 
 
 The Ps, Psm, Psp, Pb, Pup, and Pps states, ordinary and spanning loop coefficients in `conditional_density2.rs`, and the 15 states and border recurrences in `conditional_density2/polynomial.rs` are independently implemented from the CParty supplementary information, the published Jabbari-Condon-Zhao recurrences, and the cited DP09 tables. CParty, HFold, and HotKnots source code, headers, objects, and generated tables are not copied, compiled, linked, or distributed. A CParty executable may be invoked only as an optional black-box development oracle and is not a release-test or runtime dependency.
 
-The small C/C++ harnesses and drivers under `tests/oracles/` call public APIs of external oracles and are not runtime inputs. The ignored `artifacts/` directory is reserved for local external checkouts and is excluded from release archives and the Typst package.
+External validation adapters and source checkouts are local development tools and are not distributed in this repository, release archives, or the Typst package. The ignored `artifacts/` directory is reserved for local external checkouts.
 
 ## Runtime boundary
 
