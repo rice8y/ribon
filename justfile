@@ -2,6 +2,7 @@ wasm := "target/wasm32-unknown-unknown/release/ribon_plugin.wasm"
 qa-dir := "target/qa"
 typst-test-dir := qa-dir / "typst"
 typage-docs-dir := "ribon-docs"
+export RUSTUP_TOOLCHAIN := "1.82"
 
 default:
   @just --list
@@ -28,6 +29,15 @@ fmt-test:
 test:
   cargo test --workspace --locked
   cargo clippy --workspace --all-targets --locked -- -D warnings
+
+ci-test:
+  cargo test --workspace --locked -- --skip partition::tests::log_domain_remains_finite_for_long_gc_rich_sequences
+  cargo clippy --workspace --all-targets --locked -- -D warnings
+
+typst-smoke-test:
+  mkdir -p {{typst-test-dir}}
+  typst compile --root . tests/typst/smoke.typ {{typst-test-dir}}/smoke.pdf
+  typst compile --root . tests/typst/api_all.typ {{typst-test-dir}}/api_all.pdf
 
 typst-test: plugin contrast-test
   mkdir -p {{typst-test-dir}}
@@ -91,6 +101,8 @@ conditional-density2-performance-test:
 
 exact-feature-test: plugin
   python3 scripts/validate-exact-features-real.py
+
+ci-check: fmt-test ci-test wasm-sync-test typst-smoke-test
 
 release-check: fmt-test test wasm-sync-test wasm-test license-test typst-test pseudoknot-test conditional-density2-test conditional-density2-performance-test exact-feature-test performance-test render-test
 

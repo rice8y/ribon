@@ -1,6 +1,16 @@
-# Release validation scripts
+# Repository validation
 
-This directory contains the commands used by continuous integration and release validation. They operate only on Ribon sources and generated artifacts.
+This directory contains the commands used by repository and release validation. They operate only on Ribon sources and generated artifacts.
+
+## Required checks
+
+Run the same bounded checks as pull-request CI with:
+
+```sh
+just ci-check
+```
+
+This gate covers Rust formatting, the bounded unit/integration/reference/protocol test set, lints, byte-for-byte synchronization of the distributed WASM module, and compilation of the Typst smoke and complete public-API fixtures. It deliberately avoids installing PDF rasterizers, the long-sequence log-domain stress test, and performance-sensitive or exhaustive release-scale validation.
 
 ## Release validation
 
@@ -13,7 +23,7 @@ This directory contains the commands used by continuous integration and release 
 
 The root `justfile` is the supported entry point for these commands. Generated PDFs and rasterized pages are written below `target/qa/`; machine-readable summaries are written to `tests/reports/`.
 
-Run the complete local gate with:
+Run the complete release gate locally with:
 
 ```sh
 just release-check

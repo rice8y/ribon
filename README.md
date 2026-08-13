@@ -436,7 +436,13 @@ See the [technical documentation](docs/README.md), [validation report](docs/VALI
 
 ## Build and test
 
-Run the complete repository gate, then build package documentation and images:
+Run the bounded repository gate during development:
+
+```sh
+just ci-check
+```
+
+Before publication, run the complete release gate, then build package documentation and images:
 
 ```sh
 just release-check

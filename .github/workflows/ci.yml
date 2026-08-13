@@ -14,7 +14,7 @@ concurrency:
 
 jobs:
   test:
-    name: Release validation
+    name: Required checks
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
@@ -30,15 +30,5 @@ jobs:
         with:
           typst-version: 0.15.0
           cache-dependency-path: package/lib.typ
-      - name: Install PDF/vector QA tools
-        run: sudo apt-get update && sudo apt-get install -y poppler-utils imagemagick librsvg2-bin qpdf
-      - name: Install pinned WebAssembly validator
-        run: cargo install wasm-tools --version 1.245.1 --locked
-      - name: Rust formatting, tests, and lints
-        run: just fmt-test test
-      - name: Typst/WASM and license boundary
-        run: just wasm-sync-test wasm-test license-test typst-test
-      - name: Advanced numerical and performance gates
-        run: just pseudoknot-test conditional-density2-test conditional-density2-performance-test exact-feature-test performance-test
-      - name: Real-data native-vector rendering QA
-        run: just render-test
+      - name: Run required checks
+        run: just ci-check

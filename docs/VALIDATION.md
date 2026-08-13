@@ -118,12 +118,20 @@ Representative pages 1, 2, 47, and 48 receive an additional visual inspection fo
 
 ## Release gate
 
+Run the same bounded checks as pull-request CI with:
+
+```sh
+just ci-check
+```
+
+This checks Rust formatting, the bounded unit/integration/reference/protocol test set, Clippy, byte-for-byte WASM synchronization, and Typst smoke/public-API compilation. It excludes the long-sequence log-domain stress test, platform-sensitive performance measurements, exhaustive feature matrices, and release-scale image validation.
+
 Run the complete reproducible release gate with:
 
 ```sh
 just release-check
 ```
 
-This task covers Rust formatting and tests, Clippy, WASM synchronization and validation, license boundaries, Typst API and renderer tests, pseudoknots, conditional density-2 exactness and performance, exact-feature validation, general performance, and real-data image validation.
+This task includes the bounded CI gate and adds WASM validation, license boundaries, complete Typst renderer tests, pseudoknots, conditional density-2 exactness and performance, exact-feature validation, general performance, and real-data image validation. It runs locally before publication and in the tag-triggered release workflow rather than on every pull request.
 
 External differential adapters and their reference installations are maintained as local development tools rather than distributed with Ribon. Their pinned results remain available in `tests/reports/`. Differences against an external oracle may reflect either an implementation defect or a declared model boundary. Passing the release gate therefore does not imply identity with RNAstructure, ViennaRNA, or another package. Ribon's reproducibility unit is the model identifier, parameter-bundle hash, API schema, and package version.
