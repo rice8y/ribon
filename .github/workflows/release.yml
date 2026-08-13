@@ -115,7 +115,7 @@ jobs:
 
       - name: Generate checksums
         working-directory: release-assets
-        run: sha256sum * > SHA256SUMS
+        run: sha256sum -- * > SHA256SUMS
 
       - name: Publish release
         uses: softprops/action-gh-release@v3
@@ -127,30 +127,5 @@ jobs:
   deploy-docs:
     name: Deploy documentation
     needs: github-release
-    runs-on: ubuntu-latest
-    permissions:
-      contents: read
-    env:
-      VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
-      VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
-      VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v6
-
-      - name: Install Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: "22"
-
-      - name: Install Vercel CLI
-        run: npm install --global vercel@latest
-
-      - name: Pull Vercel configuration
-        run: vercel pull --yes --environment production --token "$VERCEL_TOKEN"
-
-      - name: Build documentation
-        run: vercel build --prod --token "$VERCEL_TOKEN"
-
-      - name: Deploy documentation
-        run: vercel deploy --prebuilt --prod --token "$VERCEL_TOKEN"
+    uses: ./.github/workflows/documentation.yml
+    secrets: inherit
