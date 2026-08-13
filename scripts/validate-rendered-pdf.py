@@ -69,7 +69,7 @@ def main() -> int:
         "Multi-component H-type pseudoknot",
         "Gap-aware covariation consensus",
         "Decoder source probabilities",
-        "Mathews DNA model",
+        "RNAstructure 6.6 DNA model",
         "Custom normalized model",
         "Fatgraph topology annotation",
         "MFE/MEA structure comparison",

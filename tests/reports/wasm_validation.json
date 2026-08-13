@@ -1,7 +1,7 @@
 {
   "modules": [
     {
-      "bytes": 1719814,
+      "bytes": 1721494,
       "imports": [
         [
           "typst_env",
@@ -16,7 +16,7 @@
       "public_exports": [
         "run"
       ],
-      "sha256": "b4efb3eea3c7e74e70e246ed520a907004cb685a5a2aeb0ed8045de2ff3b2167",
+      "sha256": "aebcd94d44003e2dfd4783a614b7be434e6bebcc4b6ae4abf74738e70daa92cc",
       "valid": true
     }
   ],

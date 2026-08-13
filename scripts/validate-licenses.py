@@ -12,7 +12,7 @@ import subprocess
 
 MODEL_BUNDLE_SHA256 = "0c00a31400f1dedbe9a3e161b2f9b1b74cde54941144ee988f48173d33bbcd7b"
 DNA_MODEL_BUNDLE_SHA256 = "019ad1d5c3dac421df37e0a5aeded6d3da50da03deecc23ba0ae5a6d5d06b977"
-SOURCE_ARCHIVE_SHA256 = "8a2904c4b9e16854a2aac3c6f3e510c844685f8cf330601e986d12f7d97dadc8"
+REFERENCE_ARCHIVE_SHA256 = "8a2904c4b9e16854a2aac3c6f3e510c844685f8cf330601e986d12f7d97dadc8"
 
 
 def run(arguments: list[str], root: Path) -> str:
@@ -175,7 +175,7 @@ def main() -> int:
     for value in (
         MODEL_BUNDLE_SHA256,
         DNA_MODEL_BUNDLE_SHA256,
-        SOURCE_ARCHIVE_SHA256,
+        REFERENCE_ARCHIVE_SHA256,
         "GPL-2.0-only",
     ):
         if value not in notice + third_party + package_third_party + manifest:
@@ -192,7 +192,7 @@ def main() -> int:
         "dna_parameter_source": "RNAstructure 6.6 data_tables/dna.*",
         "dna_parameter_file_count": dna_count,
         "dna_parameter_bundle_sha256": dna_fingerprint,
-        "source_archive_sha256": SOURCE_ARCHIVE_SHA256,
+        "reference_archive_sha256": REFERENCE_ARCHIVE_SHA256,
         "linked_viennarna": False,
         "linked_cparty": False,
         "linked_varna": False,

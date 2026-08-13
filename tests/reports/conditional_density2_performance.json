@@ -15,48 +15,48 @@
   },
   "medians": {
     "240": {
-      "elapsed_seconds": 0.232633042,
+      "elapsed_seconds": 0.211586542,
       "log_partition_function": 375.0651122364333,
       "pair_probability_entries": 4666,
-      "peak_heap_bytes": 54728936,
-      "seconds_per_n_cubed": 1.6828200376157407e-08
+      "peak_heap_bytes": 54728952,
+      "seconds_per_n_cubed": 1.5305739438657407e-08
     },
     "320": {
-      "elapsed_seconds": 0.564510958,
+      "elapsed_seconds": 0.505401583,
       "log_partition_function": 489.3981369906708,
       "pair_probability_entries": 9539,
-      "peak_heap_bytes": 97370104,
-      "seconds_per_n_cubed": 1.722750726318359e-08
+      "peak_heap_bytes": 97370120,
+      "seconds_per_n_cubed": 1.5423632293701172e-08
     },
     "400": {
-      "elapsed_seconds": 1.11400125,
+      "elapsed_seconds": 1.0013825,
       "log_partition_function": 629.7452764290894,
       "pair_probability_entries": 9719,
-      "peak_heap_bytes": 152012104,
-      "seconds_per_n_cubed": 1.7406269531250002e-08
+      "peak_heap_bytes": 152012120,
+      "seconds_per_n_cubed": 1.5646601562500002e-08
     }
   },
-  "normalized_cubic_spread": 1.0343512165395663,
+  "normalized_cubic_spread": 1.0222702160329271,
   "pairwise_heap_scaling_exponents": [
     {
-      "exponent": 2.0026505443861056,
+      "exponent": 2.0026500993517504,
       "from": 240,
       "to": 320
     },
     {
-      "exponent": 1.9962079278136418,
+      "exponent": 1.9962076631109444,
       "from": 320,
       "to": 400
     }
   ],
   "pairwise_scaling_exponents": [
     {
-      "exponent": 3.081518089358902,
+      "exponent": 3.0266718494958633,
       "from": 240,
       "to": 320
     },
     {
-      "exponent": 3.0462621182442353,
+      "exponent": 3.064321120014481,
       "from": 320,
       "to": 400
     }

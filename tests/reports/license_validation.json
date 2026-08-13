@@ -11,8 +11,8 @@
   "parameter_file_count": 34,
   "parameter_source": "RNAstructure 6.6 data_tables/rna.*",
   "project_license": "GPL-2.0-only",
+  "reference_archive_sha256": "8a2904c4b9e16854a2aac3c6f3e510c844685f8cf330601e986d12f7d97dadc8",
   "runtime_package_file_set_exact": true,
-  "source_archive_sha256": "8a2904c4b9e16854a2aac3c6f3e510c844685f8cf330601e986d12f7d97dadc8",
   "stale_linked_backend_paths_absent": true,
   "typst_universe_license_blocker": false,
   "wasm_imports": [

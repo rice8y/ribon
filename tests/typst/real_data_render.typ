@@ -217,7 +217,7 @@
     ),
     figure(
       render(dna-analysis, width: 65mm, height: 40mm, numbering: none),
-      caption: [Mathews DNA model],
+      caption: [RNAstructure 6.6 DNA model],
     ),
     figure(
       render(

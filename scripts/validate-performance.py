@@ -39,7 +39,7 @@ def main() -> int:
         result = json.loads(process.stdout)
         if result["length"] != length:
             raise AssertionError("performance query returned the wrong sequence length")
-        if "exact banded sliding-window Turner inside/outside ensembles" not in result["method"]:
+        if "exact banded sliding-window nearest-neighbor inside/outside ensembles" not in result["method"]:
             raise AssertionError("performance query did not use the Rust local-ensemble backend")
         expected_windows = max(1, length - min(50, length) + 1)
         if result["window-count"] != expected_windows:
@@ -56,7 +56,7 @@ def main() -> int:
     if ratio > 10.0:
         raise AssertionError(f"120→480 nt wall-time ratio exceeded 10: {ratio:.3f}")
     report = {
-        "backend": "public Typst/WASM exact banded sliding-window Turner inside/outside ensembles",
+        "backend": "public Typst/WASM exact banded sliding-window nearest-neighbor inside/outside ensembles",
         "source": "longest record in tests/data/rfam_real_24.json",
         "window_size": 50,
         "maximum_pair_span": 35,
