@@ -1,4 +1,4 @@
-#import "../lib.typ": *
+#import "@preview/ribon:0.1.0": *
 
 #set page(width: 120mm, height: 45mm, margin: 0pt, fill: white)
 #set text(font: "Libertinus Serif", size: 7pt)
