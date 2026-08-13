@@ -421,11 +421,12 @@ fn fill_banded_inside(
                 m2[i][j] = m2[i][j - 1] + log_unpaired_ml;
             }
             if j > min_loop {
-                for k in i..=j - min_loop - 1 {
-                    if qb[k][j] == NEG_INF {
+                for (k, qb_row) in qb.iter().enumerate().take(j - min_loop).skip(i) {
+                    if qb_row[j] == NEG_INF {
                         continue;
                     }
-                    let branch = qb[k][j] - model.multiloop_stem_boltzmann_energy(bases, k, j) / rt;
+                    let branch =
+                        qb_row[j] - model.multiloop_stem_boltzmann_energy(bases, k, j) / rt;
                     log_update(
                         &mut m1[i][j],
                         branch - (k - i) as f64 * model.multiloop_unpaired_boltzmann() / rt,
@@ -557,13 +558,13 @@ fn accumulate_window_pair_marginals(
                     log_update(&mut om2[i][j - 1], parent2 + log_unpaired);
                 }
                 if j > min_loop {
-                    for k in i + 1..=j - min_loop - 1 {
+                    for (k, oqb_row) in oqb.iter_mut().enumerate().take(j - min_loop).skip(i + 1) {
                         if inside.m1[i][k - 1] == NEG_INF || inside.qb[k][j] == NEG_INF {
                             continue;
                         }
                         let stem = -model.multiloop_stem_boltzmann_energy(bases, k, j) / rt;
                         log_update(&mut om1[i][k - 1], parent2 + stem + inside.qb[k][j]);
-                        log_update(&mut oqb[k][j], parent2 + inside.m1[i][k - 1] + stem);
+                        log_update(&mut oqb_row[j], parent2 + inside.m1[i][k - 1] + stem);
                     }
                 }
             }
@@ -575,19 +576,19 @@ fn accumulate_window_pair_marginals(
                     log_update(&mut om1[i][j - 1], parent1 + log_unpaired);
                 }
                 if j > min_loop {
-                    for k in i..=j - min_loop - 1 {
+                    for (k, oqb_row) in oqb.iter_mut().enumerate().take(j - min_loop).skip(i) {
                         if inside.qb[k][j] == NEG_INF {
                             continue;
                         }
                         let stem = -model.multiloop_stem_boltzmann_energy(bases, k, j) / rt;
                         log_update(
-                            &mut oqb[k][j],
+                            &mut oqb_row[j],
                             parent1 + stem
                                 - (k - i) as f64 * model.multiloop_unpaired_boltzmann() / rt,
                         );
                         if k > i && inside.m1[i][k - 1] != NEG_INF {
                             log_update(&mut om1[i][k - 1], parent1 + stem + inside.qb[k][j]);
-                            log_update(&mut oqb[k][j], parent1 + inside.m1[i][k - 1] + stem);
+                            log_update(&mut oqb_row[j], parent1 + inside.m1[i][k - 1] + stem);
                         }
                     }
                 }

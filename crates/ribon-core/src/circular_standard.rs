@@ -831,11 +831,12 @@ fn fill_partition(
                 m2[i][j] = m2[i][j - 1] + log_unpaired;
             }
             if j > min_loop {
-                for k in i..=j - min_loop - 1 {
-                    if qb[k][j] == NEG_INF {
+                for (k, qb_row) in qb.iter().enumerate().take(j - min_loop).skip(i) {
+                    if qb_row[j] == NEG_INF {
                         continue;
                     }
-                    let branch = qb[k][j] - model.multiloop_stem_boltzmann_energy(bases, k, j) / rt;
+                    let branch =
+                        qb_row[j] - model.multiloop_stem_boltzmann_energy(bases, k, j) / rt;
                     if let Some(soft) = if k == i {
                         Some(0.0)
                     } else {
@@ -962,13 +963,13 @@ fn circular_probabilities(
                     update(&mut om2[i][j - 1], parent2 + log_unpaired);
                 }
                 if j > min_loop {
-                    for k in i + 1..=j - min_loop - 1 {
+                    for (k, oqb_row) in oqb.iter_mut().enumerate().take(j - min_loop).skip(i + 1) {
                         if workspace.m1[i][k - 1] == NEG_INF || workspace.qb[k][j] == NEG_INF {
                             continue;
                         }
                         let stem = -model.multiloop_stem_boltzmann_energy(bases, k, j) / rt;
                         update(&mut om1[i][k - 1], parent2 + stem + workspace.qb[k][j]);
-                        update(&mut oqb[k][j], parent2 + workspace.m1[i][k - 1] + stem);
+                        update(&mut oqb_row[j], parent2 + workspace.m1[i][k - 1] + stem);
                     }
                 }
             }
@@ -978,7 +979,7 @@ fn circular_probabilities(
                     update(&mut om1[i][j - 1], parent1 + log_unpaired);
                 }
                 if j > min_loop {
-                    for k in i..=j - min_loop - 1 {
+                    for (k, oqb_row) in oqb.iter_mut().enumerate().take(j - min_loop).skip(i) {
                         if workspace.qb[k][j] == NEG_INF {
                             continue;
                         }
@@ -989,7 +990,7 @@ fn circular_probabilities(
                             constraints.unpaired_range_energy(i, k - 1)
                         } {
                             update(
-                                &mut oqb[k][j],
+                                &mut oqb_row[j],
                                 parent1 + stem
                                     - ((k - i) as f64 * model.multiloop_unpaired_boltzmann()
                                         + soft)
@@ -998,7 +999,7 @@ fn circular_probabilities(
                         }
                         if k > i && workspace.m1[i][k - 1] != NEG_INF {
                             update(&mut om1[i][k - 1], parent1 + stem + workspace.qb[k][j]);
-                            update(&mut oqb[k][j], parent1 + workspace.m1[i][k - 1] + stem);
+                            update(&mut oqb_row[j], parent1 + workspace.m1[i][k - 1] + stem);
                         }
                     }
                 }

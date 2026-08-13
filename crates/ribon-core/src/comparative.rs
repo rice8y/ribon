@@ -508,11 +508,11 @@ fn alignment_mfe(
                 SegmentChoice::Invalid
             };
             if j > min_loop {
-                for k in i..=j - min_loop - 1 {
-                    if qb[k][j] >= INF / 2.0 {
+                for (k, qb_row) in qb.iter().enumerate().take(j - min_loop).skip(i) {
+                    if qb_row[j] >= INF / 2.0 {
                         continue;
                     }
-                    let branch = qb[k][j] + scorer.stem(k, j, StemContext::Multiloop, false);
+                    let branch = qb_row[j] + scorer.stem(k, j, StemContext::Multiloop, false);
                     let leading = (i..k)
                         .map(|column| scorer.unpaired_multiloop(column, false))
                         .sum::<f64>();
@@ -541,13 +541,13 @@ fn alignment_mfe(
             let mut best_q = q[i][j - 1];
             let mut choice_q = ExteriorChoice::Unpaired;
             if j > min_loop {
-                for k in i..=j - min_loop - 1 {
-                    if qb[k][j] >= INF / 2.0 {
+                for (k, qb_row) in qb.iter().enumerate().take(j - min_loop).skip(i) {
+                    if qb_row[j] >= INF / 2.0 {
                         continue;
                     }
                     let left = if k == i { 0.0 } else { q[i][k - 1] };
                     let candidate =
-                        left + qb[k][j] + scorer.stem(k, j, StemContext::Exterior, false);
+                        left + qb_row[j] + scorer.stem(k, j, StemContext::Exterior, false);
                     if candidate < best_q {
                         best_q = candidate;
                         choice_q = ExteriorChoice::Pair(k);
@@ -713,11 +713,11 @@ fn alignment_partition(
                 m2[i][j] = m2[i][j - 1] + log_unpaired;
             }
             if j > min_loop {
-                for k in i..=j - min_loop - 1 {
-                    if qb[k][j] == NEG_INF {
+                for (k, qb_row) in qb.iter().enumerate().take(j - min_loop).skip(i) {
+                    if qb_row[j] == NEG_INF {
                         continue;
                     }
-                    let branch = qb[k][j] - scorer.stem(k, j, StemContext::Multiloop, true) / rt;
+                    let branch = qb_row[j] - scorer.stem(k, j, StemContext::Multiloop, true) / rt;
                     let leading = (i..k)
                         .map(|column| scorer.unpaired_multiloop(column, true))
                         .sum::<f64>();
@@ -732,13 +732,13 @@ fn alignment_partition(
 
             q[i][j] = q[i][j - 1];
             if j > min_loop {
-                for k in i..=j - min_loop - 1 {
-                    if qb[k][j] == NEG_INF {
+                for (k, qb_row) in qb.iter().enumerate().take(j - min_loop).skip(i) {
+                    if qb_row[j] == NEG_INF {
                         continue;
                     }
                     let left = if k == i { 0.0 } else { q[i][k - 1] };
                     let stem = -scorer.stem(k, j, StemContext::Exterior, true) / rt;
-                    log_update(&mut q[i][j], left + stem + qb[k][j]);
+                    log_update(&mut q[i][j], left + stem + qb_row[j]);
                 }
             }
         }

@@ -314,11 +314,12 @@ fn compute_inside(
                 m2[i][j] = m2[i][j - 1] + unpaired_ml;
             }
             if j > min_loop {
-                for k in i..=j - min_loop - 1 {
-                    if qb[k][j] == NEG_INF {
+                for (k, qb_row) in qb.iter().enumerate().take(j - min_loop).skip(i) {
+                    if qb_row[j] == NEG_INF {
                         continue;
                     }
-                    let branch = qb[k][j] - model.multiloop_stem_boltzmann_energy(bases, k, j) / rt;
+                    let branch =
+                        qb_row[j] - model.multiloop_stem_boltzmann_energy(bases, k, j) / rt;
                     let leading = if k == i {
                         Some(0.0)
                     } else {
@@ -340,13 +341,13 @@ fn compute_inside(
                 q[i][j] = q[i][j - 1] - constraints.unpaired_energy(j) / rt;
             }
             if j > min_loop {
-                for k in i..=j - min_loop - 1 {
-                    if qb[k][j] == NEG_INF {
+                for (k, qb_row) in qb.iter().enumerate().take(j - min_loop).skip(i) {
+                    if qb_row[j] == NEG_INF {
                         continue;
                     }
                     let left = if k == i { 0.0 } else { q[i][k - 1] };
                     let stem = -model.exterior_stem_boltzmann_energy(bases, k, j) / rt;
-                    q[i][j] = log_add(q[i][j], left + stem + qb[k][j]);
+                    q[i][j] = log_add(q[i][j], left + stem + qb_row[j]);
                 }
             }
         }

@@ -377,12 +377,12 @@ fn mfe(
                 }
             }
 
-            for k in i..j {
+            for (k, qb_row) in qb.iter().enumerate().take(j).skip(i) {
                 if !pair_allowed(bases, k, j, cut, min_loop, model) {
                     continue;
                 }
                 let branch_state = usize::from(crosses_cut(k, j, cut));
-                let branch = qb[k][j][branch_state];
+                let branch = qb_row[j][branch_state];
                 if branch >= INF / 2.0 {
                     continue;
                 }
@@ -645,15 +645,15 @@ fn partition(
                     m2[i][j][state] = m2[i][j - 1][state] + ml_unpaired;
                 }
             }
-            for k in i..j {
+            for (k, qb_row) in qb.iter().enumerate().take(j).skip(i) {
                 if !pair_allowed(bases, k, j, cut, min_loop, model) {
                     continue;
                 }
                 let bs = usize::from(crosses_cut(k, j, cut));
-                if qb[k][j][bs] == NEG_INF {
+                if qb_row[j][bs] == NEG_INF {
                     continue;
                 }
-                let exterior = qb[k][j][bs]
+                let exterior = qb_row[j][bs]
                     - (model.cofold_exterior_stem_boltzmann_energy(bases, k, j, cut)
                         + if bs == 1 {
                             model.duplex_initialization_boltzmann_energy()
