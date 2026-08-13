@@ -9,11 +9,15 @@ default:
 plugin:
   cargo build --release --locked --target wasm32-unknown-unknown -p ribon-plugin
   cp {{wasm}} package/ribon_plugin.wasm
+  python3 scripts/validate-wasm-source.py --update
 
 wasm-sync-test:
-  ./scripts/check-wasm-sync.sh
+  python3 scripts/validate-wasm-source.py
 
-wasm-test: plugin
+wasm-build-test:
+  cargo build --release --locked --target wasm32-unknown-unknown -p ribon-plugin
+
+wasm-test:
   python3 scripts/validate-wasm.py
 
 license-test:
@@ -38,7 +42,7 @@ typst-smoke-test:
   typst compile --root . tests/typst/smoke.typ {{typst-test-dir}}/smoke.pdf
   typst compile --root . tests/typst/api_all.typ {{typst-test-dir}}/api_all.pdf
 
-typst-test: plugin contrast-test
+typst-test: contrast-test
   mkdir -p {{typst-test-dir}}
   typst compile --root . tests/typst/smoke.typ {{typst-test-dir}}/smoke.pdf
   typst compile --root . tests/typst/api.typ {{typst-test-dir}}/api.pdf
@@ -53,29 +57,29 @@ typst-test: plugin contrast-test
   python3 scripts/validate-plot-quality.py
   python3 scripts/validate-plot-layout.py
 
-plot-test: plugin
+plot-test:
   mkdir -p {{typst-test-dir}}
   typst compile --root . tests/typst/plot_quality.typ {{typst-test-dir}}/plot-quality.pdf
   typst compile --root . tests/typst/plot_layout_quality.typ {{typst-test-dir}}/plot-layout-quality.pdf
   python3 scripts/validate-plot-quality.py
   python3 scripts/validate-plot-layout.py
 
-plot-golden-update: plugin
+plot-golden-update:
   mkdir -p {{typst-test-dir}}
   typst compile --root . tests/typst/plot_quality.typ {{typst-test-dir}}/plot-quality.pdf
   typst compile --root . tests/typst/plot_layout_quality.typ {{typst-test-dir}}/plot-layout-quality.pdf
   python3 scripts/validate-plot-quality.py --update-golden
   python3 scripts/validate-plot-layout.py --update-golden
 
-example: plugin
+example:
   mkdir -p {{qa-dir}}/examples
   typst compile --root . package/examples/secondary-structure.typ {{qa-dir}}/examples/secondary-structure.pdf
 
-real-data-pdf: plugin
+real-data-pdf:
   mkdir -p {{qa-dir}}
   typst compile --root . tests/typst/real_data_render.typ {{qa-dir}}/ribon-real-data-validation.pdf
 
-publication-pdf: plugin
+publication-pdf:
   mkdir -p {{qa-dir}}
   typst compile --root . tests/typst/publication.typ {{qa-dir}}/ribon-publication-validation.pdf
 
@@ -86,24 +90,24 @@ render-test: real-data-pdf
 render-golden-update: real-data-pdf
   python3 scripts/validate-render-golden.py --update-golden
 
-performance-test: plugin
+performance-test:
   python3 scripts/validate-performance.py
 
-pseudoknot-test: plugin
+pseudoknot-test:
   python3 scripts/validate-pseudoknot.py
 
-conditional-density2-test: plugin
+conditional-density2-test:
   python3 scripts/validate-conditional-density2.py
 
 conditional-density2-performance-test:
   python3 scripts/validate-conditional-density2-performance.py
 
-exact-feature-test: plugin
+exact-feature-test:
   python3 scripts/validate-exact-features-real.py
 
 ci-check: fmt-test ci-test wasm-sync-test typst-smoke-test
 
-release-check: fmt-test test wasm-sync-test wasm-test license-test typst-test pseudoknot-test conditional-density2-test conditional-density2-performance-test exact-feature-test performance-test render-test
+release-check: fmt-test test wasm-build-test wasm-sync-test wasm-test license-test typst-test pseudoknot-test conditional-density2-test conditional-density2-performance-test exact-feature-test performance-test render-test
 
 docs:
   just --justfile package/justfile docs
