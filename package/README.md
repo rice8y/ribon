@@ -21,7 +21,7 @@ Draw a known sequence and extended dot-bracket structure:
 )
 ```
 
-<a href="examples/secondary-structure.typ"><img src="examples/secondary-structure.png" alt="RNA secondary structure with a highlighted loop and base pair"></a>
+<p align="center"><a href="examples/secondary-structure.typ"><img src="examples/secondary-structure.png" alt="RNA secondary structure with a highlighted loop and base pair"></a></p>
 
 Or predict a structure and send the same result to drawing and probability plots:
 
@@ -40,7 +40,7 @@ Or predict a structure and send the same result to drawing and probability plots
 )
 ```
 
-<a href="examples/predicted-structure.typ"><img src="examples/predicted-structure.png" alt="Predicted RNA secondary structure"></a>
+<p align="center"><a href="examples/predicted-structure.typ"><img src="examples/predicted-structure.png" alt="Predicted RNA secondary structure"></a></p>
 
 ```typst
 #dot-plot(
@@ -56,7 +56,7 @@ Or predict a structure and send the same result to drawing and probability plots
 )
 ```
 
-<a href="examples/dot-plot.typ"><img src="examples/dot-plot.png" alt="Base-pair probability dot plot"></a>
+<p align="center"><a href="examples/dot-plot.typ"><img src="examples/dot-plot.png" alt="Base-pair probability dot plot"></a></p>
 
 ```typst
 #mountain-plot(
@@ -79,7 +79,7 @@ Or predict a structure and send the same result to drawing and probability plots
 )
 ```
 
-<a href="examples/mountain-plot.typ"><img src="examples/mountain-plot.png" alt="RNA mountain plot"></a>
+<p align="center"><a href="examples/mountain-plot.typ"><img src="examples/mountain-plot.png" alt="RNA mountain plot"></a></p>
 
 The [complete reference manual](docs/documentation.pdf) covers installation, data conventions, models, constraints, every analysis operation, all renderer controls, annotations, plots, errors, performance, validation, and figure-export guidance.
 
@@ -101,7 +101,7 @@ Ribon accepts sequence plus extended dot-bracket notation. Positions are one-bas
 )
 ```
 
-<a href="examples/multi-strand.typ"><img src="examples/multi-strand.png" alt="Antiparallel RNA duplex drawn as two strands"></a>
+<p align="center"><a href="examples/multi-strand.typ"><img src="examples/multi-strand.png" alt="Antiparallel RNA duplex drawn as two strands"></a></p>
 
 Crossing pairs can use additional bracket alphabets and are rendered directly:
 
@@ -118,7 +118,7 @@ Crossing pairs can use additional bracket alphabets and are rendered directly:
 )
 ```
 
-<a href="examples/pseudoknot.typ"><img src="examples/pseudoknot.png" alt="RNA pseudoknot with crossing interactions"></a>
+<p align="center"><a href="examples/pseudoknot.typ"><img src="examples/pseudoknot.png" alt="RNA pseudoknot with crossing interactions"></a></p>
 
 ### Layout methods
 
@@ -151,7 +151,7 @@ All layouts support aspect-preserving fit, explicit width and height, rotation, 
 )
 ```
 
-<a href="examples/edited-scene.typ"><img src="examples/edited-scene.png" alt="RNA structure with manually edited coordinates and annotations"></a>
+<p align="center"><a href="examples/edited-scene.typ"><img src="examples/edited-scene.png" alt="RNA structure with manually edited coordinates and annotations"></a></p>
 
 ## Prediction and analysis
 
@@ -268,7 +268,7 @@ Nucleotide labels automatically use the black or white text color with the highe
 )
 ```
 
-<a href="examples/annotations.typ"><img src="examples/annotations.png" alt="RNA structure with base, pair, region, and text annotations"></a>
+<p align="center"><a href="examples/annotations.typ"><img src="examples/annotations.png" alt="RNA structure with base, pair, region, and text annotations"></a></p>
 
 Continuous annotations retain their scale, so `draw` creates the exact matching legend automatically:
 
@@ -290,7 +290,7 @@ Continuous annotations retain their scale, so `draw` creates the exact matching 
 )
 ```
 
-<a href="examples/continuous-annotation.typ"><img src="examples/continuous-annotation.png" alt="RNA structure colored by continuous values with a color legend"></a>
+<p align="center"><a href="examples/continuous-annotation.typ"><img src="examples/continuous-annotation.png" alt="RNA structure colored by continuous values with a color legend"></a></p>
 
 Specialized helpers include `reactivity-annotations`, `accessibility-annotations`, `local-accessibility-annotations`, `entropy-annotations`, `topology-annotations`, and `coaxial-annotations`.
 
@@ -313,7 +313,7 @@ Quantitative figures use four independent configuration values. `plot-theme` con
 )
 ```
 
-<a href="examples/structure-comparison.typ"><img src="examples/structure-comparison.png" alt="Overlay comparing two RNA secondary structures"></a>
+<p align="center"><a href="examples/structure-comparison.typ"><img src="examples/structure-comparison.png" alt="Overlay comparing two RNA secondary structures"></a></p>
 
 ```typst
 #let untreated = analyze(sequence)
@@ -337,7 +337,7 @@ Quantitative figures use four independent configuration values. `plot-theme` con
 )
 ```
 
-<a href="examples/comparison-dot-plot.typ"><img src="examples/comparison-dot-plot.png" alt="Dot plot comparing two RNA base-pair probability ensembles"></a>
+<p align="center"><a href="examples/comparison-dot-plot.typ"><img src="examples/comparison-dot-plot.png" alt="Dot plot comparing two RNA base-pair probability ensembles"></a></p>
 
 ```typst
 #mountain-plot(
@@ -363,7 +363,7 @@ Quantitative figures use four independent configuration values. `plot-theme` con
 )
 ```
 
-<a href="examples/mountain-plot.typ"><img src="examples/mountain-plot.png" alt="Expected and reference RNA mountain profiles"></a>
+<p align="center"><a href="examples/mountain-plot.typ"><img src="examples/mountain-plot.png" alt="Expected and reference RNA mountain profiles"></a></p>
 
 ```typst
 #let decoder-sequence = "GCGCCUUGAAAGUCCAGAGGACUUGGUUUUAUUGGGUAGUUGAGGUUGGUGGCCCAUCUC"
@@ -386,7 +386,7 @@ Quantitative figures use four independent configuration values. `plot-theme` con
 )
 ```
 
-<a href="examples/decoder-comparison.typ"><img src="examples/decoder-comparison.png" alt="Comparison of RNA structure decoding methods"></a>
+<p align="center"><a href="examples/decoder-comparison.typ"><img src="examples/decoder-comparison.png" alt="Comparison of RNA structure decoding methods"></a></p>
 
 ## Stable protocol and errors
 
