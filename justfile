@@ -1,4 +1,5 @@
 wasm := "target/wasm32-unknown-unknown/release/ribon_plugin.wasm"
+package-wasm := "package/ribon_plugin.wasm"
 qa-dir := "target/qa"
 typst-test-dir := qa-dir / "typst"
 typage-docs-dir := "ribon-docs"
@@ -8,7 +9,8 @@ default:
 
 plugin:
   cargo build --release --locked --target wasm32-unknown-unknown -p ribon-plugin
-  cp {{wasm}} package/ribon_plugin.wasm
+  # Avoid oversized functions that trigger a branch-offset failure in Typst 0.15.
+  wasm-opt -Os --one-caller-inline-max-function-size=0 {{wasm}} -o {{package-wasm}}
 
 wasm-build-test:
   cargo build --release --locked --target wasm32-unknown-unknown -p ribon-plugin
